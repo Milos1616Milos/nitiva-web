@@ -202,7 +202,7 @@ footer b{color:var(--cream)}
  <div class="wrap cols">
   <div><b>Nitiva</b><br>Miloš Brisuda<br>Kubelíkova 1258/43, 130 00 Praha 3<br>IČO 29824125</div>
   <div><b>Služby</b><br><a href="/socialni-site/">Správa sociálních sítí</a><br><a href="/tvorba-webu/">Tvorba webu pro malé firmy</a><br><a href="/ai-chatbot/">AI chatbot na web</a></div>
-  <div><b>Kontakt</b><br><a href="mailto:info@nitiva.cz">info@nitiva.cz</a></div>
+  <div><b>Kontakt</b><br><a href="mailto:milos@nitiva.cz">milos@nitiva.cz</a></div>
   <div><b>Ochrana údajů</b><br>Web nepoužívá sledovací cookies. Chat si v prohlížeči ukládá jen anonymní identifikátor relace.<br>Dříve: Marketing srdcem, BotEffex.</div>
  </div>
 </footer>
@@ -219,8 +219,8 @@ footer b{color:var(--cream)}
     btn.disabled=true;
     fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
      .then(function(r){return r.json();})
-     .then(function(r){if(r&&r.ok){f.reset();show('Děkujeme, zpráva je odeslána. Ozveme se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište nám prosím na info@nitiva.cz.','err');}})
-     .catch(function(){show('Odeslání se nepodařilo. Napište nám prosím na info@nitiva.cz.','err');})
+     .then(function(r){if(r&&r.ok){f.reset();show('Děkujeme, zpráva je odeslána. Ozveme se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');}})
+     .catch(function(){show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');})
      .then(function(){btn.disabled=false;});
   });
   function openChat(){var b=document.querySelector('.nv-b');if(b&&!document.querySelector('.nv-p.o'))b.click();}
