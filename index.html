@@ -96,7 +96,7 @@ footer b{color:var(--cream)}
   <span class="kick">Sociální sítě · Web · AI asistenti</span>
   <h1>Marketing, který <em>dává smysl</em>.</h1>
   <p>Pomáháme malým firmám a živnostníkům, aby byli vidět, působili důvěryhodně a zákazníci se jim snadno ozvali. Bez složitostí a bez žargonu.</p>
-  <div class="cta"><a class="btn c" href="#kontakt">Domluvit konzultaci</a><a class="btn" href="#asistent">Vyzkoušet AI asistenta</a></div>
+  <div class="cta"><a class="btn c" href="#kontakt">Domluvit konzultaci</a><a class="btn" href="#asistent">Vyzkoušet AI asistenta</a><a class="btn l" href="#kontrola">Kontrola webu zdarma</a></div>
 
   <div class="mock" aria-hidden="true">
    <div class="post"><small>Příspěvek na Instagram</small><b>Proč vás lidé na webu nenajdou?</b><span>Nitiva</span></div>
@@ -180,6 +180,23 @@ footer b{color:var(--cream)}
  </div>
 </section>
 
+<section id="kontrola">
+ <div class="wrap">
+  <span class="kick">Zdarma a nezávazně</span>
+  <h2>Bezplatná kontrola vašeho webu nebo profilu</h2>
+  <p class="lead">Pošlete adresu webu nebo sociální sítě. Pročteme ji a pošleme vám e-mailem 5 konkrétních doporučení, co zlepšit. Bez závazku. Každou kontrolu před odesláním zkontroluje člověk.</p>
+  <form class="k" id="checkForm" novalidate>
+   <div><label for="cu">Adresa webu nebo profilu</label><input id="cu" name="url" placeholder="např. www.vasefirma.cz" required maxlength="200"></div>
+   <div><label for="ce">Váš e-mail</label><input id="ce" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+   <div><label for="cn">Na co se máme zaměřit? (nepovinné)</label><textarea id="cn" name="note" rows="3" maxlength="400"></textarea></div>
+   <input class="hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <label style="display:flex;gap:10px;align-items:flex-start;font-weight:400"><input type="checkbox" id="cc" name="consent" style="margin-top:5px;width:auto"><span>Souhlasím, že Nitiva zpracuje adresu a e-mail za účelem vytvoření a odeslání kontroly. Údaje nepředáváme dál (kromě technického zpracování nástrojem pro analýzu textu) a smažeme je, jakmile nebudou potřeba.</span></label>
+   <button class="btn c" type="submit" id="csend">Chci kontrolu zdarma</button>
+   <div id="cmsg" role="status" aria-live="polite"></div>
+  </form>
+ </div>
+</section>
+
 <section id="kontakt" style="background:#fff;border-top:1px solid var(--line)">
  <div class="wrap">
   <span class="kick">Kontakt</span>
@@ -222,6 +239,21 @@ footer b{color:var(--cream)}
      .then(function(r){if(r&&r.ok){f.reset();show('Děkujeme, zpráva je odeslána. Ozveme se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');}})
      .catch(function(){show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');})
      .then(function(){btn.disabled=false;});
+  });
+  var cf=document.getElementById('checkForm'),cm=document.getElementById('cmsg'),cb=document.getElementById('csend');
+  cf.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var d={url:cf.url.value.trim(),email:cf.email.value.trim(),note:cf.note.value.trim(),hp:cf.hp.value,consent:document.getElementById('cc').checked};
+    function sh(t,c){cm.className='msg '+c;cm.textContent=t;}
+    if(!d.url){sh('Zadejte prosím adresu webu nebo profilu.','err');return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){sh('Zadejte prosím platný e-mail.','err');return;}
+    if(!d.consent){sh('Potvrďte prosím souhlas se zpracováním údajů.','err');return;}
+    cb.disabled=true;
+    fetch(API+'nitiva-kontrola',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+     .then(function(r){return r.json();})
+     .then(function(r){if(r&&r.ok){cf.reset();sh('Děkujeme! Kontrolu připravíme a pošleme vám ji e-mailem do několika pracovních dnů.','ok');}else{sh((r&&r.msg)||'Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');}})
+     .catch(function(){sh('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');})
+     .then(function(){cb.disabled=false;});
   });
   function openChat(){var b=document.querySelector('.nv-b');if(b&&!document.querySelector('.nv-p.o'))b.click();}
   document.getElementById('openChat').addEventListener('click',openChat);
