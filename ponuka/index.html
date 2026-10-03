@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nitiva První dotaz: web a odpovídač pro malé firmy</title>
+<meta name="description" content="Web, automatický odpovídač zákazníkům a hotové příspěvky v jednom balíčku pro malé firmy a živnostníky. První měsíc provozu zdarma, spuštění do 7 dnů.">
+<link rel="canonical" href="https://nitiva.cz/ponuka/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0E1727">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:site_name" content="Nitiva"><meta property="og:locale" content="cs_CZ"><meta property="og:type" content="website">
+<meta property="og:title" content="Nitiva První dotaz: web a odpovídač pro malé firmy">
+<meta property="og:description" content="Zákazník napíše večer. Odpověď má do minut. Vy ráno jen potvrdíte termín.">
+<meta property="og:url" content="https://nitiva.cz/ponuka/"><meta property="og:image" content="https://nitiva.cz/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Nitiva První dotaz","provider":{"@type":"Organization","name":"Nitiva","url":"https://nitiva.cz/"},"areaServed":["CZ","SK"],"description":"Jednostránkový web, automatický odpovídač zákazníkům a hotové příspěvky pro malé firmy a živnostníky."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1727;--coral:#FF7356;--lime:#D9FF6F;--cream:#F7F5F0;--deep:#D95139;--ink:#0E1727;--muted:#4b5563;--line:#e6e2d8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px}
+a{color:inherit}img,svg{max-width:100%}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(247,245,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px;text-decoration:none;letter-spacing:-.02em}
+.logo i{width:34px;height:34px;border-radius:50%;background:var(--coral);display:grid;place-items:center;font-style:normal;color:var(--navy);font-weight:900}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-weight:600;font-size:15px}nav a:hover{color:var(--deep)}
+.btn{display:inline-block;background:var(--navy);color:var(--cream);padding:14px 24px;border-radius:12px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-family:inherit;font-size:16px}
+.btn:hover{background:#1b2a44}.btn.c{background:var(--coral);color:var(--navy)}.btn.c:hover{background:#ff8a71}.btn.l{background:var(--lime);color:var(--navy)}
+.hero{position:relative;overflow:hidden;padding:88px 0 150px}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.04;letter-spacing:-.03em;font-weight:900;margin:0 0 22px;max-width:14ch}
+.hero h1 em{font-style:normal;color:var(--deep)}
+.hero p{font-size:20px;max-width:46ch;color:var(--muted);margin:0 0 30px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.blob{position:absolute;border-radius:50%;z-index:-1}.b1{width:420px;height:420px;background:var(--navy);right:-120px;bottom:-140px}.b2{width:170px;height:170px;background:var(--coral);right:210px;bottom:-40px}.b3{width:64px;height:64px;background:var(--lime);right:150px;top:70px}
+section{padding:80px 0}
+h2{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.02em;font-weight:900;margin:0 0 14px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 40px}
+.kick{display:inline-block;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--deep);margin-bottom:10px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{margin:14px 0 8px;font-size:20px}.card p{margin:0;color:var(--muted);font-size:16px}
+.ic{width:46px;height:46px;border-radius:12px;background:var(--lime);display:grid;place-items:center;font-size:22px}
+.dark{background:var(--navy);color:var(--cream)}.dark .lead,.dark .card p{color:#c9ced8}.dark .kick{color:var(--lime)}
+.dark .card{background:#15213a;border-color:#22314f}.dark .ic{background:var(--coral)}
+.msg{padding:12px 14px;border-radius:10px;font-weight:600}.ok{background:var(--lime);color:var(--navy)}.err{background:#ffd9d1;color:var(--navy)}
+footer{background:var(--navy);color:#c9ced8;padding:44px 0;font-size:15px}
+footer a{color:var(--lime)}footer .cols{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+footer b{color:var(--cream)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+@media(max-width:980px){.mock{display:none}}
+@media(max-width:820px){.nav .btn{padding:9px 12px;font-size:13px;white-space:nowrap}.b3{display:none}nav ul{display:none}.hero{padding:56px 0 130px}.b1{width:300px;height:300px;right:-100px}.b2{right:120px}section{padding:56px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.price{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.pbox{background:#fff;border:2px solid var(--navy);border-radius:20px;padding:30px}
+.pbox .big{font-size:46px;font-weight:900;letter-spacing:-.03em;line-height:1}
+.pbox small{color:var(--muted);font-weight:600}
+.guar{background:var(--lime);border-radius:20px;padding:30px}
+.guar h3{margin:0 0 8px;font-size:24px}
+ul.tick{list-style:none;padding:0;margin:14px 0 0}ul.tick li{padding-left:28px;position:relative;margin:8px 0}
+ul.tick li:before{content:"\2713";position:absolute;left:0;font-weight:900;color:var(--deep)}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:800}
+.faq p{color:var(--muted);margin:10px 0 0}
+.ba{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+@media(max-width:700px){.ba{grid-template-columns:1fr}}
+.ba .card.x{background:#fff4f1}
+.note{font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="logo" href="/" aria-label="Nitiva – úvod"><i>n</i>nitiva</a>
+ <nav aria-label="Hlavní menu"><ul><li><a href="#co">Co dostanete</a></li><li><a href="#cena">Cena</a></li><li><a href="#garance">Pravidla</a></li><li><a href="#otazky">Otázky</a></li></ul></nav>
+ <a class="btn c" href="#kontakt">Chci to vyzkoušet</a>
+</div></header>
+<div style="background:var(--coral);color:var(--navy);text-align:center;font-weight:800;padding:9px 12px;font-size:15px">První měsíc provozu zdarma · spuštění do 7 dnů · konec kdykoli</div>
+<main>
+<section class="hero" style="padding-bottom:110px">
+ <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+ <div class="wrap">
+  <div style="display:inline-block;background:var(--lime);color:var(--navy);font-weight:900;font-size:clamp(18px,3vw,26px);padding:12px 20px;border-radius:14px;margin:0 0 22px;transform:rotate(-1.5deg)">První měsíc provozu ZDARMA</div><br><span class="kick">Pro kadeřnice, kosmetičky, masérky a řemeslníky</span>
+  <h1 style="max-width:16ch">Zákazník napíše ve 22:00. <em>Vy už máte termín.</em></h1>
+  <p>Malé firmy přicházejí o zákazníky ne proto, že by nebyly dobré, ale proto, že na zprávu nikdo hned neodpoví. My to vyřešíme: web, automatický odpovídač a hotové příspěvky v jednom balíčku.</p>
+  <div class="cta"><a class="btn c" href="#kontakt">Chci to vyzkoušet</a><a class="btn" href="#cena">Kolik to stojí</a></div><p class="note" style="margin-top:16px;color:#0E1727;font-weight:800">První měsíc provozu máte zdarma. Spuštění do 7 dnů, nebo zřízení slevíme.</p>
+ </div>
+</section>
+<section id="proc" style="padding-top:30px">
+ <div class="wrap">
+  <span class="kick">Kde se zákazníci ztrácejí</span>
+  <h2>Kdo odpoví první, ten obvykle dostane zakázku</h2>
+  <div class="ba">
+   <div class="card x"><h3>Dnes</h3><p>Zákazník napíše na Instagram nebo přes formulář. Vy stojíte u klienta a odpovíte večer nebo druhý den. On už se objednal jinde.</p></div>
+   <div class="card"><h3>S balíčkem Nitiva</h3><p>Odpověď přijde během minut: ceny, volné způsoby objednání, adresa. Vy dostanete jen zprávu, že se někdo hlásí, a potvrdíte termín.</p></div>
+  </div>
+  <p class="note">Rychlost odpovědi je naše hypotéza o tom, co zákazníky zdrží. Doložená čísla pro váš obor zatím nemáme, proto je první měsíc provozu zdarma.</p>
+ </div>
+</section>
+<section id="co" class="dark">
+ <div class="wrap">
+  <span class="kick">Co je v balíčku</span>
+  <h2>Čtyři věci, které fungují dohromady</h2>
+  <p class="lead">Nic z toho se nemusíte učit ani nastavovat. Dodáte ceník a fotky, zbytek uděláme my.</p>
+  <div class="grid">
+   <div class="card"><div class="ic">1</div><h3>Jednostránkový web</h3><p>Přehledný, rychlý, na mobil. Služby, ceník, mapa a formulář pro dotaz nebo rezervaci.</p></div>
+   <div class="card"><div class="ic">2</div><h3>Automatický odpovídač</h3><p>Odpovídá na dotazy zákazníků z webu a e-mailu podle vašich údajů. Co neví, předá vám.</p></div>
+   <div class="card"><div class="ic">3</div><h3>Sjednocené údaje</h3><p>Stejná adresa, otevírací doba a kontakt na webu, Firmy.cz a Facebooku, aby vás lidé našli.</p></div>
+   <div class="card"><div class="ic">4</div><h3>8 příspěvků měsíčně</h3><p>Hotové texty a grafika na Facebook a Instagram. Vy jen schválíte.</p></div>
+  </div>
+  <p class="note" style="color:#c9ced8;margin-top:20px">Odpovídání na zprávy přímo v Instagramu a Facebooku nasazujeme postupně a vždy po domluvě. Technická možnost závisí na nastavení vašich účtů.</p>
+ </div>
+</section>
+<section id="cena">
+ <div class="wrap">
+  <span class="kick">Cena</span>
+  <h2>Jasná cena, bez překvapení</h2>
+  <div class="price">
+   <div class="pbox"><small>Zřízení, jednorázově</small><div class="big">4 900 Kč</div><ul class="tick"><li>Web na míru vašemu oboru</li><li>Nastavení odpovídače</li><li>Úprava Firmy.cz a Facebooku</li><li>Spuštění do 7 dnů od podkladů</li></ul></div>
+   <div class="pbox"><small>Měsíčně</small><div class="big">1 490 Kč</div><ul class="tick"><li>Provoz odpovídače a webu</li><li>8 hotových příspěvků</li><li>Měsíční přehled dotazů</li><li>První měsíc zdarma, výpověď kdykoli</li></ul></div>
+  </div>
+  <p class="note">Ceny jsou uvedeny bez DPH, pokud nebude dohodnuto jinak. Reklamní rozpočet na Facebooku či Googlu se neplatí s námi, hradíte jej případně přímo vy.</p>
+ </div>
+</section>
+<section id="garance" style="padding-top:0">
+ <div class="wrap">
+  <div class="guar">
+   <h3>Jasná pravidla, žádné dohadování</h3>
+   <ul class="tick">
+    <li><b>První měsíc provozu zdarma.</b> Vždy, bez podmínek. Měsíční platba začíná až druhým měsícem.</li>
+    <li><b>Spuštění do 7 dnů</b> od chvíle, kdy nám pošlete ceník a fotky. Pokud to nestihneme naší vinou, zřizovací poplatek snížíme na polovinu.</li>
+    <li><b>Konec kdykoli.</b> Napíšete e-mail a končíme, bez výpovědní lhůty a sankcí.</li>
+    <li><b>Váš web a vaše údaje zůstávají vaše.</b> Při odchodu vám je předáme.</li>
+   </ul>
+  </div>
+ </div>
+</section>
+<section id="hodnota" style="padding-top:0">
+ <div class="wrap">
+  <span class="kick">Proč to vychází výhodně</span>
+  <h2>Totéž jinde koupíte po částech a dráž</h2>
+  <div class="grid">
+   <div class="card"><h3>Jednostránkový web</h3><p>Ve veřejných ceníkách agentur od zhruba 15 000 Kč.</p></div>
+   <div class="card"><h3>AI asistent na web</h3><p>Běžně stovky až tisíce korun měsíčně, například od 790 Kč.</p></div>
+   <div class="card"><h3>Příspěvky na sítě</h3><p>Správa sítí začíná zhruba od 4 500 Kč měsíčně.</p></div>
+   <div class="card" style="background:var(--navy);color:var(--cream)"><h3>U nás vše dohromady</h3><p style="color:#c9ced8">4 900 Kč jednou a 1 490 Kč měsíčně, první měsíc provozu zdarma.</p></div>
+  </div>
+  <p class="note">Ceny jsou orientační a pocházejí z veřejných ceníků v ČR z roku 2026. Služby se obsahem liší, nejde o přesné srovnání.</p>
+ </div>
+</section>
+<section id="otazky">
+ <div class="wrap faq">
+  <span class="kick">Časté otázky</span><h2>Než se rozhodnete</h2>
+  <details><summary>Musím rozumět technice?</summary><p>Ne. Pošlete ceník, fotky a pár údajů. Zbytek zařídíme a vysvětlíme lidsky.</p></details>
+  <details><summary>Co když odpovídač odpoví špatně?</summary><p>Odpovídá jen podle údajů, které nám dáte. Když si není jistý, nevymýšlí, ale zprávu předá vám. Znění odpovědí před spuštěním společně odsouhlasíme.</p></details>
+  <details><summary>Je to v souladu s ochranou osobních údajů?</summary><p>Ukládáme jen to, co zákazník sám napíše, a používáme to pro vyřízení jeho dotazu. Konkrétní podmínky doplníme do smlouvy před spuštěním.</p></details>
+  <details><summary>Jak ukončím spolupráci?</summary><p>Napíšete nám e-mail. Žádná výpovědní lhůta ani sankce.</p></details>
+ </div>
+</section>
+<section id="kontakt" class="dark">
+ <div class="wrap">
+  <span class="kick">Pojďme na to</span>
+  <h2>Napište nám, ozveme se do dne</h2>
+  <form id="contactForm" style="display:grid;gap:12px;max-width:560px">
+   <input name="name" placeholder="Jméno" required style="padding:14px;border-radius:10px;border:0;font:inherit">
+   <input name="email" type="email" placeholder="E-mail" required style="padding:14px;border-radius:10px;border:0;font:inherit">
+   <textarea name="message" rows="4" placeholder="Čím se zabýváte a co potřebujete?" style="padding:14px;border-radius:10px;border:0;font:inherit"></textarea>
+   <input name="web" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+   <button class="btn l" id="send" type="submit">Odeslat</button>
+   <div id="fmsg" class="msg"></div>
+  </form>
+ </div>
+</section>
+</main>
+<footer><div class="wrap cols">
+ <div><b>Nitiva</b><br>Miloš Brisuda<br>Kubelíkova 1258/43, 130 00 Praha 3<br>IČO 29824125</div>
+ <div><b>Kontakt</b><br><a href="mailto:info@nitiva.cz">info@nitiva.cz</a></div>
+ <div><b>Ochrana údajů</b><br>Web nepoužívá sledovací cookies.</div>
+</div></footer>
+<script>
+(function(){
+ var API='https://n8n.178-105-83-205.sslip.io/webhook/';
+ var f=document.getElementById('contactForm'),msg=document.getElementById('fmsg'),btn=document.getElementById('send');
+ function show(t,c){msg.className='msg '+c;msg.textContent=t;}
+ f.addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var d={sid:'ponuka',name:f.name.value.trim(),email:f.email.value.trim(),message:f.message.value.trim(),web:f.web.value,page:location.href};
+  if(!d.name||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){show('Vyplňte prosím jméno a platný e-mail.','err');return;}
+  btn.disabled=true;
+  fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+   .then(function(r){return r.json();})
+   .then(function(r){if(r&&r.ok){f.reset();show('Děkujeme, zpráva je odeslána. Ozveme se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište nám prosím na info@nitiva.cz.','err');}})
+   .catch(function(){show('Odeslání se nepodařilo. Napište nám prosím na info@nitiva.cz.','err');})
+   .then(function(){btn.disabled=false;});
+ });
+})();
+</script>
+</body></html>
