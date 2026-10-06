@@ -244,7 +244,7 @@ footer b{color:var(--cream)}
   var cf=document.getElementById('checkForm'),cm=document.getElementById('cmsg'),cb=document.getElementById('csend');
   cf.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var d={url:cf.url.value.trim(),email:cf.email.value.trim(),note:cf.note.value.trim(),hp:cf.hp.value,consent:document.getElementById('cc').checked};
+    var d={url:cf.url.value.trim(),email:cf.email.value.trim(),note:cf.note.value.trim(),hp:cf.hp.value,consent:document.getElementById('cc').checked,src:(function(){try{var q=new URLSearchParams(location.search);return (q.get('utm_source')||'')+(q.get('utm_campaign')?'-'+q.get('utm_campaign'):'')}catch(e){return ''}})()};
     function sh(t,c){cm.className='msg '+c;cm.textContent=t;}
     if(!d.url){sh('Zadejte prosím adresu webu nebo profilu.','err');return;}
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){sh('Zadejte prosím platný e-mail.','err');return;}
@@ -266,5 +266,6 @@ footer b{color:var(--cream)}
 })();
 </script>
 <script src="https://n8n.178-105-83-205.sslip.io/webhook/nitiva-widget.js" async></script>
+<script>(function(){try{var q=new URLSearchParams(location.search);if(q.get('utm_source')!=='meta')return;function go(){var e=document.getElementById('kontrola');if(e&&window.scrollY<300){e.scrollIntoView({behavior:'instant',block:'start'});}}window.addEventListener('load',function(){setTimeout(go,300);setTimeout(go,1200);});}catch(e){}})();</script>
 </body>
 </html>
