@@ -70,6 +70,8 @@ ul.tick li:before{content:"\2713";position:absolute;left:0;font-weight:900;color
 .ba .card.x{background:#fff4f1}
 .note{font-size:14px;color:var(--muted)}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nitiva.cz/#org","name":"Nitiva","url":"https://nitiva.cz/","logo":"https://nitiva.cz/favicon.svg","image":"https://nitiva.cz/og.png","email":"milos@nitiva.cz","founder":{"@type":"Person","name":"Miloš Brisuda"},"taxID":"29824125","address":{"@type":"PostalAddress","streetAddress":"Kubelíkova 1258/43","postalCode":"130 00","addressLocality":"Praha 3","addressCountry":"CZ"},"sameAs":["https://www.facebook.com/profile.php?id=61595124502768","https://www.instagram.com/marketing.srdcem/"]},{"@type":"WebPage","@id":"https://nitiva.cz/ponuka/#page","url":"https://nitiva.cz/ponuka/","name":"Nitiva První dotaz: web a odpovídač pro malé firmy","description":"Web, automatický odpovídač zákazníkům a hotové příspěvky v jednom balíčku pro malé firmy a živnostníky. První měsíc provozu zdarma, spuštění do 7 dnů.","inLanguage":"cs","isPartOf":{"@id":"https://nitiva.cz/#web"},"publisher":{"@id":"https://nitiva.cz/#org"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Nitiva","item":"https://nitiva.cz/"},{"@type":"ListItem","position":2,"name":"Nitiva První dotaz: web a odpovídač pro malé firmy","item":"https://nitiva.cz/ponuka/"}]}]}</script>
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 <header><div class="wrap nav">
@@ -176,8 +178,8 @@ ul.tick li:before{content:"\2713";position:absolute;left:0;font-weight:900;color
 </main>
 <footer><div class="wrap cols">
  <div><b>Nitiva</b><br>Miloš Brisuda<br>Kubelíkova 1258/43, 130 00 Praha 3<br>IČO 29824125</div>
- <div><b>Kontakt</b><br><a href="mailto:info@nitiva.cz">info@nitiva.cz</a></div>
- <div><b>Ochrana údajů</b><br>Web nepoužívá sledovací cookies.</div>
+ <div><b>Kontakt</b><br><a href="mailto:milos@nitiva.cz">milos@nitiva.cz</a></div>
+ <div><b>Ochrana údajů</b><br><a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a><br>Web nepoužívá sledovací cookies.</div>
 </div></footer>
 <script>
 (function(){
@@ -191,8 +193,8 @@ ul.tick li:before{content:"\2713";position:absolute;left:0;font-weight:900;color
   btn.disabled=true;
   fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
    .then(function(r){return r.json();})
-   .then(function(r){if(r&&r.ok){f.reset();show('Děkujeme, zpráva je odeslána. Ozveme se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište nám prosím na info@nitiva.cz.','err');}})
-   .catch(function(){show('Odeslání se nepodařilo. Napište nám prosím na info@nitiva.cz.','err');})
+   .then(function(r){if(r&&r.ok){f.reset();show('Děkujeme, zpráva je odeslána. Ozveme se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');}})
+   .catch(function(){show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');})
    .then(function(){btn.disabled=false;});
  });
 })();

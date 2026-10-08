@@ -1,13 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://nitiva.cz/</loc><lastmod>2026-10-08</lastmod></url>
-<url><loc>https://nitiva.cz/socialni-site/</loc><lastmod>2026-10-01</lastmod></url>
-<url><loc>https://nitiva.cz/tvorba-webu/</loc><lastmod>2026-10-01</lastmod></url>
-<url><loc>https://nitiva.cz/ai-chatbot/</loc><lastmod>2026-10-01</lastmod></url>
-<url><loc>https://nitiva.cz/ponuka/</loc><lastmod>2026-10-03</lastmod></url>
-<url><loc>https://nitiva.cz/ochrana-udaju/</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://nitiva.cz/video/co-automatizovat-jako-prvni/</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://nitiva.cz/projekty/odborne-tepovanie/</loc><lastmod>2026-10-07</lastmod></url>
-<url><loc>https://nitiva.cz/video/chatbot-nabidka/</loc><lastmod>2026-10-08</lastmod></url>
-<url><loc>https://nitiva.cz/video/web-poptavka/</loc><lastmod>2026-10-08</lastmod></url>
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://nitiva.cz/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/socialni-site/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/tvorba-webu/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/ai-chatbot/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/ponuka/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/ochrana-udaju/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/video/co-automatizovat-jako-prvni/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://nitiva.cz/video/co-automatizovat-jako-prvni-cover.jpg</video:thumbnail_loc>
+      <video:title>Co ve firmě automatizovat jako první?</video:title>
+      <video:description>Začněte opakovanými dotazy, potvrzováním termínů nebo příspěvky na sociálních sítích. Video a praktický postup pro první automatizaci v malé firmě.</video:description>
+      <video:content_loc>https://nitiva.cz/video/co-automatizovat-jako-prvni.mp4?v=motion-20261008</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/projekty/odborne-tepovanie/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/video/chatbot-nabidka/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://nitiva.cz/video/chatbot-nabidka-cover-seo.jpg</video:thumbnail_loc>
+      <video:title>Kdy má chatbot předat nabídku člověku?</video:title>
+      <video:description>Chatbot zjistí potřebu zákazníka a předá kontakt se shrnutím. Rozsah a cenu nabídky potvrdí člověk. Video a postup pro předání poptávky.</video:description>
+      <video:content_loc>https://nitiva.cz/video/chatbot-nabidka.mp4?v=highlight-20261008</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/video/web-poptavka/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://nitiva.cz/video/web-poptavka-cover-seo.jpg</video:thumbnail_loc>
+      <video:title>Proč zákazník neodešle poptávku?</video:title>
+      <video:description>Zákazník přišel na web, ale neozval se? Zkontrolujte výzvu ke kontaktu, délku formuláře a potvrzení odeslání. Praktické video a kontrolní seznam.</video:description>
+      <video:content_loc>https://nitiva.cz/video/web-poptavka.mp4?v=motion-20261008</video:content_loc>
+    </video:video>
+  </url>
 </urlset>
