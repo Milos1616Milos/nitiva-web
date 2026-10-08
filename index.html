@@ -432,7 +432,7 @@ summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--mut
   function show(t,c){msg.className='msg '+c;msg.textContent=t;}
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var d={sid:'web',name:f.name.value.trim(),email:f.email.value.trim(),message:window.nitivaLeadMessage(f.message.value.trim()),web:f.web.value,page:location.href};
+    var d={sid:'web',name:f.name.value.trim(),email:f.email.value.trim(),message:typeof window.nitivaLeadMessage==='function'?window.nitivaLeadMessage(f.message.value.trim()):f.message.value.trim(),web:f.web.value,page:location.href};
     if(!d.name||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){show('Vyplňte prosím jméno a platný e-mail.','err');return;}
     btn.disabled=true;
     fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
@@ -444,7 +444,7 @@ summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--mut
   var cf=document.getElementById('checkForm'),cm=document.getElementById('cmsg'),cb=document.getElementById('csend');
   cf.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var d={url:cf.url.value.trim(),email:cf.email.value.trim(),note:cf.note.value.trim(),hp:cf.hp.value,consent:document.getElementById('cc').checked,src:window.nitivaLeadSource()};
+    var d={url:cf.url.value.trim(),email:cf.email.value.trim(),note:cf.note.value.trim(),hp:cf.hp.value,consent:document.getElementById('cc').checked,src:typeof window.nitivaLeadSource==='function'?window.nitivaLeadSource():''};
     function sh(t,c){cm.className='msg '+c;cm.textContent=t;}
     if(!d.url){sh('Zadejte prosím adresu webu nebo profilu.','err');return;}
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){sh('Zadejte prosím platný e-mail.','err');return;}
