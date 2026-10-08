@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Instrument+Serif:ital@0;1&display=swap");
-:root{--navy:#0E1727;--navy2:#15213a;--coral:#FF7356;--lime:#D9FF6F;--cream:#F7F5F0;--deep:#D95139;--ink:#0E1727;--muted:#4b5563;--line:#e6e2d8;--serif:"Instrument Serif",Georgia,"Times New Roman",serif;--ease:cubic-bezier(.2,.7,.2,1)}
+:root{--navy:#0E1727;--navy2:#15213a;--coral:#FF7356;--lime:#D9FF6F;--cream:#F7F5F0;--deep:#A63E2D;--ink:#0E1727;--muted:#4b5563;--line:#e6e2d8;--serif:"Instrument Serif",Georgia,"Times New Roman",serif;--ease:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:inherit}img,svg{max-width:100%}
