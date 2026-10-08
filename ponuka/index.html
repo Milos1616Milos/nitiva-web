@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="cs">
 <head>
+<script src="/lead-source.js" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nitiva První dotaz: web a odpovídač pro malé firmy</title>
@@ -238,7 +239,7 @@ ul.tick li:before{content:"\2713";position:absolute;left:0;font-weight:900;color
  function show(t,c){msg.className='msg '+c;msg.textContent=t;}
  f.addEventListener('submit',function(ev){
   ev.preventDefault();
-  var d={sid:'ponuka',name:f.name.value.trim(),email:f.email.value.trim(),message:f.message.value.trim(),web:f.web.value,page:location.href};
+  var d={sid:'ponuka',name:f.name.value.trim(),email:f.email.value.trim(),message:window.nitivaLeadMessage(f.message.value.trim()),web:f.web.value,page:location.href};
   if(!d.name||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){show('Vyplňte prosím jméno a platný e-mail.','err');return;}
   btn.disabled=true;
   fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
