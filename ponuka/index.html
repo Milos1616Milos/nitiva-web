@@ -35,7 +35,7 @@ nav a{text-decoration:none;font-weight:600;font-size:15px}nav a:hover{color:var(
 .hero p{font-size:20px;max-width:46ch;color:var(--muted);margin:0 0 30px}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
 .blob{position:absolute;border-radius:50%;z-index:-1}.b1{width:420px;height:420px;background:var(--navy);right:-120px;bottom:-140px}.b2{width:170px;height:170px;background:var(--coral);right:210px;bottom:-40px}.b3{width:64px;height:64px;background:var(--lime);right:150px;top:70px}
-section{padding:80px 0}
+section{padding:80px 0;scroll-margin-top:84px}#rozsah p{max-width:72ch}#contactForm input,#contactForm textarea{width:100%;min-width:0;color:var(--navy);background:#fff}
 h2{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.02em;font-weight:900;margin:0 0 14px}
 .lead{color:var(--muted);max-width:60ch;margin:0 0 40px}
 .kick{display:inline-block;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--deep);margin-bottom:10px}
@@ -128,7 +128,7 @@ ul.tick li:before{content:"\2713";position:absolute;left:0;font-weight:900;color
 <header><div class="wrap nav">
  <a class="logo" href="/" aria-label="Nitiva – úvod"><i>n</i>nitiva</a>
  <nav aria-label="Hlavní menu"><ul><li><a href="#co">Co dostanete</a></li><li><a href="#cena">Cena</a></li><li><a href="#garance">Pravidla</a></li><li><a href="#otazky">Otázky</a></li></ul></nav>
- <a class="btn c" href="#kontakt">Chci to vyzkoušet</a>
+ <a class="btn c" href="#kontakt">Probrat balíček První dotaz</a>
 </div></header>
 <div style="background:var(--coral);color:var(--navy);text-align:center;font-weight:800;padding:9px 12px;font-size:15px">První měsíc provozu zdarma · spuštění do 7 dnů · konec kdykoli</div>
 <main>
@@ -138,7 +138,7 @@ ul.tick li:before{content:"\2713";position:absolute;left:0;font-weight:900;color
   <div style="display:inline-block;background:var(--lime);color:var(--navy);font-weight:900;font-size:clamp(18px,3vw,26px);padding:12px 20px;border-radius:14px;margin:0 0 22px;transform:rotate(-1.5deg)">První měsíc provozu ZDARMA</div><br><span class="kick">Pro kadeřnice, kosmetičky, masérky a řemeslníky</span>
   <h1 style="max-width:16ch">Zákazník se ptá. <em>Vy se věnujete práci.</em></h1>
   <p>Web, automatický odpovídač na opakované otázky a hotové příspěvky v jednom balíčku. Odpovědi nastavíme podle vašich služeb, ceníku a pravidel. Termíny potvrzujete vy; bez ověřeného propojení odpovídač volná místa nezná.</p>
-  <div class="cta"><a class="btn c" href="#kontakt">Chci to vyzkoušet</a><a class="btn" href="#cena">Kolik to stojí</a></div><p class="note" style="margin-top:16px;color:#0E1727;font-weight:800">První měsíc provozu máte zdarma. Spuštění do 7 dnů, nebo zřízení slevíme.</p>
+  <div class="cta"><a class="btn c" href="#kontakt">Probrat balíček První dotaz</a><a class="btn" href="#cena">Kolik to stojí</a></div><p class="note" style="margin-top:16px;color:#0E1727;font-weight:800">Zřízení 4 900 Kč. Provoz 1 490 Kč měsíčně, první měsíc provozu zdarma. Podmínky spuštění najdete níže.</p>
  </div>
 </section>
 <section id="proc" style="padding-top:30px">
@@ -213,17 +213,23 @@ ul.tick li:before{content:"\2713";position:absolute;left:0;font-weight:900;color
   <details><summary>Jak ukončím spolupráci?</summary><p>Napíšete nám e-mail. Žádná výpovědní lhůta ani sankce.</p></details>
  </div>
 </section>
+<section id="rozsah"><div class="wrap">
+<span class="kick">Rozsah spolupráce</span><h2>Co zahrnuje měsíční služba</h2>
+<h3>Obsah a publikování</h3><p>Každý měsíc připravíme 8 příspěvků s textem a statickou grafikou nebo vaší fotografií. Obsah přizpůsobíme pro jednu stránku na Facebooku a jeden účet na Instagramu; jde o 8 obsahových návrhů, nikoli 16 různých příspěvků. V ceně je jedno společné kolo připomínek. Naše chyby opravíme bez příplatku. Schválený obsah naplánujeme a zveřejníme, pokud máme potřebné přístupy k vašim účtům. Možnost publikování ověříme před objednávkou. Fotografování, videa, Reels a placená reklama nejsou součástí tohoto rozsahu.</p>
+<h3>Hosting a vaše doména</h3><p>Hosting webu je zahrnutý v měsíční ceně. Doména je vaše a její registraci nebo obnovu platíte zvlášť za předem oznámenou cenu registrátora. Pokud doménu už máte, použijeme ji. V ceně zřízení je nastavení jedné domény.</p>
+<h3>Drobné aktualizace</h3><p>Součástí měsíční služby je jedna sada drobných aktualizací stávajících údajů na webu a v odpovídači v rozsahu do 20 minut práce. Větší změnu nejdřív naceníme a začneme až po vašem souhlasu.</p>
+</div></section>
 <section id="kontakt" class="dark">
  <div class="wrap">
   <span class="kick">Pojďme na to</span>
-  <h2>Napište nám, ozveme se do dne</h2>
+  <h2>Proberme, zda se pro vás balíček hodí</h2><p>Napište, co potřebujete a co už používáte. Ozveme se vám e-mailem do dne a společně ověříme vhodný rozsah. Zřízení stojí 4 900 Kč; zdarma je první měsíc provozu. Odeslání dotazu není objednávka.</p>
   <form id="contactForm" style="display:grid;gap:12px;max-width:560px">
-   <input name="name" placeholder="Jméno" required style="padding:14px;border-radius:10px;border:0;font:inherit">
-   <input name="email" type="email" placeholder="E-mail" required style="padding:14px;border-radius:10px;border:0;font:inherit">
-   <textarea name="message" rows="4" placeholder="Čím se zabýváte a co potřebujete?" style="padding:14px;border-radius:10px;border:0;font:inherit"></textarea>
+   <label for="offer-name">Jméno</label><input id="offer-name" autocomplete="name" name="name" placeholder="Jméno" required style="padding:14px;border-radius:10px;border:0;font:inherit">
+   <label for="offer-email">E-mail</label><input id="offer-email" autocomplete="email" name="email" type="email" placeholder="E-mail" required style="padding:14px;border-radius:10px;border:0;font:inherit">
+   <label for="offer-message">Čím se zabýváte a co potřebujete? (nepovinné)</label><textarea id="offer-message" name="message" rows="4" placeholder="Čím se zabýváte a co potřebujete?" style="padding:14px;border-radius:10px;border:0;font:inherit"></textarea>
    <input name="web" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-   <button class="btn l" id="send" type="submit">Odeslat</button>
-   <div id="fmsg" class="msg"></div>
+   <button class="btn l" id="send" type="submit">Odeslat nezávazný dotaz</button>
+   <div id="fmsg" class="msg" role="status" aria-live="polite"></div><p style="font-size:14px;color:#c9ced8">Odesláním souhlasíte se zpracováním jména, e-mailu a zprávy za účelem odpovědi na váš dotaz. Podrobnosti najdete v <a href="/ochrana-udaju/">zásadách ochrany osobních údajů</a>.</p>
   </form>
  </div>
 </section>
