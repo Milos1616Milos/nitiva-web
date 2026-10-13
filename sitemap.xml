@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://nitiva.cz/</loc>
+    <loc>https://nitiva.cz/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"/>
     <lastmod>2026-10-08</lastmod>
   </url>
   <url>
-    <loc>https://nitiva.cz/socialni-site/</loc>
+    <loc>https://nitiva.cz/socialni-site/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/socialni-site/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/social-media/"/>
     <lastmod>2026-10-08</lastmod>
   </url>
   <url>
-    <loc>https://nitiva.cz/tvorba-webu/</loc>
+    <loc>https://nitiva.cz/tvorba-webu/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/tvorba-webu/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/web-design/"/>
     <lastmod>2026-10-08</lastmod>
   </url>
   <url>
-    <loc>https://nitiva.cz/ai-chatbot/</loc>
+    <loc>https://nitiva.cz/ai-chatbot/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ai-chatbot/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/ai-chatbot/"/>
     <lastmod>2026-10-08</lastmod>
   </url>
   <url>
-    <loc>https://nitiva.cz/ponuka/</loc>
+    <loc>https://nitiva.cz/ponuka/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ponuka/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/offer/"/>
     <lastmod>2026-10-08</lastmod>
   </url>
   <url>
-    <loc>https://nitiva.cz/ochrana-udaju/</loc>
+    <loc>https://nitiva.cz/ochrana-udaju/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ochrana-udaju/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/privacy/"/>
     <lastmod>2026-10-08</lastmod>
   </url>
   <url>
@@ -35,7 +35,7 @@
     </video:video>
   </url>
   <url>
-    <loc>https://nitiva.cz/projekty/odborne-tepovanie/</loc>
+    <loc>https://nitiva.cz/projekty/odborne-tepovanie/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/projekty/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/projects/odborne-tepovanie/"/>
     <lastmod>2026-10-08</lastmod>
   </url>
   <url>
@@ -57,5 +57,9 @@
       <video:description>Zákazník přišel na web, ale neozval se? Zkontrolujte výzvu ke kontaktu, délku formuláře a potvrzení odeslání. Praktické video a kontrolní seznam.</video:description>
       <video:content_loc>https://nitiva.cz/video/web-poptavka.mp4?v=motion-20261008</video:content_loc>
     </video:video>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/ai-telefon/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ai-telefon/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/ai-phone-assistant/"/>
+    <lastmod>2026-10-13</lastmod>
   </url>
 </urlset>
