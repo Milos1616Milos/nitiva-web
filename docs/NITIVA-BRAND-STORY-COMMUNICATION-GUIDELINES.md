@@ -1,8 +1,10 @@
 # NITIVA – Brand Story & Communication Guidelines
 
-Verze: 1.0  
+Aktuálny produktový profil je `.agents/product-marketing.md`. Krátky kontext pre chatboty a automatizácie je `docs/NITIVA-SYSTEM-CONTEXT.md`; zoznam miest, kam sa kontext distribuuje, je `docs/NITIVA-CONTEXT-DISTRIBUTION.md`. Pri rozpore platia aktuálne fakty v produktovom profile a tento komunikačný dokument.
+
+Verze: 1.1
 Datum: 17. 10. 2026  
-Stav: pracovní verze připravená ke schválení; webová implementace je pouze v samostatné větvi
+Stav: základní implementace příběhu značky je publikována na webu; tento dokument je aktuální komunikační guideline
 
 ## 1. Základ značky
 
