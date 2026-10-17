@@ -1,6 +1,6 @@
 # NITIVA – profil ponuky a komunikačný kontext
 
-Verzia: 1.0  
+Verzia: 1.1
 Dátum: 2026-10-17  
 Segment: malé firmy a živnostníci, primárne Česká republika  
 Zákaznícke texty: čeština  
@@ -49,4 +49,13 @@ Homepage alebo servisná stránka → konkrétna ponuka/príklad → kontaktný 
 - Aké presné prevádzkové a podporné limity platia pre jednotlivé AI služby?
 - Ktoré externé firemné profily už používajú názov NITIVA verejne a ktoré sú stále v schvaľovaní?
 - Ktoré tvrdenia o úspore času možno neskôr podložiť meraním?
+
+## Súvisiace kontextové dokumenty
+
+- Príbeh značky a komunikačné pravidlá: `docs/NITIVA-BRAND-STORY-COMMUNICATION-GUIDELINES.md`.
+- Krátky odvodený kontext pre AI a automatizácie: `docs/NITIVA-SYSTEM-CONTEXT.md`.
+- Mapa zdrojov a synchronizácie kontextu: `docs/NITIVA-CONTEXT-DISTRIBUTION.md`.
+- SEO publikačný plán a stav článkov: `docs/NITIVA-SEO-CONTENT-PLAN-2026-Q4.md`.
+
+Tento profil zostáva zdrojom pravdy pre obchodné fakty. Odvodené dokumenty ho nesmú prepisovať ani rozširovať o neoverené tvrdenia.
 
