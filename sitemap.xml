@@ -74,4 +74,14 @@
     <loc>https://nitiva.cz/poradna/automatizace-poptavek-z-webu/</loc>
     <lastmod>2026-10-17</lastmod>
   </url>
+  <url>
+    <loc>https://nitiva.cz/video/ai-agent-kdy-mu-dovolit-klikat/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://nitiva.cz/video/ai-agent-kdy-mu-dovolit-klikat-cover.jpg</video:thumbnail_loc>
+      <video:title>AI už umí klikat za vás. Kdy jí to dovolit?</video:title>
+      <video:description>Co je AI agent, v čem se liší návrh e-mailu od jeho odeslání a které tři otázky si položit, než AI dovolíte jednat.</video:description>
+      <video:content_loc>https://nitiva.cz/video/ai-agent-kdy-mu-dovolit-klikat.mp4?v=20261020</video:content_loc>
+    </video:video>
+  </url>
 </urlset>
