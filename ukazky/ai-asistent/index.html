@@ -1,21 +1,47 @@
 <!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI asistent na časté dotazy – demo | Nitiva</title><meta name="robots" content="noindex">
-<style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,Inter,sans-serif;background:linear-gradient(135deg,#1b2a4a,#3b1f5c);min-height:100vh;display:flex;flex-direction:column;align-items:center;color:#fff}
-.demo{background:#ffd76a;color:#222;width:100%;text-align:center;padding:8px;font-weight:600;font-size:14px}
-h1{margin:30px 16px 4px;text-align:center;font-size:clamp(24px,4vw,36px)}p.sub{opacity:.8;margin:0 16px 20px;text-align:center}
-.chat{width:min(440px,94vw);background:#fff;color:#222;border-radius:24px;overflow:hidden;box-shadow:0 30px 80px #0007;display:flex;flex-direction:column;height:560px}
-.top{background:#1e6fd9;color:#fff;padding:16px 20px;font-weight:700}.top small{display:block;font-weight:400;opacity:.85}
-.msgs{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#f4f6fa}
-.m{max-width:80%;padding:10px 14px;border-radius:16px;animation:in .3s}.b{background:#fff;align-self:flex-start;box-shadow:0 2px 6px #0001}.u{background:#1e6fd9;color:#fff;align-self:flex-end}
-@keyframes in{from{opacity:0;transform:translateY(8px)}}
-.q{display:flex;flex-wrap:wrap;gap:6px;padding:10px;border-top:1px solid #eee}.q button{border:1px solid #1e6fd9;color:#1e6fd9;background:#fff;border-radius:999px;padding:7px 12px;cursor:pointer;font-size:13px}
-form{display:flex;border-top:1px solid #eee}input{flex:1;border:0;padding:14px;font-size:15px;outline:0}form button{border:0;background:#1e6fd9;color:#fff;padding:0 18px;font-weight:700}
-footer{margin:20px;font-size:14px;opacity:.85;text-align:center}footer a{color:#ffd76a}</style></head><body>
-<div class="demo">UKÁZKOVÁ PRÁCE / DEMO – smyšlený autoservis, odpovědi jsou ilustrační</div>
-<h1>AI asistent na časté dotazy</h1><p class="sub">Ukázka pro „Autoservis Rychlík“ (smyšlená firma). Zkuste se zeptat.</p>
-<div class="chat"><div class="top">Autoservis Rychlík · asistent<small>Odpovídá okamžitě, 24/7</small></div><div class="msgs" id="m"></div>
-<div class="q" id="q"></div><form id="f"><input id="i" placeholder="Napište dotaz…" autocomplete="off"><button>➤</button></form></div>
-<footer>Na skutečném webu asistent čerpá z informací firmy a složité dotazy předá majiteli.<br><a href="/portfolio/">Portfolio Nitiva</a> · <a href="https://nitiva.cz/">nitiva.cz</a></footer>
+<title>AI asistent pro autoservis – DEMO · Nitiva</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0C0F14;--p:#151A22;--p2:#1C232E;--ac:#C6F432;--mu:#8D97A6;--ln:rgba(255,255,255,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#fff;font-family:Inter,sans-serif;line-height:1.6;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(700px 500px at 75% 30%,rgba(198,244,50,.12),transparent 60%),linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px) 0 0/48px 48px}
+.demo{text-align:center;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:9px;background:#1a1f28;color:var(--mu)}.demo a{color:var(--ac)}
+.w{max-width:1200px;margin:auto;padding:0 30px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+.lg{font-family:'Space Grotesk';font-weight:700;font-size:22px;display:flex;align-items:center;gap:10px}.lg i{width:30px;height:30px;border-radius:9px;background:var(--ac);display:grid;place-items:center;color:#0C0F14;font-style:normal;font-size:16px}
+.pill{font-size:13px;color:var(--mu);border:1px solid var(--ln);padding:8px 14px;border-radius:999px}.pill b{color:var(--ac)}
+.hero{display:grid;grid-template-columns:1fr 440px;gap:70px;align-items:center;padding:50px 0 90px}
+.ey{font-family:'Space Grotesk';font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ac)}
+h1{font-family:'Space Grotesk';font-weight:700;font-size:clamp(44px,6vw,78px);line-height:1;letter-spacing:-.04em;margin:20px 0 22px}h1 span{color:var(--ac)}
+.sub{font-size:18px;color:#c3cad5;max-width:520px;margin:0 0 34px}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:600px}
+.ft{background:var(--p);border:1px solid var(--ln);border-radius:18px;padding:18px}.ft b{font-family:'Space Grotesk';font-size:28px;display:block;color:var(--ac);line-height:1.1}.ft span{font-size:13px;color:var(--mu)}
+.chat{background:var(--p);border:1px solid var(--ln);border-radius:28px;overflow:hidden;box-shadow:0 50px 100px -40px rgba(0,0,0,.9),0 0 0 6px rgba(255,255,255,.02),0 0 90px -30px rgba(198,244,50,.35);display:flex;flex-direction:column;height:600px}
+.top{display:flex;gap:14px;align-items:center;padding:18px 20px;border-bottom:1px solid var(--ln);background:var(--p2)}
+.av{width:42px;height:42px;border-radius:14px;background:var(--ac);color:#0C0F14;font-family:'Space Grotesk';font-weight:700;display:grid;place-items:center;position:relative}.av:after{content:"";position:absolute;right:-3px;bottom:-3px;width:12px;height:12px;border-radius:50%;background:#3ddc84;border:2px solid var(--p2)}
+.top b{display:block;font-size:15px}.top small{color:var(--mu);font-size:12px}
+.msgs{flex:1;overflow:auto;padding:20px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+.m{max-width:82%;padding:11px 15px;border-radius:18px;font-size:14.5px;animation:in .45s cubic-bezier(.16,1,.3,1)}
+.m.b{background:var(--p2);border:1px solid var(--ln);border-bottom-left-radius:6px}.m.u{align-self:flex-end;background:var(--ac);color:#0C0F14;font-weight:600;border-bottom-right-radius:6px}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.q{display:flex;gap:8px;flex-wrap:wrap;padding:0 20px 12px}.q button{font:inherit;font-size:13px;background:transparent;color:#dfe5ee;border:1px solid var(--ln);padding:7px 12px;border-radius:999px;cursor:pointer;transition:.25s}.q button:hover{border-color:var(--ac);color:var(--ac)}
+form{display:flex;gap:10px;padding:14px;border-top:1px solid var(--ln)}form input{flex:1;font:inherit;background:var(--bg);border:1px solid var(--ln);color:#fff;padding:13px 16px;border-radius:14px;outline:none}form input:focus{border-color:var(--ac)}
+form button{width:50px;border:0;border-radius:14px;background:var(--ac);color:#0C0F14;font-size:18px;font-weight:700;cursor:pointer}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:90px}
+.h{border-top:1px solid var(--ln);padding-top:24px}.h i{font-style:normal;font-family:'Space Grotesk';color:var(--ac);font-weight:700}.h h3{font-family:'Space Grotesk';font-size:22px;margin:10px 0 6px}.h p{color:var(--mu);margin:0;font-size:15px}
+footer{border-top:1px solid var(--ln);padding:30px 0;color:var(--mu);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}footer a{color:var(--ac);font-weight:600;text-decoration:none}
+@media(max-width:960px){.hero{grid-template-columns:1fr}.how{grid-template-columns:1fr}.feat{grid-template-columns:1fr 1fr 1fr}}
+</style></head><body>
+<div class="demo">Ukázková práce / DEMO – smyšlený autoservis, odpovědi jsou ilustrační · <a href="/portfolio/">Nitiva</a></div>
+<div class="w"><nav><span class="lg"><i>R</i>Autoservis Rychlík</span><span class="pill">Asistent <b>online</b> 24/7</span></nav>
+<header class="hero"><div><span class="ey">AI asistent na časté dotazy</span><h1>Odpovědi pro zákazníky. <span>Okamžitě.</span></h1>
+<p class="sub">Otevírací doba, ceny, volné termíny – asistent odpoví i v noci a složitější dotazy předá majiteli. Zkuste se ho na něco zeptat.</p>
+<div class="feat"><div class="ft"><b>24/7</b><span>odpovídá nonstop</span></div><div class="ft"><b>&lt;1 s</b><span>čas odpovědi</span></div><div class="ft"><b>CZ</b><span>česky, přirozeně</span></div></div></div>
+<div class="chat"><div class="top"><div class="av">R</div><div><b>Autoservis Rychlík · asistent</b><small>Odpovídá okamžitě</small></div></div><div class="msgs" id="m"></div>
+<div class="q" id="q"></div><form id="f"><input id="i" placeholder="Napište dotaz…" autocomplete="off"><button aria-label="Odeslat">→</button></form></div></header>
+<div class="how"><div class="h"><i>01</i><h3>Naučí se vaši firmu</h3><p>Čerpá z vašeho ceníku, otevírací doby a častých dotazů.</p></div><div class="h"><i>02</i><h3>Odpovídá na webu</h3><p>Malé okno v rohu stránky, funguje na mobilu i počítači.</p></div><div class="h"><i>03</i><h3>Předá, co neví</h3><p>Složité dotazy pošle majiteli e-mailem.</p></div></div>
+<footer><span>Autoservis Rychlík je smyšlená firma, údaje jsou ilustrační.</span><span><a href="/portfolio/">Portfolio Nitiva</a> · <a href="https://nitiva.cz/">nitiva.cz</a></span></footer></div>
 <script>
 const K=[[/otev|hodin|kdy m|otevírací/i,"Máme otevřeno Po–Pá 7:30–17:00, v sobotu 8:00–12:00 (ukázkové údaje)."],
 [/pneu|přezu|gum/i,"Přezutí pneumatik stojí od 600 Kč za sadu. Termín si můžete vybrat online, obvykle do 2 dnů."],
