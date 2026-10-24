@@ -1,0 +1,36 @@
+<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI asistent na časté dotazy – demo | Nitiva</title><meta name="robots" content="noindex">
+<style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,Inter,sans-serif;background:linear-gradient(135deg,#1b2a4a,#3b1f5c);min-height:100vh;display:flex;flex-direction:column;align-items:center;color:#fff}
+.demo{background:#ffd76a;color:#222;width:100%;text-align:center;padding:8px;font-weight:600;font-size:14px}
+h1{margin:30px 16px 4px;text-align:center;font-size:clamp(24px,4vw,36px)}p.sub{opacity:.8;margin:0 16px 20px;text-align:center}
+.chat{width:min(440px,94vw);background:#fff;color:#222;border-radius:24px;overflow:hidden;box-shadow:0 30px 80px #0007;display:flex;flex-direction:column;height:560px}
+.top{background:#1e6fd9;color:#fff;padding:16px 20px;font-weight:700}.top small{display:block;font-weight:400;opacity:.85}
+.msgs{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#f4f6fa}
+.m{max-width:80%;padding:10px 14px;border-radius:16px;animation:in .3s}.b{background:#fff;align-self:flex-start;box-shadow:0 2px 6px #0001}.u{background:#1e6fd9;color:#fff;align-self:flex-end}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.q{display:flex;flex-wrap:wrap;gap:6px;padding:10px;border-top:1px solid #eee}.q button{border:1px solid #1e6fd9;color:#1e6fd9;background:#fff;border-radius:999px;padding:7px 12px;cursor:pointer;font-size:13px}
+form{display:flex;border-top:1px solid #eee}input{flex:1;border:0;padding:14px;font-size:15px;outline:0}form button{border:0;background:#1e6fd9;color:#fff;padding:0 18px;font-weight:700}
+footer{margin:20px;font-size:14px;opacity:.85;text-align:center}footer a{color:#ffd76a}</style></head><body>
+<div class="demo">UKÁZKOVÁ PRÁCE / DEMO – smyšlený autoservis, odpovědi jsou ilustrační</div>
+<h1>AI asistent na časté dotazy</h1><p class="sub">Ukázka pro „Autoservis Rychlík“ (smyšlená firma). Zkuste se zeptat.</p>
+<div class="chat"><div class="top">Autoservis Rychlík · asistent<small>Odpovídá okamžitě, 24/7</small></div><div class="msgs" id="m"></div>
+<div class="q" id="q"></div><form id="f"><input id="i" placeholder="Napište dotaz…" autocomplete="off"><button>➤</button></form></div>
+<footer>Na skutečném webu asistent čerpá z informací firmy a složité dotazy předá majiteli.<br><a href="/portfolio/">Portfolio Nitiva</a> · <a href="https://nitiva.cz/">nitiva.cz</a></footer>
+<script>
+const K=[[/otev|hodin|kdy m|otevírací/i,"Máme otevřeno Po–Pá 7:30–17:00, v sobotu 8:00–12:00 (ukázkové údaje)."],
+[/pneu|přezu|gum/i,"Přezutí pneumatik stojí od 600 Kč za sadu. Termín si můžete vybrat online, obvykle do 2 dnů."],
+[/stk|emis/i,"Auto vám na STK rádi připravíme a odvezeme. Příprava od 490 Kč."],
+[/cen|kolik|stojí/i,"Orientační ceny: přezutí od 600 Kč, olej + filtr od 1 290 Kč, diagnostika 590 Kč. Přesnou cenu potvrdí technik."],
+[/olej|servis|prohlíd/i,"Výměnu oleje a filtru zvládneme na počkání, cca 45 minut. Cena od 1 290 Kč včetně práce."],
+[/termín|objedn|rezerv/i,"Nejbližší volný termín je zítra v 9:00 nebo ve 13:30. Mám vám ho předběžně zapsat? (demo)"],
+[/adres|kde|parkov/i,"Najdete nás na adrese Ukázková 12 (smyšlená). Parkování přímo před dílnou."],
+[/náhrad|zapůj|odvoz/i,"Za poplatek 300 Kč/den nabízíme náhradní vůz, při větší opravě zdarma."]];
+const Q=["Kdy máte otevřeno?","Kolik stojí přezutí?","Volný termín?","Máte náhradní auto?"];
+const m=document.getElementById('m');
+function add(t,c){const d=document.createElement('div');d.className='m '+c;d.textContent=t;m.appendChild(d);m.scrollTop=1e5}
+function ask(t){add(t,'u');const a=(K.find(k=>k[0].test(t))||[0,"Na tohle zatím odpověď nemám. Předám dotaz technikovi a ozve se vám e-mailem. (demo)"])[1];
+const d=document.createElement('div');d.className='m b';d.textContent='…';m.appendChild(d);setTimeout(()=>{d.textContent=a;m.scrollTop=1e5},700)}
+add("Dobrý den 👋 Jsem asistent Autoservisu Rychlík. S čím vám pomohu?",'b');
+Q.forEach(x=>{const b=document.createElement('button');b.textContent=x;b.onclick=()=>ask(x);document.getElementById('q').appendChild(b)});
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const i=document.getElementById('i');if(i.value.trim())ask(i.value.trim());i.value=''};
+</script></body></html>
