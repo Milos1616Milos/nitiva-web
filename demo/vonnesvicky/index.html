@@ -1,0 +1,21 @@
+<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Ukázka od Nitiva – AI asistent pro Vonné svíčky</title>
+<style>body{font-family:system-ui,sans-serif;margin:0;background:#f5f3ef;color:#222}.w{max-width:720px;margin:0 auto;padding:24px}.badge{display:inline-block;background:#1f3a5f;color:#fff;padding:6px 12px;border-radius:20px;font-size:14px}
+#log{background:#fff;border-radius:12px;padding:16px;min-height:260px;max-height:55vh;overflow:auto;box-shadow:0 1px 4px #0002}.m{margin:8px 0;padding:10px 14px;border-radius:12px;max-width:85%}.u{background:#1f3a5f;color:#fff;margin-left:auto}.a{background:#eee}
+form{display:flex;gap:8px;margin-top:12px}input{flex:1;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:16px}button{padding:12px 18px;border:0;border-radius:8px;background:#1f3a5f;color:#fff;font-size:16px;cursor:pointer}.s button{background:#fff;color:#1f3a5f;border:1px solid #1f3a5f;margin:4px 4px 0 0;font-size:14px;padding:8px 12px}small{color:#666}</style></head>
+<body><div class="w"><span class="badge">Ukázka od Nitiva</span>
+<h1>AI asistent pro Vonné svíčky</h1>
+<p>Toto je nezávazná ukázka, kterou připravil tým <a href="https://nitiva.cz/">Nitiva</a>. Asistent odpovídá jen z veřejných informací na vašem webu (doprava, platba, vrácení). Co neví, nevymýšlí a odkáže na váš kontakt. Nejde o oficiální kanál e-shopu Vonné svíčky.</p>
+<div id="log"><div class="m a">Dobrý den, jsem AI asistent e-shopu Vonné svíčky (ukázka). Na co se chcete zeptat?</div></div>
+<div class="s"><button type="button">Od kolika je doprava zdarma?</button><button type="button">Můžu zboží vrátit?</button></div>
+<form id="f"><input id="i" maxlength="500" placeholder="Napište dotaz…" autocomplete="off"><button>Odeslat</button></form>
+<p><small>Ukázka od Nitiva · zprávy se nezobrazují e-shopu a neukládáme k nim osobní údaje · kontakt: milos@nitiva.cz</small></p></div>
+<script>
+(function(){var U='https://n8n.178-105-83-205.sslip.io/webhook/nitiva-demo-chat',T='vonnesvicky',H=[],log=document.getElementById('log'),i=document.getElementById('i');
+var sid=localStorage.nv_demo_sid||(localStorage.nv_demo_sid=Math.random().toString(36).slice(2));
+function add(t,c){var d=document.createElement('div');d.className='m '+c;d.textContent=t;log.appendChild(d);log.scrollTop=1e6;return d}
+function send(t){t=t.trim();if(!t)return;add(t,'u');var w=add('…','a');
+fetch(U,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({tenant:T,sid:sid,message:t,history:H.slice(-6)})}).then(function(r){return r.json()}).then(function(j){w.textContent=j.answer||'Chyba.';H.push({r:'u',t:t},{r:'a',t:j.answer||''});if(j.off){document.getElementById('f').style.display='none'}}).catch(function(){w.textContent='Omlouvám se, teď se nepodařilo spojit.'})}
+document.getElementById('f').onsubmit=function(e){e.preventDefault();send(i.value);i.value=''};
+[].forEach.call(document.querySelectorAll('.s button'),function(b){b.onclick=function(){send(b.textContent)}});})();
+</script></body></html>
