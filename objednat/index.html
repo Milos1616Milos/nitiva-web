@@ -35,13 +35,13 @@
 <main>
 <section class="dark" id="kontakt"><div class="wrap">
  <h1>Objednat službu Nitiva</h1>
- <p>Vyberte, o co máte zájem. Po odeslání vám do jednoho pracovního dne potvrdíme rozsah e-mailem.</p>
+ <p>Vyberte, o co máte zájem. Po odeslání vám do jednoho pracovního dne potvrdím rozsah e-mailem.</p>
  <ul style="max-width:640px;line-height:1.6">
   <li><b>Bezplatná kontrola webu</b> – 0 Kč. Krátký rozbor, co na vašem webu brzdí poptávky.</li>
   <li><b>Balíček První dotaz</b> – zřízení 4 900 Kč jednorázově, provoz 1 490 Kč měsíčně, první měsíc provozu zdarma. <a href="/ponuka/">Co obsahuje</a><br><a class="btn l" href="https://www.paypal.com/ncp/payment/MCGKTSP2LCCA8" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;max-width:100%;white-space:normal;text-align:center">Zaplatit zálohu 2 450 Kč (PayPal nebo karta)</a><br><small>Záloha 50 % z ceny zřízení balíčku První dotaz.</small></li>
   <li><b>AI telefon</b> – zřízení 2 900 Kč jednorázově, provoz od 490 Kč měsíčně. <a href="/ai-telefon/">Více</a><br><a class="btn l" href="https://www.paypal.com/ncp/payment/APG5XSL2FAZFC" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;max-width:100%;white-space:normal;text-align:center">Zaplatit zálohu 1 450 Kč (PayPal nebo karta)</a><br><small>Záloha 50 % z ceny zřízení AI telefonu.</small></li>
  </ul>
- <p><b>Záloha 50 %</b> – u placených služeb začínáme po úhradě zálohy 50 % z ceny zřízení. Zálohu zaplatíte tlačítkem u balíčku (PayPal nebo karta). Nejsem plátce DPH.</p>
+ <p><b>Záloha 50 %</b> – u placených služeb začínám po úhradě zálohy 50 % z ceny zřízení. Zálohu zaplatíte tlačítkem u balíčku (PayPal nebo karta). Nejsem plátce DPH.</p>
  <form id="orderForm" class="k">
   <label for="o-pkg">Služba</label><select id="o-pkg" name="pkg" required><option value="Bezplatná kontrola webu">Bezplatná kontrola webu (0 Kč)</option><option value="Balíček První dotaz">Balíček První dotaz (zřízení 4 900 Kč + 1 490 Kč/měs.)</option><option value="AI telefon">AI telefon (zřízení 2 900 Kč + od 490 Kč/měs.)</option></select>
   <label for="o-name">Jméno</label><input id="o-name" name="name" autocomplete="name" required>
@@ -78,8 +78,8 @@
   btn.disabled=true;
   fetch('https://n8n.178-105-83-205.sslip.io/webhook/nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
    .then(function(res){return res.json().then(function(body){return {ok:!!res.ok,body:body};},function(){return {ok:false,body:null};});})
-   .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){if(metaId&&window.nitivaFireLead)window.nitivaFireLead('objednavka',metaId);f.reset();show('Děkujeme, objednávka je odeslána. Potvrzení a případný platební odkaz na zálohu vám pošleme e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');}})
-   .catch(function(){show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');})
+   .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){if(metaId&&window.nitivaFireLead)window.nitivaFireLead('objednavka',metaId);f.reset();show('Děkuji, objednávka je odeslána. Potvrzení a případný platební odkaz na zálohu vám pošlu e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');}})
+   .catch(function(){show('Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');})
    .then(function(){btn.disabled=false;});
  });
 })();
