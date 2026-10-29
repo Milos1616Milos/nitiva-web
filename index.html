@@ -272,7 +272,7 @@ ol.steps{grid-template-columns:1fr;gap:26px}
 <link rel="preload" href="/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" hreflang="cs" href="https://nitiva.cz/"><link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"><link rel="alternate" hreflang="x-default" href="https://nitiva.cz/">
-</head>
+<script src="/consent.js"></script></head>
 <body>
 <a class="skip" href="#kontrola">Přeskočit na kontrolu webu</a>
 <header>
@@ -500,7 +500,7 @@ ol.steps{grid-template-columns:1fr;gap:26px}
   <div><b>NITIVA</b><br>Technologie, které propojují.<br>Miloš Brisuda<br>Kubelíkova 1258/43, 130 00 Praha 3<br>IČO 29824125</div>
   <div><b>Služby a obsah</b><br><a href="/socialni-site/">Správa sociálních sítí</a><br><a href="/tvorba-webu/">Tvorba webu pro malé firmy</a><br><a href="/ai-chatbot/">AI chatbot na web</a><br><a href="/ai-telefon/">AI telefonní asistent</a><br><a href="/poradna/">Poradna pro malé firmy</a></div>
   <div><b>Kontakt</b><br><a href="mailto:milos@nitiva.cz">milos@nitiva.cz</a><br><a href="/ponuka/">Balíček První dotaz</a></div>
-  <div><b>Ochrana údajů</b><br><a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a><br>Web nepoužívá sledovací cookies. Chat si v prohlížeči ukládá jen anonymní identifikátor relace.<br>Dříve: Marketing srdcem, BotEffex.</div>
+  <div><b>Ochrana údajů</b><br><a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a><br>Marketingové cookies (Meta Pixel) používáme jen po vašem souhlasu. <button type="button" class="nitiva-cookie-settings">Nastavení cookies</button><br>Chat si v prohlížeči ukládá jen anonymní identifikátor relace.<br>Dříve: Marketing srdcem, BotEffex.</div>
  </div>
 </footer>
 <script>
@@ -516,10 +516,12 @@ ol.steps{grid-template-columns:1fr;gap:26px}
     mark(f.name,!d.name);mark(f.email,!EMAIL.test(d.email));
     if(!d.name){show('Vyplňte prosím jméno.','err');f.name.focus();return;}
     if(!EMAIL.test(d.email)){show('Zadejte prosím platný e-mail, například jana@salon.cz.','err');f.email.focus();return;}
+    var metaId=window.nitivaMetaEventId?window.nitivaMetaEventId():'';
+    if(metaId)d.meta_event_id=metaId;
     btn.disabled=true;show('Odesílám…','ok');
     fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
-     .then(function(r){return r.json();})
-     .then(function(r){if(r&&r.ok){f.reset();show('Děkuji, zpráva je odeslaná. Ozvu se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište mi prosím přímo na milos@nitiva.cz.','err');}})
+     .then(function(res){return res.json().then(function(body){return {ok:!!res.ok,body:body};},function(){return {ok:false,body:null};});})
+     .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){if(metaId&&window.nitivaFireLead)window.nitivaFireLead('kontakt',metaId);f.reset();show('Děkuji, zpráva je odeslaná. Ozvu se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište mi prosím přímo na milos@nitiva.cz.','err');}})
      .catch(function(){show('Odeslání se nepodařilo. Napište mi prosím přímo na milos@nitiva.cz.','err');})
      .then(function(){btn.disabled=false;});
   });
@@ -532,10 +534,12 @@ ol.steps{grid-template-columns:1fr;gap:26px}
     if(!d.url){sh('Zadejte prosím adresu webu nebo profilu, například www.vasefirma.cz.','err');cf.url.focus();return;}
     if(!EMAIL.test(d.email)){sh('Zadejte prosím platný e-mail, na který vám pošlu výsledek.','err');cf.email.focus();return;}
     if(!d.consent){sh('Potvrďte prosím souhlas se zpracováním údajů.','err');document.getElementById('cc').focus();return;}
+    var metaId=window.nitivaMetaEventId?window.nitivaMetaEventId():'';
+    if(metaId)d.meta_event_id=metaId;
     cb.disabled=true;sh('Kontroluji váš web… trvá to asi 20 sekund.','ok');
     fetch(API+'nitiva-kontrola',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
-     .then(function(r){return r.json();})
-     .then(function(r){if(r&&r.ok){cf.reset();sh('','ok');var rp=document.createElement('div');rp.className='box';rp.style.cssText='margin-top:14px;white-space:pre-wrap';var hd=document.createElement('b');hd.textContent='Vaše bezplatná kontrola';var tx=document.createElement('p');tx.style.margin='8px 0 0';tx.textContent=(r.report||'Kontrolu se nepodařilo vytvořit automaticky, ozvu se vám e-mailem.');var ft=document.createElement('small');ft.textContent='Kopii jsem vám poslal i e-mailem. Jde o automatickou orientační kontrolu, rád ji s vámi projdu osobně: milos@nitiva.cz.';rp.appendChild(hd);rp.appendChild(tx);rp.appendChild(ft);cm.appendChild(rp);}else{sh((r&&r.msg)||'Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');}})
+     .then(function(res){return res.json().then(function(body){return {ok:!!res.ok,body:body};},function(){return {ok:false,body:null};});})
+     .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){if(metaId&&window.nitivaFireLead)window.nitivaFireLead('kontrola_webu',metaId);cf.reset();sh('','ok');var rp=document.createElement('div');rp.className='box';rp.style.cssText='margin-top:14px;white-space:pre-wrap';var hd=document.createElement('b');hd.textContent='Vaše bezplatná kontrola';var tx=document.createElement('p');tx.style.margin='8px 0 0';tx.textContent=(r.report||'Kontrolu se nepodařilo vytvořit automaticky, ozvu se vám e-mailem.');var ft=document.createElement('small');ft.textContent='Kopii jsem vám poslal i e-mailem. Jde o automatickou orientační kontrolu, rád ji s vámi projdu osobně: milos@nitiva.cz.';rp.appendChild(hd);rp.appendChild(tx);rp.appendChild(ft);cm.appendChild(rp);}else{sh((r&&r.msg)||'Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');}})
      .catch(function(){sh('Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');})
      .then(function(){cb.disabled=false;});
   });

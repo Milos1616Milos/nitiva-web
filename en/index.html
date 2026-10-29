@@ -221,7 +221,7 @@ summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--mut
 <link rel="preload" href="/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" hreflang="cs" href="https://nitiva.cz/"><link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"><link rel="alternate" hreflang="x-default" href="https://nitiva.cz/"><style id="nitiva-lang">.navr{display:flex;align-items:center;gap:14px}.lang{display:inline-flex;border:1px solid #cfc9bb;border-radius:999px;overflow:hidden;font:800 12.5px/1 Inter,system-ui,sans-serif;letter-spacing:.06em;background:#fff}.lang a{padding:9px 11px;text-decoration:none;color:#0E1727}.lang a[aria-current]{background:#0E1727;color:#F7F5F0}.lang a:not([aria-current]):hover{background:#D9FF6F}@media(max-width:560px){.navr{gap:8px}.lang a{padding:8px 8px}.navr .btn{font-size:12px;padding:8px 10px;white-space:normal;max-width:150px;line-height:1.2;text-align:center}}</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nitiva.cz/#org","name":"Nitiva","url":"https://nitiva.cz/","logo":"https://nitiva.cz/favicon.svg","image":"https://nitiva.cz/og-en.png","email":"milos@nitiva.cz","founder":{"@type":"Person","name":"Miloš Brisuda"},"taxID":"29824125","address":{"@type":"PostalAddress","streetAddress":"Kubelíkova 1258/43","postalCode":"130 00","addressLocality":"Praha 3","addressCountry":"CZ"},"sameAs":["https://www.facebook.com/profile.php?id=61595124502768","https://www.instagram.com/marketing.srdcem/"]},{"@type":"ProfessionalService","@id":"https://nitiva.cz/#service","name":"Nitiva","url":"https://nitiva.cz/en/","description":"Social media, websites and AI assistants for small businesses and sole traders.","areaServed":[{"@type":"Country","name":"Czechia"},{"@type":"Country","name":"Slovakia"}],"knowsLanguage":["cs","sk"],"parentOrganization":{"@id":"https://nitiva.cz/#org"},"address":{"@type":"PostalAddress","streetAddress":"Kubelíkova 1258/43","postalCode":"130 00","addressLocality":"Praha 3","addressCountry":"CZ"},"email":"milos@nitiva.cz","image":"https://nitiva.cz/og-en.png"},{"@type":"WebSite","@id":"https://nitiva.cz/en/#web","url":"https://nitiva.cz/en/","name":"Nitiva","inLanguage":"en","publisher":{"@id":"https://nitiva.cz/#org"}},{"@type":"WebPage","@id":"https://nitiva.cz/en/#page","url":"https://nitiva.cz/en/","name":"Nitiva – social media, websites and AI assistants for small businesses","description":"Nitiva helps small businesses and sole traders with regular social media, a clear website and an AI assistant that answers customers. No-obligation consultation.","inLanguage":"en","isPartOf":{"@id":"https://nitiva.cz/#web"},"publisher":{"@id":"https://nitiva.cz/#org"}}]}</script>
-</head>
+<script src="/consent.js"></script></head>
 <body>
 <div class="prog" aria-hidden="true"></div>
 <header>
@@ -342,7 +342,7 @@ summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--mut
   <div><b>Nitiva</b><br>Miloš Brisuda<br>Kubelíkova 1258/43, 130 00 Praha 3, Czech Republic<br>Business ID (IČO) 29824125</div>
   <div><b>Services</b><br><a href="/en/social-media/">Social media management</a><br><a href="/en/web-design/">Website design for small businesses</a><br><a href="/en/ai-chatbot/">AI chatbot for your website</a><br><a href="/en/ai-phone-assistant/">AI phone assistant</a></div>
   <div><b>Contact</b><br><a href="mailto:milos@nitiva.cz">milos@nitiva.cz</a></div>
-  <div><b>Privacy</b><br><a href="/en/privacy/">Privacy policy</a><br>This website does not use tracking cookies.<br>Formerly: Marketing srdcem, BotEffex.</div>
+  <div><b>Privacy</b><br><a href="/en/privacy/">Privacy policy</a><br>Marketing cookies (Meta Pixel) are used only after you consent. <button type="button" class="nitiva-cookie-settings">Cookie settings</button><br>Formerly: Marketing srdcem, BotEffex.</div>
  </div>
 </footer>
 <script>
@@ -365,10 +365,12 @@ summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--mut
   var base=typeof window.nitivaLeadMessage==='function'?window.nitivaLeadMessage(raw):raw;
   var d={sid:'web',name:f.name.value.trim(),email:f.email.value.trim(),message:'[Anglická verzia webu / English site]\n'+base,web:f.web.value,page:location.href};
   if(!d.name||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){show('Please enter your name and a valid e-mail address.','err');return;}
+  var metaId=window.nitivaMetaEventId?window.nitivaMetaEventId():'';
+  if(metaId)d.meta_event_id=metaId;
   btn.disabled=true;
   fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
-   .then(function(r){return r.json();})
-   .then(function(r){if(r&&r.ok){f.reset();show('Thank you, your message has been sent. We will reply by e-mail.','ok');}else{show('Sending failed. Please write to us at milos@nitiva.cz.','err');}})
+   .then(function(res){return res.json().then(function(body){return {ok:!!res.ok,body:body};},function(){return {ok:false,body:null};});})
+   .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){if(metaId&&window.nitivaFireLead)window.nitivaFireLead('kontakt',metaId);f.reset();show('Thank you, your message has been sent. We will reply by e-mail.','ok');}else{show('Sending failed. Please write to us at milos@nitiva.cz.','err');}})
    .catch(function(){show('Sending failed. Please write to us at milos@nitiva.cz.','err');})
    .then(function(){btn.disabled=false;});
  });
