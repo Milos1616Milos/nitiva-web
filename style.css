@@ -57,7 +57,8 @@ section{padding:80px 0}
 .page-head .crumbs{color:var(--soft);padding:0}.page-head .crumbs a{color:#fff}
 .page-head h1{color:#fff}
 .page-head .intro,.page-head p{color:#C9D0DC}
-.crumbs{font-size:14px;color:var(--muted);padding:28px 0 0;margin:0}
+.crumbs{font-size:14px;color:var(--muted);padding-top:28px}
+p.crumbs{margin:0}
 .crumbs a{color:var(--deep);font-weight:600;text-decoration:none}.crumbs a:hover{text-decoration:underline}
 .page h1,.page-head h1{font-size:clamp(32px,4.2vw,52px);line-height:1.08;letter-spacing:-.035em;font-weight:850;margin:14px 0 18px;max-width:22ch}
 .page .intro{font-size:19px;color:var(--muted);max-width:60ch;margin:0 0 28px;line-height:1.6}
@@ -97,8 +98,7 @@ details p{margin:10px 0 0;color:var(--muted);max-width:66ch}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;color:var(--ink)}
 .card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted)}
 .dark .card{background:var(--navy2);border-color:var(--navy3);color:#fff}.dark .card p{color:#C9D0DC}
-.ic{font-size:15px;font-weight:800;color:var(--deep);margin-bottom:10px;font-variant-numeric:tabular-nums}
-.ic:after{content:"."}
+.ic{display:none}
 .dark .ic{color:var(--lime)}
 .card .num{display:block;font-size:15px;font-weight:800;color:var(--deep);margin-bottom:10px}
 .card.x{background:var(--ground)}
@@ -245,3 +245,6 @@ section{padding:60px 0}
 @media(max-width:400px){.logo{font-size:20px}.navr{gap:8px}.navr .btn.s{font-size:13px;padding:10px 10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 .legal section{padding:0}.legal>section>div>h1{margin-top:0}
+
+.cs-split{display:grid;gap:56px;grid-template-columns:1.1fr .9fr;align-items:center}
+@media(max-width:860px){.cs-split{grid-template-columns:1fr;gap:32px}}
