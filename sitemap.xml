@@ -49,6 +49,17 @@
     </video:video>
   </url>
   <url>
+    <loc>https://nitiva.cz/video/jedno-tlacitko-na-webu/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://nitiva.cz/video/jedno-tlacitko-na-webu-cover.jpg</video:thumbnail_loc>
+      <video:title>Telefon mlčí? Na webu chybí jedno tlačítko</video:title>
+      <video:description>Zákazník na webu neví, co má udělat? Přidejte jedno velké tlačítko nahoru – objednat se, zavolat, napsat. Zkuste test pěti sekund na mobilu.</video:description>
+      <video:content_loc>https://nitiva.cz/video/jedno-tlacitko-na-webu.mp4?v=20261029</video:content_loc>
+      <video:duration>26</video:duration>
+    </video:video>
+  </url>
+  <url>
     <loc>https://nitiva.cz/video/web-poptavka/</loc>
     <lastmod>2026-10-08</lastmod>
     <video:video>
