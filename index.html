@@ -21,210 +21,230 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nitiva.cz/#org","name":"NITIVA","slogan":"Technologie, které propojují.","url":"https://nitiva.cz/","logo":"https://nitiva.cz/favicon.svg","founder":{"@type":"Person","name":"Miloš Brisuda"},"taxID":"29824125","address":{"@type":"PostalAddress","streetAddress":"Kubelíkova 1258/43","postalCode":"130 00","addressLocality":"Praha 3","addressCountry":"CZ"},"sameAs":["https://www.facebook.com/profile.php?id=61595124502768","https://www.instagram.com/marketing.srdcem/"],"image":"https://nitiva.cz/og.png","email":"milos@nitiva.cz"},{"@type":"ProfessionalService","@id":"https://nitiva.cz/#service","name":"NITIVA","url":"https://nitiva.cz/","description":"AI asistenti, automatizace, weby a digitální marketing propojené do praktických řešení pro malé firmy.","areaServed":[{"@type":"Country","name":"Česko"},{"@type":"Country","name":"Slovensko"}],"knowsLanguage":["cs","sk"],"parentOrganization":{"@id":"https://nitiva.cz/#org"},"address":{"@type":"PostalAddress","streetAddress":"Kubelíkova 1258/43","postalCode":"130 00","addressLocality":"Praha 3","addressCountry":"CZ"},"email":"milos@nitiva.cz","image":"https://nitiva.cz/og.png"},{"@type":"WebSite","@id":"https://nitiva.cz/#web","url":"https://nitiva.cz/","name":"NITIVA","inLanguage":"cs","publisher":{"@id":"https://nitiva.cz/#org"}}]}</script>
 <style>
-:root{--navy:#0E1727;--navy2:#15213a;--coral:#FF7356;--lime:#D9FF6F;--cream:#F7F5F0;--deep:#A63E2D;--ink:#0E1727;--muted:#4b5563;--line:#e6e2d8;--serif:"Instrument Serif",Georgia,"Times New Roman",serif;--ease:cubic-bezier(.2,.7,.2,1)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-a{color:inherit}img,svg{max-width:100%}
-.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+:root{--navy:#0E1727;--navy2:#16223A;--navy3:#27375A;--coral:#FF7356;--coral-h:#FF8B72;--deep:#A63E2D;--lime:#D9FF6F;--paper:#FFFFFF;--ground:#F3F4F6;--line:#E2E5EA;--ink:#0E1727;--muted:#4B5563;--soft:#BAC2D0;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-color:#9AA3B2 var(--ground)}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;caret-color:var(--deep)}
 ::selection{background:var(--lime);color:var(--navy)}
-/* progress + header */
-.prog{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--coral),var(--lime));z-index:50}
-header{position:sticky;top:0;z-index:40;background:rgba(247,245,240,.72);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s,box-shadow .3s}
-header.sc{border-color:var(--line);background:rgba(247,245,240,.9);box-shadow:0 8px 30px rgba(14,23,39,.06)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px;text-decoration:none;letter-spacing:-.03em}
-.logo i{width:34px;height:34px;border-radius:50%;background:var(--coral);display:grid;place-items:center;font-style:normal;color:var(--navy);font-weight:900;transition:transform .5s var(--ease)}
-.logo:hover i{transform:rotate(-12deg) scale(1.08)}
-nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
-nav a{text-decoration:none;font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px;transition:background .25s,color .25s}nav a:hover{background:rgba(14,23,39,.06)}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--cream);padding:15px 26px;border-radius:14px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-family:inherit;font-size:16px;letter-spacing:-.005em;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .25s}
-.btn:hover{background:#1b2a44;transform:translateY(-2px);box-shadow:0 14px 28px rgba(14,23,39,.22)}
-.btn.c{background:var(--coral);color:var(--navy)}.btn.c:hover{background:#ff8a71;box-shadow:0 14px 30px rgba(255,115,86,.38)}
-.btn.l{background:var(--lime);color:var(--navy)}.btn.g{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,23,39,.25)}.btn.g:hover{background:rgba(14,23,39,.05);box-shadow:inset 0 0 0 1.5px var(--ink)}
-.btn .ar{transition:transform .35s var(--ease)}.btn:hover .ar{transform:translateX(4px)}
-/* hero */
-.hero{position:relative;overflow:hidden;padding:84px 0 120px;isolation:isolate}
-.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 55% at 85% 20%,rgba(255,115,86,.20),transparent 70%),radial-gradient(45% 50% at 10% 90%,rgba(217,255,111,.55),transparent 70%),radial-gradient(40% 40% at 55% 55%,rgba(255,255,255,.7),transparent 70%)}
-.hero:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.35;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .09 0 0 0 0 .15 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-.pill{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.02em;padding:7px 14px 7px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 4px 14px rgba(14,23,39,.05);margin-bottom:26px}
-.pill b{background:var(--lime);border-radius:999px;padding:3px 10px;font-weight:800}
-.hero h1{font-size:clamp(44px,7vw,92px);line-height:.98;letter-spacing:-.045em;font-weight:900;margin:0 0 26px}
-.hero h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:var(--deep);font-size:1.08em}
-.hero p.sub{font-size:clamp(18px,1.6vw,21px);max-width:44ch;color:var(--muted);margin:0 0 34px}
-.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
-.proof{display:flex;gap:26px;flex-wrap:wrap;margin-top:42px;padding-top:26px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;font-weight:600}
-.proof span{display:flex;align-items:center;gap:8px}.proof svg{color:var(--deep)}
-/* hero visual */
-.vis{position:relative;height:560px}
-.vis .win{position:absolute;right:0;top:20px;width:min(100%,470px);background:#fff;border-radius:18px;border:1px solid var(--line);box-shadow:0 40px 80px -20px rgba(14,23,39,.35),0 0 0 1px rgba(14,23,39,.04);overflow:hidden;transform:rotate(2deg);animation:fl 9s ease-in-out infinite}
-.win .bar{display:flex;align-items:center;gap:6px;padding:11px 14px;background:#f1eee6;border-bottom:1px solid var(--line)}
-.win .bar i{width:10px;height:10px;border-radius:50%;background:#ddd7c8}.win .bar i:first-child{background:#ff9a85}.win .bar i:nth-child(2){background:#f4d36a}
-.win .bar u{margin-left:10px;flex:1;text-decoration:none;font-size:11px;color:#8a8576;background:#fff;border-radius:6px;padding:3px 10px}
-.win img{display:block;width:100%;height:auto}
-.vis .post{position:absolute;left:0;bottom:60px;width:230px;aspect-ratio:1/1;background:var(--coral);border-radius:20px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-5deg);box-shadow:0 30px 60px -16px rgba(255,115,86,.7);animation:fl 7s ease-in-out -2s infinite}
-.post small{font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}.post b{font-size:27px;line-height:1.04;font-weight:900;letter-spacing:-.03em}.post span{font-weight:800;font-size:14px}
-.vis .chat{position:absolute;right:30px;bottom:-6px;width:300px;background:#fff;border-radius:18px;padding:14px;font-size:13.5px;display:grid;gap:8px;box-shadow:0 26px 54px -14px rgba(14,23,39,.4);border:1px solid var(--line);transform:rotate(-1.5deg);animation:fl 8s ease-in-out -4s infinite}
-.chat .q{background:var(--navy);color:var(--cream);padding:9px 13px;border-radius:14px 14px 4px 14px;justify-self:end}.chat .a{background:var(--lime);padding:9px 13px;border-radius:14px 14px 14px 4px}
-.chat .t{display:flex;gap:4px;padding:2px 4px}.chat .t i{width:6px;height:6px;border-radius:50%;background:#aab;animation:bl 1.2s infinite}.chat .t i:nth-child(2){animation-delay:.15s}.chat .t i:nth-child(3){animation-delay:.3s}
-@keyframes fl{0%,100%{translate:0 0}50%{translate:0 -12px}}
-@keyframes bl{0%,60%,100%{opacity:.25}30%{opacity:1}}
-/* marquee */
-.strip{background:var(--navy);color:var(--cream);overflow:hidden;padding:18px 0;border-block:1px solid #22314f}
-.strip .tr{display:flex;gap:56px;width:max-content;animation:mq 38s linear infinite;font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
-.strip .tr span{display:flex;align-items:center;gap:56px;color:#c9ced8}.strip .tr span:after{content:"";width:8px;height:8px;border-radius:50%;background:var(--coral)}
-@keyframes mq{to{transform:translateX(-50%)}}
-section{padding:104px 0}
-h2{font-size:clamp(32px,4.6vw,56px);line-height:1.04;letter-spacing:-.035em;font-weight:900;margin:0 0 16px}
-h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--deep);letter-spacing:-.015em;font-size:1.06em}
-.lead{color:var(--muted);max-width:58ch;margin:0 0 52px;font-size:18px}
-.kick{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);margin-bottom:16px}
-.kick:before{content:"";width:26px;height:2px;background:currentColor;border-radius:2px}
-/* bento */
-.bento{display:grid;gap:18px;grid-template-columns:repeat(6,1fr)}
-.bc{position:relative;border-radius:26px;padding:32px;overflow:hidden;background:#fff;border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease);display:flex;flex-direction:column}
-.bc:hover{transform:translateY(-6px);box-shadow:0 30px 60px -24px rgba(14,23,39,.28)}
-.bc h3{margin:18px 0 10px;font-size:26px;letter-spacing:-.03em;line-height:1.1}.bc p{margin:0;color:var(--muted);font-size:16px}
-.bc .more{margin-top:auto;padding-top:22px;font-weight:800;font-size:15px;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
-.bc .more:hover .ar{transform:translateX(5px)}.bc .ar{transition:transform .3s var(--ease)}
-.ic{width:52px;height:52px;border-radius:15px;background:var(--lime);display:grid;place-items:center}
-.b-soc{grid-column:span 3;background:var(--coral);border-color:var(--coral)}.b-soc p,.b-soc .more{color:var(--navy)}.b-soc .ic{background:var(--navy)}.b-soc .ic svg{stroke:var(--lime)}
-.b-web{grid-column:span 3;background:var(--navy);border-color:var(--navy);color:var(--cream)}.b-web p{color:#c9ced8}.b-web .ic{background:var(--coral)}
-.b-gra{grid-column:span 2;background:var(--lime);border-color:var(--lime)}.b-gra p{color:#27341a}.b-gra .ic{background:var(--navy)}.b-gra .ic svg{stroke:var(--lime)}
-.b-ai{grid-column:span 4;display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
-.b-ai .mini{display:grid;gap:8px;font-size:14px}.b-ai .mini .q{background:var(--navy);color:var(--cream);padding:9px 13px;border-radius:14px 14px 4px 14px;justify-self:end}.b-ai .mini .a{background:var(--lime);padding:9px 13px;border-radius:14px 14px 14px 4px;max-width:90%}
-.bc .deco{position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;opacity:.18;background:currentColor}
-/* case */
-.case{background:var(--navy);color:var(--cream);position:relative;overflow:hidden;isolation:isolate}
-.case:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(50% 60% at 80% 30%,rgba(255,115,86,.22),transparent 70%),radial-gradient(40% 50% at 5% 100%,rgba(217,255,111,.12),transparent 70%)}
-.case .lead{color:#c9ced8}.case .kick{color:var(--lime)}.case h2 em{color:var(--coral)}
-.cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}.tags span{border:1px solid #33456a;border-radius:999px;padding:6px 13px;font-size:13px;font-weight:600;color:#dfe4ee}
-.facts{display:grid;gap:12px;margin:0 0 32px;padding:0;list-style:none}.facts li{display:flex;gap:12px;align-items:flex-start;color:#dfe4ee;font-size:16px}.facts li:before{content:"";flex:none;margin-top:8px;width:9px;height:9px;border-radius:50%;background:var(--lime)}
-.ba{position:relative}
-.ba .frame{border-radius:18px;overflow:hidden;box-shadow:0 50px 90px -30px rgba(0,0,0,.7);border:1px solid #2a3a5c;background:#fff}
-.ba .frame img{display:block;width:100%;height:auto}
-.ba .pre{position:absolute;left:-26px;bottom:-34px;width:48%;border-radius:14px;overflow:hidden;border:4px solid var(--navy);box-shadow:0 26px 50px -14px rgba(0,0,0,.65);transform:rotate(-3deg);transition:transform .5s var(--ease)}
-.ba .pre img{display:block;width:100%;height:auto;filter:grayscale(.4)}
-.ba:hover .pre{transform:rotate(-1deg) translateY(-6px)}
-.lab{position:absolute;z-index:2;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
-.lab.b{left:12px;top:12px;background:#fff;color:var(--navy)}.lab.a{right:14px;top:14px;background:var(--lime);color:var(--navy)}
-/* projects */
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
-.card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -24px rgba(14,23,39,.28)}
-.card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.02em}.card p{margin:0;color:var(--muted);font-size:16px}
-.card .num{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--deep);line-height:1;display:block;margin-bottom:18px}
-.pj a{color:var(--deep);font-weight:700;text-decoration:none}.pj a:hover{text-decoration:underline}
-/* steps */
-.dark{background:var(--navy);color:var(--cream)}.dark .lead{color:#c9ced8}.dark .kick{color:var(--lime)}.dark h2 em{color:var(--coral)}
-.steps{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));counter-reset:s}
-.step{position:relative;padding:34px 30px;border-radius:24px;background:var(--navy2);border:1px solid #22314f;transition:transform .45s var(--ease),border-color .3s}
-.step:hover{transform:translateY(-5px);border-color:var(--coral)}
-.step:before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-style:italic;font-size:54px;line-height:1;color:var(--coral);display:block;margin-bottom:20px}
-.step h3{margin:0 0 8px;font-size:22px;letter-spacing:-.02em}.step p{margin:0;color:#c9ced8}
-/* assistant */
-.demo{display:grid;gap:56px;grid-template-columns:1.05fr .95fr;align-items:center}
-.demo .box{background:var(--navy);color:var(--cream);border:1px solid #22314f;border-radius:26px;padding:34px;box-shadow:0 40px 80px -30px rgba(14,23,39,.5)}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.chips button{background:transparent;border:1px solid #4a5b7d;color:var(--cream);padding:10px 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;transition:all .25s}.chips button:hover{border-color:var(--lime);color:var(--lime);transform:translateY(-2px)}
-/* contact */
-.kgrid{display:grid;gap:56px;grid-template-columns:.9fr 1.1fr;align-items:start}
-form.k{display:grid;gap:14px;max-width:600px}
-form.k input,form.k textarea{width:100%;padding:15px 16px;border:1.5px solid #d8d2c4;border-radius:12px;font:inherit;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
-form.k input:focus,form.k textarea:focus{outline:0;border-color:var(--coral);box-shadow:0 0 0 4px rgba(255,115,86,.18)}
-form.k label{font-weight:700;font-size:15px;display:block;margin-bottom:6px}.hp{position:absolute;left:-9999px}
-.msg{padding:13px 15px;border-radius:12px;font-weight:600}.ok{background:var(--lime)}.err{background:#ffd9d1}
-footer{background:var(--navy);color:#c9ced8;padding:56px 0;font-size:15px}
-footer a{color:var(--lime)}footer .cols{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-footer b{color:var(--cream)}
-:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
-/* reveal */
-.rv{opacity:1;transform:none;transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.rv.in{opacity:1;transform:none}.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
-/* subpages */
-.crumbs{font-size:14px;color:var(--muted);padding:26px 0 0}.crumbs a{color:var(--deep);font-weight:600;text-decoration:none}
-.page h1{font-size:clamp(36px,5.6vw,68px);line-height:1.02;letter-spacing:-.04em;font-weight:900;margin:16px 0 20px;max-width:18ch}
-.page h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--deep);font-size:1.06em}
-.page .intro{font-size:20px;color:var(--muted);max-width:60ch;margin:0 0 28px}
-.page section{padding:72px 0}
-.page ul.tick{list-style:none;padding:0;margin:0;display:grid;gap:14px;max-width:68ch}
-.page ul.tick li{padding-left:36px;position:relative}.page ul.tick li:before{content:"";position:absolute;left:0;top:6px;width:21px;height:21px;border-radius:50%;background:var(--lime)}
-.shot{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 80px -34px rgba(14,23,39,.4);background:#fff}.shot img{display:block;width:100%;height:auto}
-.shot-m{max-width:300px;border-radius:34px;border:8px solid var(--navy);box-shadow:0 40px 80px -30px rgba(14,23,39,.5)}
-.cmp{display:grid;gap:22px;grid-template-columns:1fr 1fr}.cmp figure{margin:0;position:relative}.cmp figcaption{margin-top:12px;color:var(--muted);font-size:15px}
-.note{font-size:14px;color:var(--muted);background:#fff;border:1px dashed #cfc9bb;border-radius:14px;padding:14px 18px;max-width:70ch}
-.soon{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;background:var(--lime);padding:6px 14px;border-radius:999px}
-@media(max-width:980px){.hero .wrap{grid-template-columns:1fr}.vis{height:auto;display:grid;gap:18px;margin-top:10px}.vis .win,.vis .post,.vis .chat{position:relative;inset:auto;right:auto;left:auto;bottom:auto;top:auto;width:100%;transform:none;animation:none}.vis .post{width:min(260px,100%)}.vis .chat{width:min(320px,100%)}.cgrid,.demo,.kgrid,.cmp{grid-template-columns:1fr}.b-soc,.b-web,.b-gra,.b-ai{grid-column:span 6}.b-ai{grid-template-columns:1fr}.ba .pre{left:-6px}}
-.advice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}.advice-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);transition:transform .35s var(--ease),border-color .35s var(--ease)}.advice-card:hover{transform:translateY(-4px);border-color:var(--coral)}.advice-card .tag{font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:var(--deep);font-weight:800}.advice-card h3{font-size:23px;line-height:1.2;margin:14px 0 10px}.advice-card p{color:var(--muted);margin:0}.advice-card .more{margin-top:auto;padding-top:20px;font-weight:800;color:var(--deep)}
-section[id],[id="kontrola"],[id="kontakt"]{scroll-margin-top:84px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:4px}
+section[id],[id="kontrola"]{scroll-margin-top:88px}
+.skip{position:absolute;left:-9999px;top:10px;z-index:60;background:#fff;color:var(--navy);padding:10px 14px;border-radius:10px;font-weight:700}.skip:focus{left:16px}
+
+/* Header */
+header{position:sticky;top:0;z-index:40;background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:22px;letter-spacing:-.035em;color:#fff}
+.logo i{width:34px;height:34px;border-radius:50%;background:var(--coral);display:grid;place-items:center;font-style:normal;color:var(--navy);font-weight:900}
+nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0}
+nav a{display:block;text-decoration:none;font-weight:600;font-size:15px;padding:9px 13px;border-radius:10px;color:#D6DCE6;transition:background .2s,color .2s}
+nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.navr{display:flex;align-items:center;gap:12px}
+.lang{display:inline-flex;border:1px solid rgba(255,255,255,.2);border-radius:10px;overflow:hidden;font:700 12.5px/1 Inter,system-ui,sans-serif;letter-spacing:.04em}
+.lang a{padding:10px 10px;text-decoration:none;color:#D6DCE6}.lang a[aria-current]{background:#fff;color:var(--navy)}.lang a:not([aria-current]):hover{color:#fff;background:rgba(255,255,255,.08)}
 .mnav,.mlang{display:none}
-#cc{width:20px!important;height:20px;margin-top:3px!important;flex:0 0 auto;accent-color:var(--deep)}
-@media(max-width:820px){nav ul{display:none}.nav .btn{padding:10px 14px;font-size:13px;white-space:nowrap}section{padding:68px 0}.hero{padding:48px 0 70px}.ba .pre{display:none}
-.nav{gap:10px}.navr .lang{display:none}.mnav{display:inline-grid;place-items:center;width:44px;height:44px;border:1.5px solid rgba(14,23,39,.25);border-radius:12px;background:transparent;color:var(--ink);cursor:pointer;flex:0 0 auto}.mnav svg{display:block}.mnav[aria-expanded="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
-nav.open ul{display:flex;flex-direction:column;gap:2px;position:absolute;left:0;right:0;top:72px;padding:10px 20px 18px;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 18px 30px -18px rgba(14,23,39,.25)}nav.open a{display:block;padding:13px 12px;font-size:17px;border-radius:12px}nav.open .mlang{display:flex;gap:8px;padding:8px 12px 0}nav.open .mlang a{padding:10px 16px;border:1px solid #cfc9bb;font-size:14px;font-weight:800}nav.open .mlang a[aria-current]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
-.navr .btn{font-size:12.5px;padding:9px 12px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.strip .tr,.vis>*{animation:none!important}}
-details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin:0 0 12px;max-width:780px;transition:box-shadow .3s}
-details[open]{box-shadow:0 18px 40px -24px rgba(14,23,39,.3)}
-summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--muted)}
-.rel{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
-.box{background:var(--navy);color:var(--cream);border-radius:16px;padding:20px 22px;border:1px solid #22314f}.box small{display:block;margin-top:10px;color:#c9ced8!important}
-.vrow{display:flex;flex-wrap:nowrap;gap:22px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:6px 4px 22px;text-align:left;align-items:flex-start;scrollbar-color:var(--coral) #e6e2d8;scrollbar-width:auto}.vf{margin:0;min-width:0;flex:0 0 min(320px,82vw);display:grid;gap:12px;align-content:start;scroll-snap-align:start}.vf figcaption{font-size:14px;color:#5b6475;text-align:center}.vf video{height:auto;aspect-ratio:9/16;transition:transform .5s var(--ease)}.vf:hover video{transform:translateY(-4px)}.vhelp{font-size:14px;color:var(--muted);margin:0 0 18px}
-.page h2{font-size:clamp(26px,3.4vw,38px);letter-spacing:-.03em;margin:0 0 16px}
-.page .wrap>.crumbs{padding-top:0}
 
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--coral);color:var(--navy);padding:15px 24px;border-radius:12px;font:inherit;font-weight:800;font-size:16px;line-height:1.2;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .3s var(--ease)}
+.btn:hover{background:var(--coral-h)}.btn:active{transform:translateY(1px)}.btn:disabled{opacity:.65;cursor:progress}
+.btn .ar{transition:transform .3s var(--ease)}.btn:hover .ar{transform:translateX(3px)}
+.btn.s{padding:10px 16px;font-size:14.5px}
+.btn.g{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px #C3C9D3}.btn.g:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
 
-.video-tools{margin:0 0 20px;text-align:left}.video-tools[hidden],.video-tools [hidden],.vf[hidden],.video-empty[hidden]{display:none}.video-topics{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.video-topics button{border:1px solid #cfc9bb;background:#fff;border-radius:999px;padding:9px 14px;font-family:inherit;font-size:14px;font-weight:600;line-height:1.3;color:var(--navy);cursor:pointer}.video-topics button[aria-pressed="true"]{background:var(--navy);color:var(--cream);border-color:var(--navy)}.video-search{display:grid;gap:6px;max-width:520px}.video-search label{font-weight:700;font-size:15px}.video-search input{width:100%;padding:12px 14px;border:1px solid #cfc9bb;border-radius:12px;font:inherit;color:var(--navy);background:#fff}.video-result{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:12px 0 0;font-size:14px;color:var(--muted)}.video-result button{border:0;background:transparent;color:var(--deep);text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit}.vtopic{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.05em;font-weight:800;color:var(--deep);margin-bottom:5px}.video-empty{padding:20px;background:var(--cream);border-radius:12px;text-align:left}
-/* Brand story: a restrained connection motif using the existing palette. */
-.brand-story{position:relative;overflow:hidden;background:#fff;border-block:1px solid var(--line)}
-.brand-story:before{content:"";position:absolute;inset:12% -8% auto 48%;height:2px;background:linear-gradient(90deg,rgba(255,115,86,0),rgba(255,115,86,.55),rgba(217,255,111,.8),rgba(217,255,111,0));transform:rotate(-6deg);pointer-events:none}
-.brand-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
-.brand-mark{position:relative;min-height:320px;display:grid;place-items:center}
-.brand-line{position:absolute;width:min(390px,90%);height:210px}
-.brand-line:before,.brand-line:after{content:"";position:absolute;border:2px solid var(--line);border-radius:50%}
-.brand-line:before{inset:18px 36px;transform:rotate(9deg)}.brand-line:after{inset:52px 6px;transform:rotate(-13deg);border-color:rgba(255,115,86,.36)}
-.brand-node{position:absolute;width:18px;height:18px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 9px rgba(255,115,86,.12)}
-.brand-node.n1{left:12%;top:30%}.brand-node.n2{right:9%;top:22%;background:var(--lime);box-shadow:0 0 0 9px rgba(217,255,111,.2)}.brand-node.n3{right:20%;bottom:16%}.brand-node.n4{left:22%;bottom:10%;background:var(--navy);box-shadow:0 0 0 9px rgba(14,23,39,.09)}
-.brand-word{position:relative;z-index:1;font-size:clamp(52px,8vw,94px);font-weight:900;letter-spacing:-.06em;line-height:1;color:var(--navy)}
-.brand-word em{font-family:var(--serif);font-weight:400;color:var(--deep)}
-.brand-copy p{max-width:62ch;color:var(--muted)}.brand-copy .brand-slogan{margin-top:28px;color:var(--navy);font-weight:900;font-size:21px}
-@media(max-width:800px){.brand-grid{grid-template-columns:1fr;gap:18px}.brand-mark{min-height:230px;order:2}.brand-story:before{display:none}}
-@media(prefers-reduced-motion:reduce){.brand-story *{animation:none!important}}
+/* Desk + letter */
+.desk{background:var(--navy);padding:36px 0 96px}
+.desk>.wrap{display:grid;grid-template-columns:minmax(0,1fr) 380px;grid-template-areas:"letter slip" "ticket slip";gap:28px 32px;align-items:start}
+.letter{grid-area:letter;background:var(--paper);border-radius:14px;padding:40px 56px 40px;box-shadow:0 40px 70px -42px rgba(0,0,0,.75);animation:lift .9s var(--ease) both}
+@keyframes lift{from{transform:translateY(18px)}to{transform:none}}
+.from{display:flex;align-items:center;gap:16px;padding-bottom:22px;margin-bottom:30px;border-bottom:1px solid var(--line)}
+.from img{width:68px;height:68px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.from b{display:block;font-size:17px;line-height:1.3}.from span{display:block;font-size:14.5px;color:var(--muted);line-height:1.45}
+.letter h1{font-size:clamp(30px,3.2vw,43px);line-height:1.12;letter-spacing:-.03em;font-weight:850;margin:0 0 24px;max-width:21ch;text-wrap:balance}
+.letter p{font-size:18.5px;line-height:1.66;margin:0 0 16px;max-width:60ch}
+.letter q{quotes:"„" "“"}
+.sign{margin-top:28px}.sign b{display:block;font-size:19px;letter-spacing:-.01em}.sign span{display:block;color:var(--muted);font-size:15px}
+.slip{grid-area:slip;position:sticky;top:96px;padding:30px 28px 28px;border-radius:14px;background:#FFF2EE;box-shadow:0 40px 70px -42px rgba(0,0,0,.75);animation:lift .9s .1s var(--ease) both}
+.ps h2{font-size:20px;line-height:1.35;letter-spacing:-.015em;margin:0 0 6px;font-weight:800;max-width:none}
+.ps>p{font-size:15.5px;line-height:1.55;color:#4A2E28;margin:0 0 20px}
+.slip form.k .row{grid-template-columns:1fr}
+.slip .btn{width:100%}
+
+/* Forms */
+form.k{display:grid;gap:14px}
+form.k .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form.k label{font-weight:700;font-size:15px;display:block;margin-bottom:6px}
+form.k input:not([type=checkbox]),form.k textarea{width:100%;padding:14px 15px;border:1.5px solid #C9D0DA;border-radius:10px;font:inherit;font-size:16px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+form.k input::placeholder,form.k textarea::placeholder{color:#6B7280}
+form.k input:focus,form.k textarea:focus{outline:0;border-color:var(--deep);box-shadow:0 0 0 4px rgba(255,115,86,.22)}
+form.k textarea{resize:vertical;min-height:96px}
+.consent{display:flex!important;gap:12px;align-items:flex-start;font-weight:400!important;font-size:14.5px!important;line-height:1.5;color:#374151;cursor:pointer;margin:0!important}
+.consent input{width:22px;height:22px;margin:1px 0 0;flex:0 0 auto;accent-color:var(--deep);cursor:pointer}
+.addnote summary{cursor:pointer;font-size:15px;font-weight:600;color:var(--deep);list-style:none;display:inline-flex;align-items:center;gap:6px;padding:4px 0}
+.addnote summary::-webkit-details-marker{display:none}.addnote summary:before{content:"+";font-weight:800}.addnote[open] summary:before{content:"–"}
+.addnote>div{margin-top:10px}
+.hp{position:absolute!important;left:-9999px}
+.msg{padding:12px 14px;border-radius:10px;font-weight:600;font-size:15px}.msg:empty{display:none}
+.msg.ok{background:#EEF8D2;color:#2B3A05}.msg.err{background:#FCE7E2;color:#8A2716}
+.box{background:var(--navy);color:#fff;border-radius:12px;padding:20px 22px}.box small{display:block;margin-top:10px;color:#C9D0DC!important}
+.formnote{font-size:13.5px;color:var(--muted);margin:0;line-height:1.5}
+
+/* Price ticket */
+.ticket{grid-area:ticket;color:#fff;background:var(--navy2);border:1px solid var(--navy3);border-radius:14px;padding:28px 32px;display:grid;grid-template-columns:auto 1fr;gap:6px 40px;animation:lift .9s .18s var(--ease) both}
+.ticket h2{grid-column:1/-1;font-size:15px;font-weight:700;color:var(--soft);margin:0 0 10px;letter-spacing:0;line-height:1.4}
+.prices{display:grid;gap:14px;padding-right:40px;border-right:1px dashed #3A4A6B}
+.price b{display:block;font-size:30px;line-height:1.1;letter-spacing:-.03em;font-weight:850;font-variant-numeric:tabular-nums}
+.price span{font-size:14.5px;color:var(--soft)}
+.ticket ul{list-style:none;margin:0 0 16px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:15px;line-height:1.45;color:#DCE1EA}
+.ticket li{padding-left:22px;position:relative}.ticket li:before{content:"";position:absolute;left:0;top:.68em;width:11px;height:2px;border-radius:2px;background:var(--lime)}
+.ticket li strong{color:var(--lime);font-weight:700}
+.ticket .tlink{color:#fff;font-weight:700;font-size:15.5px;margin-right:18px}
+.ticket .tsub{font-size:14px;color:var(--soft);white-space:nowrap}.ticket .tsub a{color:#fff}
+
+/* Sections */
+section{padding:104px 0}
+.gnd{background:var(--ground)}
+h2.sec{font-size:clamp(28px,3.3vw,42px);line-height:1.12;letter-spacing:-.03em;font-weight:850;margin:0 0 14px;max-width:22ch;text-wrap:balance}
+.intro{font-size:18px;color:var(--muted);max-width:60ch;margin:0 0 48px}
+
+/* Services */
+.svc{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:start}
+.main-svc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:36px 36px 30px}
+.main-svc h3{font-size:25px;line-height:1.25;letter-spacing:-.02em;margin:0 0 10px}
+.main-svc>p{color:var(--muted);margin:0 0 6px;max-width:52ch}
+.main-svc .tlink{color:var(--deep);font-weight:700}
+.conv{margin:26px 0 0;padding:22px 0 0;border-top:1px solid var(--line);display:grid;gap:10px}
+.conv .t{font-size:12.5px;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums;margin-top:4px}
+.conv .q{justify-self:end;background:var(--navy);color:#fff;padding:11px 15px;border-radius:14px 14px 4px 14px;max-width:82%;font-size:15.5px;line-height:1.45}
+.conv .a{justify-self:start;background:var(--ground);padding:11px 15px;border-radius:14px 14px 14px 4px;max-width:86%;font-size:15.5px;line-height:1.45}
+.conv .mail{justify-self:start;font-size:14px;line-height:1.4;color:#2B3A05;background:var(--lime);padding:8px 12px;border-radius:8px;font-weight:600}
+.conv figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.list{border-top:1px solid #D5DAE1}
+.list h3{font-size:15px;font-weight:700;color:var(--muted);margin:0 0 4px;letter-spacing:0}
+.list a{display:grid;grid-template-columns:1fr auto;column-gap:16px;padding:19px 2px;border-bottom:1px solid #D5DAE1;text-decoration:none}
+.list a b{font-size:18px;line-height:1.35;letter-spacing:-.01em;transition:color .2s}
+.list a span{color:var(--muted);font-size:15.5px;line-height:1.5;grid-column:1}
+.list a i{grid-row:1/3;grid-column:2;align-self:center;font-style:normal;font-weight:800;color:var(--deep);transition:transform .3s var(--ease)}
+.list a:hover b{color:var(--deep)}.list a:hover i{transform:translateX(4px)}
+.try{margin-top:28px;padding:24px 24px 22px;border-radius:14px;background:var(--navy);color:#fff}
+.try h3{font-size:19px;margin:0 0 6px;letter-spacing:-.01em}.try p{margin:0;color:#C9D0DC;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.chips button{background:transparent;border:1px solid #4A5B7D;color:#fff;padding:10px 14px;border-radius:999px;font:inherit;font-size:14.5px;cursor:pointer;transition:border-color .2s,color .2s;min-height:44px}
+.chips button:hover{border-color:var(--lime);color:var(--lime)}
+.try .btn{background:var(--lime);color:var(--navy)}.try .btn:hover{background:#E6FF97}
+.try a{color:var(--lime)}
+
+/* Projects */
+.case{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:start}
+.shots{display:grid;grid-template-columns:2fr 1fr;gap:14px;align-items:start}
+.shots figure{margin:0}
+.shots img{border-radius:10px;border:1px solid var(--line);box-shadow:0 26px 50px -34px rgba(14,23,39,.5)}
+.shots figcaption{font-size:13.5px;font-weight:700;color:var(--muted);margin-top:8px}
+.case h3{font-size:25px;line-height:1.25;letter-spacing:-.02em;margin:0 0 4px}
+.case .where{color:var(--muted);font-size:15.5px;margin:0 0 18px}
+.case ul{margin:0 0 22px;padding-left:20px;display:grid;gap:8px}
+.case blockquote{margin:24px 0 0;padding:20px 0 0;border-top:1px solid var(--line);font-size:17.5px;line-height:1.6}
+.case blockquote footer,.pq footer{display:block;margin-top:10px;font-size:14.5px;color:var(--muted)}
+.tlink{color:var(--deep);font-weight:700}
+.others{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:64px;align-items:start}
+.proj{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column}
+.proj img{border-radius:8px;border:1px solid var(--line);margin-bottom:20px;aspect-ratio:16/9;object-fit:cover;object-position:top}
+.proj h3{font-size:21px;letter-spacing:-.015em;margin:0 0 2px}
+.proj .where{color:var(--muted);font-size:15px;margin:0 0 12px}
+.proj p{margin:0 0 12px}
+.pq{margin:auto 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:16px;line-height:1.6}
+.alsodone{margin:28px 0 0;color:var(--muted)}
+
+/* Steps */
+ol.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin:0;padding:28px 0 0;border-top:2px solid var(--navy)}
+.steps li{counter-increment:s}
+.steps li:before{content:counter(s) ".";display:block;font-size:15px;font-weight:800;color:var(--deep);margin-bottom:8px;font-variant-numeric:tabular-nums}
+.steps h3{font-size:20px;letter-spacing:-.015em;margin:0 0 8px;line-height:1.3}
+.steps p{margin:0;color:var(--muted)}
+
+/* Video */
+.vhead{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.vhead .intro{margin:0}
+.vhelp{font-size:14.5px;color:var(--muted);margin:0 0 16px}
+.vhelp a{color:var(--deep);font-weight:600}
+.vrow{display:flex;flex-wrap:nowrap;gap:20px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:6px 2px 22px;align-items:flex-start;scrollbar-color:var(--coral) var(--line)}
+.vf{margin:0;min-width:0;flex:0 0 min(280px,78vw);display:grid;gap:10px;align-content:start;scroll-snap-align:start}
+.vf video{height:auto;aspect-ratio:9/16}
+.vf figcaption{font-size:15px;line-height:1.4;font-weight:600}.vf figcaption a{text-decoration:none}.vf figcaption a:hover{text-decoration:underline}
+.vtopic{display:block;font-size:12.5px;font-weight:700;color:var(--deep);margin-bottom:3px}
+.video-tools{margin:0 0 20px}.video-tools[hidden],.video-tools [hidden],.vf[hidden],.video-empty[hidden]{display:none}
+.video-topics{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.video-topics button{border:1px solid #C9D0DA;background:#fff;border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;font-weight:600;color:var(--navy);cursor:pointer;min-height:44px}
+.video-topics button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.video-search{display:grid;gap:6px;max-width:480px}.video-search label{font-weight:700;font-size:15px}
+.video-search input{width:100%;padding:12px 14px;border:1.5px solid #C9D0DA;border-radius:10px;font:inherit;color:var(--navy);background:#fff}
+.video-result{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:12px 0 0;font-size:14px;color:var(--muted)}
+.video-result button{border:0;background:transparent;color:var(--deep);text-decoration:underline;cursor:pointer;font:inherit}
+.video-empty{padding:20px;background:var(--ground);border-radius:12px}
+
+/* Advice */
+.advice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.advice-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;text-decoration:none;color:var(--ink);transition:border-color .25s,transform .35s var(--ease)}
+.advice-card:hover{border-color:var(--coral);transform:translateY(-3px)}
+.advice-card .tag{font-size:13px;font-weight:700;color:var(--deep)}
+.advice-card h3{font-size:22px;line-height:1.25;letter-spacing:-.015em;margin:10px 0 8px}
+.advice-card p{color:var(--muted);margin:0}
+.advice-card .more{margin-top:auto;padding-top:18px;font-weight:700;color:var(--deep)}
+.allposts{margin:28px 0 0}
+
+/* Reply */
+.reply{background:var(--navy);color:#fff}
+.reply .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.reply img{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:24px}
+.reply h2.sec{color:#fff}
+.reply .intro{color:#C9D0DC;margin-bottom:22px}
+.reply .mail{font-size:20px;font-weight:700;color:var(--lime)}
+.reply .back{display:block;margin-top:22px;color:#C9D0DC;font-size:15.5px}.reply .back a{color:#fff}
+.card{background:#fff;color:var(--ink);border-radius:14px;padding:32px}
+
+body>footer{background:#0A111D;color:#B5BECC;padding:56px 0;font-size:15px;line-height:1.7}
+body>footer a{color:#fff}body>footer b{color:#fff}
+footer .cols{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+@media(max-width:980px){
+.desk>.wrap{grid-template-columns:1fr;grid-template-areas:"letter" "slip" "ticket"}
+.svc,.case,.reply .wrap{grid-template-columns:1fr}
+.slip{position:static}
+.others{grid-template-columns:1fr}
+}
+@media(max-width:820px){
+nav ul{display:none}.navr .lang{display:none}
+.nav{gap:10px}
+.mnav{display:inline-grid;place-items:center;width:44px;height:44px;border:1.5px solid rgba(255,255,255,.28);border-radius:10px;background:transparent;color:#fff;cursor:pointer;flex:0 0 auto}
+.mnav[aria-expanded="true"]{background:#fff;color:var(--navy);border-color:#fff}
+nav.open ul{display:flex;flex-direction:column;gap:2px;position:absolute;left:0;right:0;top:72px;padding:10px 20px 20px;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.1);box-shadow:0 24px 40px -24px rgba(0,0,0,.6)}
+nav.open a{padding:13px 12px;font-size:17px}
+nav.open .mlang{display:flex;gap:8px;padding:10px 12px 0}
+nav.open .mlang a{padding:10px 16px;border:1px solid rgba(255,255,255,.25);font-size:14px;font-weight:700}
+nav.open .mlang a[aria-current]{background:#fff;color:var(--navy)}
+.navr .btn.s{font-size:13.5px;padding:10px 12px}
+section{padding:72px 0}
+.desk{padding:20px 0 56px}
+.letter{padding:28px 22px 30px;border-radius:12px}
+.from{gap:14px;padding-bottom:18px;margin-bottom:22px}.from img{width:56px;height:56px}
+.letter h1{font-size:29px}
+.letter p{font-size:17.5px}
+.slip{padding:24px 18px}
+.ticket{grid-template-columns:1fr;padding:24px 20px}.prices{grid-template-columns:1fr 1fr;padding:0 0 16px;border-right:0;border-bottom:1px dashed #3A4A6B;margin-bottom:12px}.price b{font-size:25px}.ticket ul{grid-template-columns:1fr}
+form.k .row{grid-template-columns:1fr}
+.main-svc{padding:26px 20px 22px}
+.shots{grid-template-columns:1fr}
+.shots figure:last-child{max-width:60%}
+ol.steps{grid-template-columns:1fr;gap:26px}
+.card{padding:24px 18px}
+.reply img{width:80px;height:80px}
+}
+@media(max-width:400px){.logo{font-size:20px}.navr{gap:8px}.navr .btn.s{font-size:13px;padding:10px 10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://nitiva.cz/#page","url":"https://nitiva.cz/","name":"AI asistenti, automatizace a weby pro firmy | NITIVA","description":"NITIVA propojuje AI asistenty, automatizaci, weby a digitální marketing do praktických řešení pro malé firmy.","inLanguage":"cs","isPartOf":{"@id":"https://nitiva.cz/#web"},"publisher":{"@id":"https://nitiva.cz/#org"}}]}</script>
 <style id="nitiva-local-fonts">
-@font-face {
-  font-family: 'Instrument Serif';
-  font-style: italic;
-  font-weight: 400;
-  font-display: optional;
-  src: url(/fonts/instrument-serif-italic-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Instrument Serif';
-  font-style: italic;
-  font-weight: 400;
-  font-display: optional;
-  src: url(/fonts/instrument-serif-italic-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Instrument Serif';
-  font-style: normal;
-  font-weight: 400;
-  font-display: optional;
-  src: url(/fonts/instrument-serif-normal-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Instrument Serif';
-  font-style: normal;
-  font-weight: 400;
-  font-display: optional;
-  src: url(/fonts/instrument-serif-normal-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -244,146 +264,168 @@ summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--mut
 </style>
 <link rel="preload" href="/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="alternate" hreflang="cs" href="https://nitiva.cz/"><link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"><link rel="alternate" hreflang="x-default" href="https://nitiva.cz/"><style id="nitiva-lang">.navr{display:flex;align-items:center;gap:14px}.lang{display:inline-flex;border:1px solid #cfc9bb;border-radius:999px;overflow:hidden;font:800 12.5px/1 Inter,system-ui,sans-serif;letter-spacing:.06em;background:#fff}.lang a{padding:9px 11px;text-decoration:none;color:#0E1727}.lang a[aria-current]{background:#0E1727;color:#F7F5F0}.lang a:not([aria-current]):hover{background:#D9FF6F}@media(max-width:560px){.navr{gap:8px}.lang a{padding:8px 8px}.navr .btn{font-size:12px;padding:8px 10px;white-space:normal;max-width:150px;line-height:1.2;text-align:center}}</style>
-<style id="nitiva-testimonials">
-/* Nitiva testimonials: wording confirmed by owner, 2026-10-15. */
-.nv-reviews{background:#efede7;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.nv-reviews .nv-intro{max-width:760px;margin-bottom:38px}
-.nv-reviews .nv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.nv-reviews figure{margin:0;background:#fff;border:1px solid #e1ddd3;border-radius:22px;padding:34px;display:flex;flex-direction:column;min-width:0}
-.nv-reviews .nv-scope{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#555e6c;font-weight:750;line-height:1.6}
-.nv-reviews blockquote{margin:22px 0 28px;font:500 21px/1.65 Inter,system-ui,sans-serif;letter-spacing:-.02em;color:var(--navy);flex:1}
-.nv-reviews figcaption{border-top:1px solid #e6e2d8;padding-top:22px;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center}
-.nv-reviews .nv-initials{width:48px;height:48px;border-radius:50%;background:#0e1727;color:#f7f5f0;display:grid;place-items:center;font-size:15px;font-weight:800}
-.nv-reviews strong{display:block;font-size:16px;line-height:1.5}
-.nv-reviews figcaption a{font-size:14px;color:#7d3224;text-underline-offset:4px;overflow-wrap:anywhere}
-@media(max-width:700px){.nv-reviews .nv-grid{grid-template-columns:1fr;gap:18px}.nv-reviews figure{padding:25px}.nv-reviews blockquote{font-size:19px;line-height:1.65}.nv-reviews .nv-intro{margin-bottom:28px}}
-</style>
+<link rel="alternate" hreflang="cs" href="https://nitiva.cz/"><link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"><link rel="alternate" hreflang="x-default" href="https://nitiva.cz/">
 </head>
 <body>
-<div class="prog" aria-hidden="true"></div>
+<a class="skip" href="#kontrola">Přeskočit na kontrolu webu</a>
 <header>
  <div class="wrap nav">
   <a class="logo" href="/" aria-label="Nitiva – úvod"><i>n</i>nitiva</a>
   <nav aria-label="Hlavní menu" id="hlavni-menu"><ul id="menu-odkazy">
-   <li><a href="/#sluzby">Služby</a></li><li><a href="/#proc-nitiva">Proč NITIVA</a></li><li><a href="/#projekty">Projekty</a></li><li><a href="/poradna/">Poradna</a></li><li><a href="/ponuka/">Nabídka</a></li><li><a href="/#kontakt">Kontakt</a></li>
+   <li><a href="/#sluzby">Služby</a></li><li><a href="/#projekty">Projekty</a></li><li><a href="/ponuka/">Nabídka</a></li><li><a href="/poradna/">Poradna</a></li><li><a href="/#kontakt">Kontakt</a></li>
    <li class="mlang" role="group" aria-label="Jazyk / Language"><a href="/" hreflang="cs" lang="cs" aria-current="true">Česky</a><a href="/en/" hreflang="en" lang="en">English</a></li>
   </ul></nav>
-  <div class="navr"><span class="lang" role="group" aria-label="Jazyk / Language"><a href="/" hreflang="cs" lang="cs" aria-current="true">CS</a><a href="/en/" hreflang="en" lang="en">EN</a></span><a class="btn c" href="/#kontakt">Nezávazná konzultace</a><button class="mnav" type="button" aria-expanded="false" aria-controls="menu-odkazy" aria-label="Otevřít menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button></div>
+  <div class="navr"><span class="lang" role="group" aria-label="Jazyk / Language"><a href="/" hreflang="cs" lang="cs" aria-current="true">CS</a><a href="/en/" hreflang="en" lang="en">EN</a></span><a class="btn s" href="/#kontrola">Kontrola webu zdarma</a><button class="mnav" type="button" aria-expanded="false" aria-controls="menu-odkazy" aria-label="Otevřít menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button></div>
  </div>
 </header>
 <main id="top">
-<section class="hero">
+<div class="desk">
  <div class="wrap">
-  <div>
-   <span class="pill"><b>NITIVA</b> AI · automatizace · web · marketing</span>
-   <h1>AI asistenti, automatizace a weby, které <em>spolupracují.</em></h1>
-   <p class="sub">Propojujeme umělou inteligenci, firemní procesy a digitální marketing do řešení, která vám usnadní každodenní práci.</p>
-   <div class="cta"><a class="btn c" href="/ponuka/">Balíček První dotaz <span class="ar" aria-hidden="true">→</span></a><a class="btn g" href="/pro-salony/">Ukázka pro salon</a></div><p style="font-size:16px;margin-top:18px"><strong>Zřízení 4 900 Kč + provoz 1 490 Kč měsíčně.</strong><br>První měsíc provozu zdarma. Podrobnosti a cenové podmínky v nabídce.</p>
-   <div class="proof"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Vše uděláme za vás</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Mluvíme lidsky</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Konzultace nezávazně</span></div>
-  </div>
-  <div class="vis" aria-hidden="true">
-   <div class="win"><div class="bar"><i></i><i></i><i></i><u>odborne-tepovanie.sk</u></div><img src="/img/tep-po.webp" alt="Ukázka webu Odborné tepovanie vytvořeného Nitiva" width="1600" height="1000" loading="eager" fetchpriority="high"></div>
-   <div class="post"><small>Příspěvek na Instagram</small><b>Proč vás lidé na webu nenajdou?</b><span>Nitiva</span></div>
-   <div class="chat"><div class="q">Dobrý den, kolik dní trvá zhotovení webu?</div><div class="a">Rád vám poradím. Zanechte kontakt a domluvíme krátkou konzultaci.</div><div class="t"><i></i><i></i><i></i></div></div>
-  </div>
- </div>
-</section>
+  <article class="letter" aria-labelledby="dopis">
+   <div class="from">
+    <img src="/img/milos/milos-brisuda.webp" alt="Miloš Brisuda" width="480" height="480" fetchpriority="high">
+    <div><b>Miloš Brisuda</b><span>Nitiva · weby a AI odpovídače pro malé firmy</span></div>
+   </div>
+   <h1 id="dopis">Zákazníci se vás pořád ptají na totéž? Ať jim odpoví váš web.</h1>
+   <p>Dobrý den, jsem Miloš Brisuda. Pomáhám kadeřnicím, kosmetičkám, řemeslníkům a dalším malým firmám, které nemají čas sedět u telefonu.</p>
+   <p>Když máte plné ruce práce, dotaz <q>kolik to stojí?</q> nebo <q>máte v sobotu otevřeno?</q> musí počkat. Někdo mezitím může napsat jinam.</p>
+   <p>Nastavím vám web s odpovídačem, který na tyhle otázky odpoví podle vašeho ceníku a pravidel. Co neví, nevymýšlí a pošle vám to e-mailem. Termíny dál potvrzujete vy.</p>
+   <div class="sign"><b>Miloš Brisuda</b><span>Odpovídám osobně, e-mailem.</span></div>
 
-<div class="strip" aria-hidden="true"><div class="tr">
- <span>Facebook</span><span>Instagram</span><span>Web na míru</span><span>AI asistenti</span><span>Grafika</span><span>Automatizace</span><span>Facebook</span><span>Instagram</span><span>Web na míru</span><span>AI asistenti</span><span>Grafika</span><span>Automatizace</span>
- <span>Facebook</span><span>Instagram</span><span>Web na míru</span><span>AI asistenti</span><span>Grafika</span><span>Automatizace</span><span>Facebook</span><span>Instagram</span><span>Web na míru</span><span>AI asistenti</span><span>Grafika</span><span>Automatizace</span>
-</div></div>
+  </article>
 
-<section id="sluzby">
- <div class="wrap">
-  <span class="kick rv">Co děláme</span>
-  <h2 class="rv">Čtyři věci, které malé firmě <em>opravdu</em> pomáhají</h2>
-  <p class="lead rv">Každou službu můžete mít samostatně, nebo je propojit do jednoho systému.</p>
-  <div class="bento">
-   <article class="bc b-soc rv"><div class="deco"></div><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></div><h3>Sociální sítě</h3><p>Pravidelné příspěvky na Facebooku a Instagramu, které dávají smysl vašim zákazníkům, ne jen algoritmu.</p><a class="more" href="/socialni-site/">Správa sociálních sítí <span class="ar" aria-hidden="true">→</span></a></article>
-   <article class="bc b-web rv d1"><div class="deco"></div><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Web, který prodává</h3><p>Přehledný web s jasnou výzvou ke kontaktu. Rychlý na mobilu a srozumitelný na první pohled.</p><a class="more" href="/tvorba-webu/">Tvorba webu pro malé firmy <span class="ar" aria-hidden="true">→</span></a></article>
-   <article class="bc b-gra rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.5-.8 1.2-1.6-.4-1 .2-2.2 1.4-2.2H17a4 4 0 0 0 4-4C21 7 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="14.5" cy="7.5" r="1"/></svg></div><h3>Grafika</h3><p>Jednotný vzhled příspěvků, bannerů a podkladů, aby vás lidé poznali.</p></article>
-   <article class="bc b-ai rv d1"><div><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V5M9 13h.01M15 13h.01M9 16.5h6"/><circle cx="12" cy="4" r="1"/></svg></div><h3>AI asistenti</h3><p>Chatbot na vašem webu odpoví na časté dotazy, sebere kontakt a složitější věci předá vám.</p><a class="more" href="/ai-chatbot/">AI chatbot na web <span class="ar" aria-hidden="true">→</span></a><br><a class="more" href="/ai-telefon/">AI telefonní asistent <span class="ar" aria-hidden="true">→</span></a></div>
-    <div class="mini" aria-hidden="true"><div class="q">Kolik web stojí?</div><div class="a">Cenu určíme po krátké konzultaci, podle rozsahu.</div><div class="q">Super, díky.</div></div></article>
-  </div>
- </div>
-</section>
+   <section id="kontrola" class="ps slip" aria-labelledby="ps-title">
+   <h2 id="ps-title">P.S. Pošlete mi adresu svého webu a podívám se, co na něm zákazníkům chybí.</h2>
+   <p>Zdarma a nezávazně. Automatická kontrola trvá asi 20 sekund, výsledek uvidíte tady a přijde vám i e-mailem.</p>
+   <form class="k" id="checkForm" novalidate>
+    <div class="row">
+     <div><label for="cu">Adresa webu nebo profilu</label><input id="cu" name="url" placeholder="např. www.vasefirma.cz" required maxlength="200" autocomplete="url" inputmode="url"></div>
+     <div><label for="ce">Váš e-mail</label><input id="ce" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+    </div>
+    <details class="addnote"><summary>Přidat poznámku (nepovinné)</summary><div><label for="cn">Na co se mám zaměřit?</label><textarea id="cn" name="note" rows="3" maxlength="400"></textarea></div></details>
+    <input class="hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label class="consent" for="cc"><input type="checkbox" id="cc" name="consent"><span>Souhlasím, že Nitiva zpracuje adresu a e-mail za účelem vytvoření a odeslání kontroly. Údaje nepředávám dál a smažu je, jakmile nebudou potřeba.</span></label>
+    <div><button class="btn" type="submit" id="csend">Zkontrolovat web zdarma <span class="ar" aria-hidden="true">→</span></button></div>
+    <div id="cmsg" role="status" aria-live="polite"></div>
+   </form>
+  </section>
 
-<section id="proc-nitiva" class="brand-story" aria-labelledby="proc-nitiva-title">
- <div class="wrap brand-grid">
-  <div class="brand-copy rv">
-   <span class="kick">Příběh značky</span>
-   <h2 id="proc-nitiva-title">Proč <em>NITIVA?</em></h2>
-   <p>Jedna nit dokáže spojit mnoho částí v jeden celek. Stejně přemýšlíme o technologiích.</p>
-   <p>Firmy dnes používají web, marketingové nástroje, zákaznickou komunikaci a stále častěji také umělou inteligenci. Když spolu tyto části nekomunikují, vzniká zbytečná práce, chaos a nevyužitý potenciál.</p>
-   <p>V NITIVA proto propojujeme umělou inteligenci, automatizaci, weby a digitální marketing do řešení, která dávají smysl jako celek. Technologie pro nás nejsou cílem. Jsou prostředkem, jak firmám zjednodušit práci, zlepšit komunikaci a vytvořit prostor pro další rozvoj.</p>
-   <p class="brand-slogan">NITIVA – Technologie, které propojují.</p>
-  </div>
-  <div class="brand-mark rv d1" aria-hidden="true">
-   <div class="brand-line"><i class="brand-node n1"></i><i class="brand-node n2"></i><i class="brand-node n3"></i><i class="brand-node n4"></i></div>
-   <div class="brand-word"><em>nit</em>iva</div>
-  </div>
- </div>
-</section>
-
-<section id="referencia" class="case">
- <div class="wrap cgrid">
-  <div class="rv">
-   <span class="kick">Referenční projekt</span>
-   <h2>Z jednoduché stránky <em>nástroj</em>, který pracuje pro firmu</h2>
-   <div class="tags"><span>Web na míru</span><span>Kalkulačka ceny</span><span>AI asistent</span><span>Online objednávka</span></div>
-   <ul class="facts">
-    <li>Odborné tepovanie, Bánovce nad Bebravou: nový web místo původní jednoduché stránky.</li>
-    <li>Kalkulačka ceny podle ceníku firmy, objednávka a samostatný formulář pro velké zakázky (kanceláře, školy, školky).</li>
-    <li>AI asistent odpovídá jen z ověřených údajů a poptávky chodí majiteli přímo na e-mail.</li>
+  <aside class="ticket" aria-labelledby="cena-title">
+   <h2 id="cena-title">Kolik to stojí: balíček První dotaz</h2>
+   <div class="prices"><div class="price"><b>4 900 Kč</b><span>zřízení, jednorázově</span></div>
+   <div class="price"><b>1 490 Kč</b><span>provoz měsíčně</span></div></div>
+   <div class="terms"><ul>
+    <li><strong>První měsíc provozu zdarma</strong></li>
+    <li>Web, odpovídač a 8 příspěvků měsíčně</li>
+    <li>Spuštění do 7 dnů od podkladů</li>
+    <li>Konec kdykoli e-mailem, bez sankcí</li>
+    <li>Ceny jsou konečné, nejsem plátce DPH</li>
    </ul>
-   <a class="btn l" href="/projekty/odborne-tepovanie/">Prohlédnout případovou studii <span class="ar" aria-hidden="true">→</span></a>
-  </div>
-  <div class="ba rv d1">
-   <span class="lab a">Po</span>
-   <div class="frame"><img src="/img/tep-po.webp" alt="Nový web Odborné tepovanie – úvodní obrazovka s kalkulačkou ceny" width="1600" height="1000" loading="lazy"></div>
-   <div class="pre"><span class="lab b">Před</span><img src="/img/tep-pred.webp" alt="Původní web Odborné tepovanie" width="1400" height="719" loading="lazy"></div>
-  </div>
+   <a class="tlink" href="/ponuka/">Co přesně dostanete →</a>
+   <span class="tsub">Máte salon? <a href="/pro-salony/">Ukázka pro salony</a></span></div>
+  </aside>
  </div>
-</section>
+</div>
 
-<section id="projekty" style="background:#fff;border-block:1px solid var(--line)">
+<section id="sluzby" class="gnd" aria-labelledby="sluzby-title">
  <div class="wrap">
-  <span class="kick rv">Další projekty</span>
-  <h2 class="rv">Na čem jsme <em>ještě</em> pracovali</h2>
-  <p class="lead rv">Konkrétní výsledky zatím neuvádíme. Rádi vám na konzultaci ukážeme, jak jednotlivé projekty fungují.</p>
-  <div class="grid pj">
-   <article class="card rv"><span class="num">01</span><h3>DINGOPET – e-shop</h3><p>E-shop a digitální růstový systém: zákaznická cesta, obsah, výkonnostní marketing a automatizace provozu.</p><p style="margin-top:12px"><a href="https://www.dingopet.cz" rel="noopener" target="_blank">dingopet.cz →</a></p></article>
-   <article class="card rv d1"><span class="num">02</span><h3>DINGOPET – AI asistent</h3><p>Asistent pro e-shop: odpovídá z ověřených údajů, pomáhá s produkty, dopravou a kontaktem a dotaz podle potřeby předá člověku.</p></article>
-   <article class="card rv d2"><span class="num">03</span><h3>ODNESTO – AI a automatizace</h3><p>AI asistent pro web, třídění poptávek a automatizované kroky od dotazu až po vyřízení.</p></article>
-   <article class="card rv d3"><span class="num">04</span><h3>AI nástroje Nitiva</h3><p>Zkušenosti z dřívějších značek Marketing srdcem a BotEffex dnes spojujeme v Nitivě: odpovídače zákazníkům a propojené pracovní postupy.</p></article>
+  <h2 class="sec" id="sluzby-title">Co pro vás udělám</h2>
+  <p class="intro">Nejčastěji nastavuji web s odpovídačem. Každou službu ale můžete mít i samostatně.</p>
+  <div class="svc">
+   <div class="main-svc">
+    <h3>Web, který odpoví i ve 22:07</h3>
+    <p>Odpovídač na webu zná váš ceník, adresu a otevírací dobu. Odpoví hned a co neví, předá vám.</p>
+    <p><a class="tlink" href="/ai-chatbot/">Jak odpovídač funguje →</a></p>
+    <figure class="conv" aria-label="Ukázka rozhovoru s odpovídačem kadeřnictví">
+     <div class="t">Úterý 10:14</div>
+     <div class="q">Dobrý den, kolik stojí dámský střih?</div>
+     <div class="a">Dobrý den, dámský střih stojí 650 Kč, s mytím a foukanou 850 Kč. Chcete se objednat?</div>
+     <div class="t">Úterý 22:07</div>
+     <div class="q">Máte volno tuhle sobotu?</div>
+     <div class="a">Volné termíny potvrzuje přímo Jana. Nechte mi telefon nebo e-mail a ráno se vám ozve.</div>
+     <div class="mail">Jana dostala e-mail s kontaktem a dotazem.</div>
+     <figcaption>Ukázka pro kadeřnictví. Jméno i ceny jsou smyšlené.</figcaption>
+    </figure>
+   </div>
+   <div>
+    <div class="list">
+     <a href="/tvorba-webu/"><b>Web pro malou firmu</b><span>Přehledný, rychlý na mobilu, s ceníkem a jasným kontaktem.</span><i aria-hidden="true">→</i></a>
+     <a href="/ai-telefon/"><b>AI telefonní asistent</b><span>Vezme hovor, když nemůžete, a shrnutí vám pošle e-mailem.</span><i aria-hidden="true">→</i></a>
+     <a href="/poradna/automatizace-poptavek-z-webu/"><b>Automatizace poptávek</b><span>Poptávka z webu dojde správnému člověku, bez přepisování.</span><i aria-hidden="true">→</i></a>
+     <a href="/socialni-site/"><b>Sociální sítě a grafika</b><span>Pravidelné příspěvky na Facebook a Instagram, vy jen schválíte.</span><i aria-hidden="true">→</i></a>
+    </div>
+    <div class="try" id="asistent">
+     <h3>Vyzkoušejte si to na mně</h3>
+     <p>Vpravo dole běží můj vlastní odpovídač. Zeptejte se ho na cokoli o Nitivě.</p>
+     <div class="chips" id="chips">
+      <button type="button">Co pro malou firmu děláte?</button>
+      <button type="button">Jak probíhá spolupráce?</button>
+      <button type="button">Umíte napojit chatbota na Instagram?</button>
+     </div>
+     <button class="btn s" type="button" id="openChat">Otevřít chat</button>
+    </div>
+   </div>
   </div>
-  <p class="rv" style="margin:30px 0 0;color:var(--muted)">Další realizované weby: ĎuriKe, dvadsatjeden.org.</p>
  </div>
 </section>
 
-<!-- Customer testimonial wording confirmed by owner, 2026-10-15. -->
-<section id="recenze" class="nv-reviews" aria-labelledby="nv-reviews-title"><div class="wrap"><div class="nv-intro"><span class="kick">Zkušenosti zákazníků</span><h2 id="nv-reviews-title">Jak hodnotí naši <em>spolupráci</em></h2></div><div class="nv-grid"><figure><div class="nv-scope">Web na míru · AI asistent</div><blockquote lang="sk">„S novým webom od Nitivy som veľmi spokojný. Máme na ňom prehľad služieb, cenník, kalkulačku ceny aj možnosť objednávky. Súčasťou je aj AI asistent, ktorý návštevníkom pomáha s otázkami.“</blockquote><figcaption><span class="nv-initials" aria-hidden="true">MP</span><div><strong>Martin Petrek</strong><a href="https://odborne-tepovanie.sk/" target="_blank" rel="noopener">odborne-tepovanie.sk</a></div></figcaption></figure><figure><div class="nv-scope">Kompletní e-shop · Platební brána · AI asistent</div><blockquote lang="cs">„Nitiva pro nás vytvořila kompletní e-shop DINGOPET včetně platební brány a AI asistenta pro zákazníky. S výsledkem jsem velmi spokojená. Oceňuji, že jednotlivé části tvoří jeden celek, od nabídky produktů až po objednávku a platbu.“</blockquote><figcaption><span class="nv-initials" aria-hidden="true">PŠ</span><div><strong>Petra Štíchová</strong><a href="https://dingopet.cz/" target="_blank" rel="noopener">dingopet.cz</a></div></figcaption></figure></div></div></section>
-
-<section id="postup" class="dark">
+<section id="projekty" aria-labelledby="projekty-title">
  <div class="wrap">
-  <span class="kick rv">Jak pracujeme</span>
-  <h2 class="rv">Tři kroky. Nejdřív <em>poslech.</em></h2>
-  <p class="lead rv">Pro malé provozovny nabízíme balíček Nitiva První dotaz: zřízení 4 900 Kč a provoz 1 490 Kč měsíčně, první měsíc provozu zdarma. U zakázek mimo balíček připravíme cenu podle rozsahu po konzultaci.</p>
-  <div class="steps">
-   <div class="step rv"><h3>Krátká konzultace</h3><p>Zeptáme se, co potřebujete a co vám dnes bere čas. Nezávazně.</p></div>
-   <div class="step rv d1"><h3>Návrh postupu</h3><p>Navrhneme praktické řešení a řekneme upřímně, co dává smysl a co ne.</p></div>
-   <div class="step rv d2"><h3>Realizace</h3><p>Vše uděláme za vás a průběžně vás informujeme.</p></div>
+  <h2 class="sec" id="projekty-title">Co už jsem postavil</h2>
+  <p class="intro">Nitiva je mladá značka, proto vám neukážu desítky klientů. Ukážu vám, co jsem postavil, i pro rodinu a pro sebe. Píšu u toho poctivě, pro koho.</p>
+  <div class="case" id="referencia">
+   <div class="shots">
+    <figure><img src="/img/tep-po.webp" alt="Nový web Odborné tepovanie – úvodní obrazovka s kalkulačkou ceny" width="1600" height="1000" loading="lazy"><figcaption>Po: nový web s kalkulačkou</figcaption></figure>
+    <figure><img src="/img/tep-pred.webp" alt="Původní web Odborné tepovanie" width="1400" height="719" loading="lazy"><figcaption>Před</figcaption></figure>
+   </div>
+   <div>
+    <h3>Odborné tepovanie</h3>
+    <p class="where">Čištění koberců a sedaček, Bánovce nad Bebravou. Firma mého bratrance.</p>
+    <ul>
+     <li>Nový web místo původní jednoduché stránky.</li>
+     <li>Kalkulačka ceny podle ceníku, objednávka a formulář pro velké zakázky.</li>
+     <li>AI asistent odpovídá jen z ověřených údajů, poptávky chodí majiteli na e-mail.</li>
+    </ul>
+    <a class="tlink" href="/projekty/odborne-tepovanie/">Celá případová studie →</a>
+    <blockquote lang="sk">„S novým webom od Nitivy som veľmi spokojný. Máme na ňom prehľad služieb, cenník, kalkulačku ceny aj možnosť objednávky. Súčasťou je aj AI asistent, ktorý návštevníkom pomáha s otázkami.“<footer lang="cs">Martin Petrek, majitel · <a href="https://odborne-tepovanie.sk/" target="_blank" rel="noopener">odborne-tepovanie.sk</a></footer></blockquote>
+   </div>
+  </div>
+  <div class="others">
+   <article class="proj">
+    <img src="/portfolio/img/dingopet-desktop.webp" alt="E-shop DINGOPET – úvodní stránka" width="1600" height="1000" loading="lazy">
+    <h3>DINGOPET</h3>
+    <p class="where">E-shop pro psy. Moje vlastní rodinná značka.</p>
+    <p>Kompletní e-shop s platební bránou a AI asistentem, který radí s produkty a dopravou.</p>
+    <blockquote class="pq">„Oceňuji, že jednotlivé části tvoří jeden celek, od nabídky produktů až po objednávku a platbu.“<footer>Petra Štíchová, DINGOPET · <a href="https://dingopet.cz/" target="_blank" rel="noopener">dingopet.cz</a></footer></blockquote>
+   </article>
+   <article class="proj">
+    <h3>ODNESTO</h3>
+    <p class="where">AI asistent a automatizace pro firmu ODNESTO.</p>
+    <p>AI asistent na webu, třídění poptávek a automatické kroky od dotazu až po vyřízení.</p>
+    <p class="alsodone">Další weby, které jsem postavil: ĎuriKe, dvadsatjeden.org.</p>
+   </article>
   </div>
  </div>
 </section>
 
-<section id="video" style="background:#fff;border-top:1px solid var(--line)">
- <div class="wrap" style="text-align:center">
-  <span class="kick rv">Video tipy</span>
-  <h2 class="rv">Krátké tipy pro váš web a <em>chatbota</em></h2>
-  <p class="lead rv" style="margin:0 auto 30px;max-width:60ch">Krátká videa s praktickými tipy, díky kterým získá váš web a chatbot víc poptávek.</p>
+<section id="postup" class="gnd" aria-labelledby="postup-title">
+ <div class="wrap">
+  <h2 class="sec" id="postup-title">Jak to probíhá</h2>
+  <p class="intro">Bez schůzek, bez techniky na vaší straně. Všechno vyřešíme e-mailem.</p>
+  <ol class="steps">
+   <li><h3>Napíšete mi</h3><p>Nebo mi pošlete web na kontrolu. Odpovím osobně a řeknu upřímně, jestli vám balíček dává smysl.</p></li>
+   <li><h3>Pošlete ceník a fotky</h3><p>Web i odpovídač nastavím podle vašich údajů. Spuštění do 7 dnů, odpovědi spolu předem odsouhlasíme.</p></li>
+   <li><h3>První měsíc zdarma</h3><p>Vyzkoušíte si to v provozu. Když vám to nebude dávat smysl, napíšete e-mail a končíme.</p></li>
+  </ol>
+ </div>
+</section>
+
+<section id="video" aria-labelledby="video-title">
+ <div class="wrap">
+  <div class="vhead">
+   <div><h2 class="sec" id="video-title">Krátká videa, kde vysvětluji, co funguje</h2>
+   <p class="intro">Minuta až dvě o webu, odpovídačích a poptávkách. Bez odborných slov.</p></div>
+  </div>
   <div class="video-tools" id="video-tools" hidden>
    <div class="video-topics" role="group" aria-label="Vybrat téma videí">
     <button type="button" data-video-topic="all" aria-pressed="true" aria-controls="video-strip">Všechna videa</button>
@@ -406,78 +448,42 @@ summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--mut
    <figure data-topics="web" data-keywords="kontrola webu první dojem nabídka služba kontakt" class="vf"><video poster="/video/nitiva-kontrola-webu-cover-seo.jpg" controls playsinline preload="none" width="1080" height="1920" style="width:100%;border-radius:20px;box-shadow:0 22px 44px -16px rgba(14,23,39,.35);background:#0E1727" aria-label="Video: jednoduchá kontrola webu"><source src="/video/Nitiva%20%E2%80%93%20%C4%8Desk%C3%BD%20test%20v%20kancel%C3%A1%C5%99i%20s%20titulky_1080p_caption.mp4" type="video/mp4"></video><figcaption><span class="vtopic">Web a poptávky</span>Kontrola webu za pět sekund</figcaption></figure>
    <figure data-topics="automatizace" data-keywords="opakované dotazy termíny automatizovat čas první krok" class="vf"><video poster="/video/co-automatizovat-jako-prvni-cover.jpg" controls playsinline preload="none" width="1080" height="1920" style="width:100%;border-radius:20px;box-shadow:0 22px 44px -16px rgba(14,23,39,.35);background:#0E1727" aria-label="Video: co ve firmě automatizovat jako první"><source src="/video/co-automatizovat-jako-prvni.mp4?v=motion-20261008#t=0.5" type="video/mp4"></video><figcaption><span class="vtopic">Automatizace</span><a href="/video/co-automatizovat-jako-prvni/">Co ve firmě automatizovat jako první</a></figcaption></figure>
   </div>
-  <p class="video-empty" id="video-empty" hidden>Pro tento výběr jsme video nenašli. Zkuste jiné slovo nebo zrušte vybranou kategorii.</p>
+  <p class="video-empty" id="video-empty" hidden>Pro tento výběr jsem video nenašel. Zkuste jiné slovo nebo zrušte vybranou kategorii.</p>
  </div>
 </section>
 
-<section id="poradna" style="background:#fff;border-block:1px solid var(--line)">
+<section id="poradna" class="gnd" aria-labelledby="poradna-title">
  <div class="wrap">
-  <span class="kick">Praktická poradna</span>
-  <h2>Rozhodujte se podle <em>přínosu</em>, ne podle módních slov</h2>
-  <p class="lead">Srozumitelné návody pro malé firmy: co automatizovat, kdy má smysl AI asistent a jak propojit web s navazující prací.</p>
+  <h2 class="sec" id="poradna-title">Poradna pro malé firmy</h2>
+  <p class="intro">Srozumitelné návody: co automatizovat, kdy má smysl AI asistent a jak propojit web s navazující prací.</p>
   <div class="advice-grid">
    <a class="advice-card" href="/poradna/kdy-ma-ai-chatbot-smysl/"><span class="tag">AI asistenti · 8 min</span><h3>Kdy má AI chatbot na webu smysl – a kdy ještě ne</h3><p>Rozhodovací kontrola podle dotazů zákazníků, podkladů a způsobu předání člověku.</p><span class="more">Přečíst návod →</span></a>
    <a class="advice-card" href="/poradna/automatizace-poptavek-z-webu/"><span class="tag">Automatizace · 9 min</span><h3>Jak automatizovat poptávky z webu krok za krokem</h3><p>Od formuláře přes potvrzení a předání odpovědné osobě až po bezpečnou kontrolu výsledku.</p><span class="more">Přečíst návod →</span></a>
   </div>
-  <p style="margin-top:28px"><a class="btn g" href="/poradna/">Všechny články <span class="ar" aria-hidden="true">→</span></a></p>
+  <p class="allposts"><a class="btn g" href="/poradna/">Všechny články <span class="ar" aria-hidden="true">→</span></a></p>
  </div>
 </section>
 
-<section id="asistent">
- <div class="wrap demo">
-  <div class="rv">
-   <span class="kick">Vyzkoušejte si to sami</span>
-   <h2>AI asistent, který <em>odpovídá</em> vašim zákazníkům</h2>
-   <p class="lead" style="margin-bottom:26px">Asistent v pravém dolním rohu je ukázkou toho, co můžeme nasadit i na váš web. Zeptejte se ho na cokoli o našich službách.</p>
-   <button class="btn c" type="button" id="openChat">Otevřít chat <span class="ar" aria-hidden="true">→</span></button>
+<section id="kontakt" class="reply" aria-labelledby="kontakt-title">
+ <div class="wrap">
+  <div>
+   <img src="/img/milos/milos-brisuda.webp" alt="" width="480" height="480" loading="lazy">
+   <h2 class="sec" id="kontakt-title">Raději mi rovnou napište</h2>
+   <p class="intro">Stačí pár vět o tom, co řešíte. Odpovím osobně a domluvíme se, co dává smysl. Nezávazně.</p>
+   <a class="mail" href="mailto:milos@nitiva.cz">milos@nitiva.cz</a>
+   <span class="back">Nebo si nechte <a href="#kontrola">zkontrolovat web zdarma</a>.</span>
   </div>
-  <div class="box rv d1">
-   <b>Zkuste se zeptat:</b>
-   <div class="chips" id="chips">
-    <button type="button">Co pro malou firmu děláte?</button>
-    <button type="button">Jak probíhá spolupráce?</button>
-    <button type="button">Umíte napojit chatbota na Instagram?</button>
-   </div>
-   <p style="margin:18px 0 0;font-size:14px;color:#c9ced8">Jde o AI asistenta. U složitějších věcí předá dotaz člověku. S člověkem můžete mluvit přímo: <a href="mailto:milos@nitiva.cz" style="color:var(--lime)">milos@nitiva.cz</a>.</p>
+  <div class="card">
+   <form class="k" id="contactForm" novalidate>
+    <div><label for="n">Jméno</label><input id="n" name="name" autocomplete="name" required maxlength="80"></div>
+    <div><label for="e">E-mail</label><input id="e" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+    <div><label for="m">S čím vám můžu pomoci? (nepovinné)</label><textarea id="m" name="message" rows="4" maxlength="1000"></textarea></div>
+    <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div><button class="btn" type="submit" id="send">Odeslat zprávu <span class="ar" aria-hidden="true">→</span></button></div>
+    <div id="fmsg" role="status" aria-live="polite"></div>
+    <p class="formnote">Odesláním souhlasíte se zpracováním jména, e-mailu a zprávy za účelem odpovědi na váš dotaz. Údaje nepředávám dál a smažu je, jakmile nebudou potřeba.</p>
+   </form>
   </div>
- </div>
-</section>
-
-<section id="kontrola">
- <div class="wrap kgrid">
-  <div class="rv">
-   <span class="kick">Zdarma a nezávazně</span>
-   <h2>Bezplatná kontrola vašeho webu nebo <em>profilu</em></h2>
-   <p class="lead">Zadejte adresu webu a během pár vteřin uvidíte, co zlepšit, aby vás zákazníci snáz našli a ozvali se. Bez závazku, výsledek se zobrazí rovnou na stránce.</p>
-  </div>
-  <form class="k rv d1" id="checkForm" novalidate>
-   <div><label for="cu">Adresa webu nebo profilu</label><input id="cu" name="url" placeholder="např. www.vasefirma.cz" required maxlength="200"></div>
-   <div><label for="ce">Váš e-mail</label><input id="ce" name="email" type="email" autocomplete="email" required maxlength="120"></div>
-   <div><label for="cn">Na co se máme zaměřit? (nepovinné)</label><textarea id="cn" name="note" rows="3" maxlength="400"></textarea></div>
-   <input class="hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-   <label style="display:flex;gap:10px;align-items:flex-start;font-weight:400"><input type="checkbox" id="cc" name="consent" style="margin-top:5px;width:auto"><span>Souhlasím, že Nitiva zpracuje adresu a e-mail za účelem vytvoření a odeslání kontroly. Údaje nepředáváme dál a smažeme je, jakmile nebudou potřeba.</span></label>
-   <button class="btn c" type="submit" id="csend">Chci kontrolu zdarma <span class="ar" aria-hidden="true">→</span></button>
-   <div id="cmsg" role="status" aria-live="polite"></div>
-  </form>
- </div>
-</section>
-
-<section id="kontakt" style="background:#fff;border-top:1px solid var(--line)">
- <div class="wrap kgrid">
-  <div class="rv">
-   <span class="kick">Kontakt</span>
-   <h2>Napište nám, <em>ozveme se</em> e-mailem</h2>
-   <p class="lead">Stačí pár vět o tom, co řešíte. Odpovíme a domluvíme krátkou nezávaznou konzultaci.</p>
-  </div>
-  <form class="k rv d1" id="contactForm" novalidate>
-   <div><label for="n">Jméno</label><input id="n" name="name" autocomplete="name" required maxlength="80"></div>
-   <div><label for="e">E-mail</label><input id="e" name="email" type="email" autocomplete="email" required maxlength="120"></div>
-   <div><label for="m">S čím vám můžeme pomoci? (nepovinné)</label><textarea id="m" name="message" rows="4" maxlength="1000"></textarea></div>
-   <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
-   <button class="btn c" type="submit" id="send">Odeslat zprávu <span class="ar" aria-hidden="true">→</span></button>
-   <div id="fmsg" role="status" aria-live="polite"></div>
-   <small style="color:var(--muted)">Odesláním souhlasíte se zpracováním jména, e-mailu a zprávy za účelem odpovědi na váš dotaz. Údaje nepředáváme dál a smažeme je, jakmile nebudou potřeba.</small>
-  </form>
  </div>
 </section>
 </main>
@@ -485,33 +491,28 @@ summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--mut
  <div class="wrap cols">
   <div><b>NITIVA</b><br>Technologie, které propojují.<br>Miloš Brisuda<br>Kubelíkova 1258/43, 130 00 Praha 3<br>IČO 29824125</div>
   <div><b>Služby a obsah</b><br><a href="/socialni-site/">Správa sociálních sítí</a><br><a href="/tvorba-webu/">Tvorba webu pro malé firmy</a><br><a href="/ai-chatbot/">AI chatbot na web</a><br><a href="/ai-telefon/">AI telefonní asistent</a><br><a href="/poradna/">Poradna pro malé firmy</a></div>
-  <div><b>Kontakt</b><br><a href="mailto:milos@nitiva.cz">milos@nitiva.cz</a></div>
+  <div><b>Kontakt</b><br><a href="mailto:milos@nitiva.cz">milos@nitiva.cz</a><br><a href="/ponuka/">Balíček První dotaz</a></div>
   <div><b>Ochrana údajů</b><br><a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a><br>Web nepoužívá sledovací cookies. Chat si v prohlížeči ukládá jen anonymní identifikátor relace.<br>Dříve: Marketing srdcem, BotEffex.</div>
  </div>
 </footer>
 <script>
 (function(){
- var h=document.querySelector('header'),p=document.querySelector('.prog');
- function s(){var y=window.scrollY;h.classList.toggle('sc',y>10);var m=document.documentElement.scrollHeight-innerHeight;p.style.width=(m>0?y/m*100:0)+'%'}
- addEventListener('scroll',s,{passive:true});s();
- var els=document.querySelectorAll('.rv');
- if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
-})();
-</script>
-<script>
-(function(){
   var API='https://n8n.178-105-83-205.sslip.io/webhook/';
+  var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  function mark(el,bad){if(!el)return;if(bad)el.setAttribute('aria-invalid','true');else el.removeAttribute('aria-invalid');}
   var f=document.getElementById('contactForm'),msg=document.getElementById('fmsg'),btn=document.getElementById('send');
   function show(t,c){msg.className='msg '+c;msg.textContent=t;}
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
     var d={sid:'web',name:f.name.value.trim(),email:f.email.value.trim(),message:typeof window.nitivaLeadMessage==='function'?window.nitivaLeadMessage(f.message.value.trim()):f.message.value.trim(),web:f.web.value,page:location.href};
-    if(!d.name||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){show('Vyplňte prosím jméno a platný e-mail.','err');return;}
-    btn.disabled=true;
+    mark(f.name,!d.name);mark(f.email,!EMAIL.test(d.email));
+    if(!d.name){show('Vyplňte prosím jméno.','err');f.name.focus();return;}
+    if(!EMAIL.test(d.email)){show('Zadejte prosím platný e-mail, například jana@salon.cz.','err');f.email.focus();return;}
+    btn.disabled=true;show('Odesílám…','ok');
     fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
      .then(function(r){return r.json();})
-     .then(function(r){if(r&&r.ok){f.reset();show('Děkujeme, zpráva je odeslána. Ozveme se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');}})
-     .catch(function(){show('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');})
+     .then(function(r){if(r&&r.ok){f.reset();show('Děkuji, zpráva je odeslaná. Ozvu se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište mi prosím přímo na milos@nitiva.cz.','err');}})
+     .catch(function(){show('Odeslání se nepodařilo. Napište mi prosím přímo na milos@nitiva.cz.','err');})
      .then(function(){btn.disabled=false;});
   });
   var cf=document.getElementById('checkForm'),cm=document.getElementById('cmsg'),cb=document.getElementById('csend');
@@ -519,22 +520,23 @@ summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0;color:var(--mut
     ev.preventDefault();
     var d={url:cf.url.value.trim(),email:cf.email.value.trim(),note:cf.note.value.trim(),hp:cf.hp.value,consent:document.getElementById('cc').checked,src:typeof window.nitivaLeadSource==='function'?window.nitivaLeadSource():''};
     function sh(t,c){cm.className='msg '+c;cm.textContent=t;}
-    if(!d.url){sh('Zadejte prosím adresu webu nebo profilu.','err');return;}
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){sh('Zadejte prosím platný e-mail.','err');return;}
-    if(!d.consent){sh('Potvrďte prosím souhlas se zpracováním údajů.','err');return;}
-    cb.disabled=true;sh('Kontrolujeme… trvá to asi 20 sekund.','ok');
+    mark(cf.url,!d.url);mark(cf.email,!EMAIL.test(d.email));
+    if(!d.url){sh('Zadejte prosím adresu webu nebo profilu, například www.vasefirma.cz.','err');cf.url.focus();return;}
+    if(!EMAIL.test(d.email)){sh('Zadejte prosím platný e-mail, na který vám pošlu výsledek.','err');cf.email.focus();return;}
+    if(!d.consent){sh('Potvrďte prosím souhlas se zpracováním údajů.','err');document.getElementById('cc').focus();return;}
+    cb.disabled=true;sh('Kontroluji váš web… trvá to asi 20 sekund.','ok');
     fetch(API+'nitiva-kontrola',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
      .then(function(r){return r.json();})
-     .then(function(r){if(r&&r.ok){cf.reset();sh('','ok');var rp=document.createElement('div');rp.className='box';rp.style.cssText='margin-top:14px;white-space:pre-wrap';var hd=document.createElement('b');hd.textContent='Vaše bezplatná kontrola';var tx=document.createElement('p');tx.style.margin='8px 0 0';tx.textContent=(r.report||'Kontrolu se nepodařilo vytvořit automaticky, ozveme se vám e-mailem.');var ft=document.createElement('small');ft.style.color='var(--muted)';ft.textContent='Kopii jsme vám poslali také e-mailem. Jde o automatickou orientační kontrolu, rádi ji s vámi projdeme osobně: milos@nitiva.cz.';rp.appendChild(hd);rp.appendChild(tx);rp.appendChild(ft);cm.appendChild(rp);}else{sh((r&&r.msg)||'Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');}})
-     .catch(function(){sh('Odeslání se nepodařilo. Napište nám prosím na milos@nitiva.cz.','err');})
+     .then(function(r){if(r&&r.ok){cf.reset();sh('','ok');var rp=document.createElement('div');rp.className='box';rp.style.cssText='margin-top:14px;white-space:pre-wrap';var hd=document.createElement('b');hd.textContent='Vaše bezplatná kontrola';var tx=document.createElement('p');tx.style.margin='8px 0 0';tx.textContent=(r.report||'Kontrolu se nepodařilo vytvořit automaticky, ozvu se vám e-mailem.');var ft=document.createElement('small');ft.textContent='Kopii jsem vám poslal i e-mailem. Jde o automatickou orientační kontrolu, rád ji s vámi projdu osobně: milos@nitiva.cz.';rp.appendChild(hd);rp.appendChild(tx);rp.appendChild(ft);cm.appendChild(rp);}else{sh((r&&r.msg)||'Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');}})
+     .catch(function(){sh('Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');})
      .then(function(){cb.disabled=false;});
   });
-  function openChat(){var b=document.querySelector('.nv-b');if(b&&!document.querySelector('.nv-p.o'))b.click();}
+  function openChat(){var b=document.querySelector('.nv-b');if(b){if(!document.querySelector('.nv-p.o'))b.click();return true;}location.href='mailto:milos@nitiva.cz';return false;}
   document.getElementById('openChat').addEventListener('click',openChat);
   document.getElementById('chips').addEventListener('click',function(e){
-    if(e.target.tagName!=='BUTTON')return;
-    openChat();
-    setTimeout(function(){var i=document.querySelector('.nv-i'),s=document.querySelector('.nv-f');if(i&&s){i.value=e.target.textContent;s.dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}));}},250);
+    var t=e.target.closest('button');if(!t)return;
+    if(!openChat())return;
+    setTimeout(function(){var i=document.querySelector('.nv-i'),s=document.querySelector('.nv-f');if(i&&s){i.value=t.textContent;s.dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}));}},250);
   });
 })();
 </script>
