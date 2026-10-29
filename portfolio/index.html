@@ -1,79 +1,67 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nitiva – Portfolio · Naše práce</title>
 <meta name="description" content="Real websites built by Nitiva (odborne-tepovanie.sk, dingopet.cz) plus demo samples: Shorts, small-business websites and AI assistants.">
-<link rel="icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0B1221;--card:#162032;--card2:#1b2840;--or:#F7921E;--mu:#8C9BB4;--line:rgba(140,155,180,.16)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:#fff;line-height:1.6;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(900px 600px at 85% -10%,rgba(247,146,30,.16),transparent 60%),radial-gradient(800px 600px at -10% 40%,rgba(60,100,190,.18),transparent 60%);z-index:-1}
-a{color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 28px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
-.logo{font-weight:900;font-size:24px;letter-spacing:-.02em;text-decoration:none}.logo b{color:var(--or)}
-.navcta{font-weight:700;font-size:14px;text-decoration:none;border:1.5px solid var(--or);color:var(--or);padding:10px 20px;border-radius:12px;transition:.3s}.navcta:hover{background:var(--or);color:var(--bg)}
-.eb{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--or)}
-h1{font-size:clamp(42px,7vw,86px);font-weight:900;line-height:1.02;letter-spacing:-.035em;margin:18px 0 22px}h1 em{font-style:normal;color:var(--or)}
-h2{font-size:clamp(32px,4.4vw,52px);font-weight:900;letter-spacing:-.03em;line-height:1.08;margin:12px 0 14px}
-.lead{font-size:19px;color:#dfe5ef;max-width:640px;margin:0}.cz{color:var(--mu);font-size:15px;display:block;margin-top:8px}
-.hero{padding:70px 0 90px;display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
-.frame{border:3px solid var(--or);border-radius:28px;padding:0;overflow:hidden;line-height:0;width:min(330px,100%);aspect-ratio:9/16;background:#000;box-shadow:0 30px 80px -20px rgba(247,146,30,.35);max-width:330px;margin-left:auto}
-.frame video{width:100%;height:100%;display:block;aspect-ratio:9/16;object-fit:cover;background:#000}
-.stats{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
-.stat{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 20px 14px 14px}
-.num{flex:none;width:44px;height:44px;border-radius:12px;background:var(--or);color:var(--bg);font-weight:900;font-size:19px;display:grid;place-items:center;box-shadow:0 8px 24px -6px rgba(247,146,30,.6)}
-.stat b{display:block;font-size:15px;line-height:1.25}.stat span{font-size:13px;color:var(--mu)}
-section{padding:90px 0}.sh{max-width:760px;margin-bottom:50px}
-.proj{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;margin-bottom:110px}
-.proj.rev{grid-template-columns:.8fr 1.2fr}.proj.rev .mock{order:2}
-.mock{position:relative;padding:0 60px 50px 0}
-.laptop{background:#0e1626;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.03),0 0 80px -30px rgba(247,146,30,.35)}
-.bar{height:34px;display:flex;align-items:center;gap:7px;padding:0 14px;background:#121c2f;border-bottom:1px solid var(--line)}
-.bar i{width:10px;height:10px;border-radius:50%;background:#2c3a55}.bar i:first-child{background:var(--or)}
-.bar span{margin-left:14px;font-size:12px;color:var(--mu);background:#0B1221;padding:3px 14px;border-radius:8px}
-.laptop img{display:block;width:100%;height:auto}
-.phone{position:absolute;right:0;bottom:0;width:27%;border-radius:30px;padding:7px;background:#05080f;border:2px solid #2a3650;box-shadow:0 30px 60px -10px rgba(0,0,0,.85)}
-.phone img{display:block;width:100%;border-radius:23px}
-.tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:rgba(247,146,30,.12);color:var(--or);border:1px solid rgba(247,146,30,.35);padding:6px 12px;border-radius:999px}
-.tag.demo{background:rgba(140,155,180,.12);color:#c6d0e0;border-color:rgba(140,155,180,.35)}
-.proj h3{font-size:clamp(28px,3.2vw,40px);font-weight:900;letter-spacing:-.03em;margin:16px 0 10px;line-height:1.1}
-.proj p{color:#d5dce8;margin:0 0 6px}
-ul.f{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:10px}
-ul.f li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#dfe5ef}
-ul.f li:before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:3px;background:var(--or)}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--or);color:var(--bg);font-weight:800;text-decoration:none;padding:15px 26px;border-radius:14px;transition:transform .3s ease,box-shadow .3s ease;box-shadow:0 14px 34px -12px rgba(247,146,30,.7)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 20px 44px -12px rgba(247,146,30,.85)}
-.btn.ghost{background:transparent;color:#fff;border:1.5px solid var(--line);box-shadow:none}
-.demos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;transition:transform .4s ease,border-color .4s}
-.card:hover{transform:translateY(-4px);border-color:rgba(247,146,30,.45)}
-.card .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
-.card h4{font-size:22px;font-weight:800;letter-spacing:-.02em;margin:0 0 8px;line-height:1.2}
-.card p{color:var(--mu);font-size:15px;margin:0 0 18px;flex:1}
-.card video{width:62%;display:block;margin:0 auto 20px;border-radius:16px;border:2px solid var(--or);aspect-ratio:9/16;object-fit:cover}
-.prev{height:190px;border-radius:16px;margin-bottom:20px;overflow:hidden;position:relative}
-.prev.salon{background:linear-gradient(135deg,#f3ece4,#e6d5c3);display:grid;place-items:center;color:#2b1f1a;font-family:Georgia,serif;font-size:34px;font-style:italic}
-.prev.ai{background:#0f1a2e;padding:18px;display:flex;flex-direction:column;gap:8px;justify-content:center}
-.prev.ai span{font-size:13px;padding:8px 12px;border-radius:12px;max-width:80%}.prev.ai .u{align-self:flex-end;background:#2ec4b6;color:#062a26;font-weight:600}.prev.ai .b{background:#1e2b45;color:#dbe4f3}
-.card a.lk{color:var(--or);font-weight:800;text-decoration:none}
-.cta{margin-top:30px;background:var(--or);color:var(--bg);border-radius:30px;padding:56px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;box-shadow:0 40px 100px -40px rgba(247,146,30,.8)}
-.cta h2{margin:0 0 8px;color:var(--bg)}.cta p{margin:0;font-weight:500;color:#2a1a05}
-.cta .btn{background:var(--bg);color:#fff;box-shadow:0 14px 34px -12px rgba(11,18,33,.8)}
-footer{margin:80px 0 0;border-top:1px solid var(--line)}
-.fb{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:30px 0;flex-wrap:wrap;color:var(--mu);font-size:14px}
-.hash{background:var(--or);color:var(--bg);font-weight:900;padding:8px 16px;border-radius:10px;font-size:16px}
-.fb a{color:#fff;text-decoration:none;font-weight:600}
-.rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}.rv.in{opacity:1;transform:none}
-.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
-@media(max-width:900px){.hero,.proj,.proj.rev,.cta{grid-template-columns:1fr}.proj.rev .mock{order:0}.demos{grid-template-columns:1fr}.frame{margin:0 auto}.mock{padding:0 40px 40px 0}.cta{padding:36px}section{padding:60px 0}.proj{margin-bottom:80px}}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-</style><script src="/consent.js"></script></head><body>
-<div class="wrap">
-<nav><a class="logo" href="/">nitiva<b>.</b></a><a class="navcta" href="mailto:milos@nitiva.cz">Get a quote · Poptávka</a></nav>
-<header class="hero">
+<link rel="icon" href="/favicon.svg">
+
+<script src="/consent.js"></script><link rel="stylesheet" href="/style.css?v=2">
+<style id="pf">
+.pf-hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:48px;align-items:center}
+.pf h1{font-size:clamp(34px,4.6vw,56px);line-height:1.06;letter-spacing:-.035em;font-weight:850;margin:8px 0 16px;color:#fff;max-width:18ch}
+.pf .lead{color:#C9D0DC;margin-bottom:24px}
+.cz{display:block;font-size:15px;color:var(--muted);margin-top:6px;font-style:normal}
+.pf .cz{color:var(--soft)}
+.stats{display:flex;gap:28px;flex-wrap:wrap}
+.stat{display:flex;gap:10px;align-items:baseline}.stat .num{font-weight:800;color:var(--lime);font-variant-numeric:tabular-nums}.stat .num:after{content:"."}
+.stat b{display:block;color:#fff;line-height:1.3}.stat span{display:block;color:var(--soft);font-size:14px}
+.pf .frame{justify-self:center}.pf .frame video{display:block;width:min(280px,100%);aspect-ratio:9/16;object-fit:cover;border-radius:16px;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.sh{margin-bottom:12px}.sh h2{margin:0 0 10px}
+#work .lead,#demos .lead{margin-bottom:28px}
+.proj{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center;padding:48px 0;border-top:1px solid var(--line)}
+.proj.rev .mock{order:2}
+.mock{position:relative;padding:0 24px 40px 0}
+.laptop{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -36px rgba(14,23,39,.5)}
+.laptop .bar{display:flex;gap:6px;align-items:center;padding:9px 12px;background:var(--ground);border-bottom:1px solid var(--line)}
+.laptop .bar i{width:9px;height:9px;border-radius:50%;background:#C9D0DA}.laptop .bar span{margin-left:8px;font-size:12.5px;color:var(--muted)}
+.laptop img{display:block;width:100%}
+.phone{position:absolute;right:0;bottom:0;width:24%;border:5px solid var(--navy);border-radius:20px;overflow:hidden;background:var(--navy);box-shadow:0 20px 40px -20px rgba(14,23,39,.6)}
+.phone img{display:block;width:100%}
+.proj h3{font-size:26px;letter-spacing:-.02em;margin:6px 0 10px}
+.tag{font-size:13.5px;font-weight:600;color:var(--muted)}
+ul.f{padding-left:20px;margin:16px 0 24px}ul.f li{margin-bottom:6px}
+.demos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.demos .card{display:flex;flex-direction:column}
+.demos .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.demos .num{font-weight:800;color:var(--deep)}.demos .num:after{content:"."}
+.tag.demo{background:var(--ground);padding:3px 8px;border-radius:6px;color:var(--ink)}
+.demos video{display:block;width:100%;height:240px;object-fit:cover;border-radius:10px;background:var(--navy)}
+.prev{height:240px;border-radius:10px;display:grid;place-items:center}
+.prev.salon{background:#EFE7DF;font-size:28px;font-weight:800;color:#5A3A2E;letter-spacing:-.02em}
+.prev.ai{place-items:stretch;align-content:center;gap:8px;padding:18px;background:var(--ground)}
+.prev .u{justify-self:end;background:var(--navy);color:#fff;padding:8px 12px;border-radius:12px 12px 4px 12px;font-size:14px}
+.prev .b{justify-self:start;background:#fff;padding:8px 12px;border-radius:12px 12px 12px 4px;font-size:14px;max-width:90%}
+.demos h4{font-size:19px;letter-spacing:-.015em;margin:16px 0 6px}
+.demos p{margin:0 0 12px}
+.lk{margin-top:auto;color:var(--deep);font-weight:700}
+#demos .cta{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:var(--navy);color:#fff;border-radius:14px;padding:32px;margin-top:48px}
+#demos .cta h2{color:#fff;margin:0 0 6px}#demos .cta p{color:#C9D0DC;margin:0}
+#demos .cta .btn{background:var(--coral);color:var(--navy)}
+@media(max-width:900px){.pf-hero,.proj,.demos{grid-template-columns:1fr}.proj.rev .mock{order:0}.mock{padding-right:16px}}
+</style>
+</head><body>
+<header class="site">
+ <div class="wrap nav">
+  <a class="logo" href="/en/" aria-label="Nitiva – home"><i>n</i>nitiva</a>
+  <nav aria-label="Main menu" id="hlavni-menu"><ul id="menu-odkazy">
+   <li><a href="/en/#services">Services</a></li><li><a href="/en/#projects">Projects</a></li><li><a href="/en/offer/">Offer</a></li><li><a href="/en/#contact">Contact</a></li>
+   <li class="mlang" role="group" aria-label="Jazyk / Language"><a href="/" hreflang="cs" lang="cs">Česky</a><a href="/en/" hreflang="en" lang="en" aria-current="true">English</a></li>
+  </ul></nav>
+  <div class="navr"><span class="lang" role="group" aria-label="Jazyk / Language"><a href="/" hreflang="cs" lang="cs">CS</a><a href="/en/" hreflang="en" lang="en" aria-current="true">EN</a></span><a class="btn c s" href="/en/#contact">Write to me</a><button class="mnav" type="button" aria-expanded="false" aria-controls="menu-odkazy" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button></div>
+ </div>
+</header>
+<main>
+<div class="page-head pf"><div class="wrap pf-hero">
  <div>
-  <span class="eb rv">Portfolio · Naše práce</span>
-  <h1 class="rv d1">Websites, videos &amp; AI<br>built for <em>real</em> businesses.</h1>
+  <h1 class="rv d1">Websites, videos &amp; AI<br>built for real businesses.</h1>
   <p class="lead rv d2">Below are live websites we built for real clients, followed by clearly labelled demo samples. Everything is made with AI tools — fast delivery, fair prices.<span class="cz">Níže jsou weby, které jsme skutečně postavili pro klienty, a pod nimi označené ukázky. Všechno děláme přes AI.</span></p>
   <div class="stats rv d3">
    <div class="stat"><div class="num">1</div><div><b>Websites</b><span>Weby na míru</span></div></div>
@@ -82,17 +70,16 @@ footer{margin:80px 0 0;border-top:1px solid var(--line)}
   </div>
  </div>
  <div class="frame rv d2"><video src="/video/nitiva-short-3-kolikrat.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
-</header>
-</div>
+</div></div>
 
 <section id="work"><div class="wrap">
- <div class="sh rv"><span class="eb">Real client work · Skutečné projekty</span><h2>Live websites we built</h2><p class="lead">Both sites are online and used by their owners every day. Click through and try them.<span class="cz">Oba weby jsou v provozu – klidně si je proklikejte.</span></p></div>
+ <div class="sh rv"><h2>Live websites we built</h2><p class="lead">Both sites are online and used by their owners every day. Click through and try them.<span class="cz">Oba weby jsou v provozu – klidně si je proklikejte.</span></p></div>
 
  <article class="proj">
   <div class="mock rv"><div class="laptop"><div class="bar"><i></i><i></i><i></i><span>odborne-tepovanie.sk</span></div><img src="/portfolio/img/tepovanie-desktop.webp" alt="Odborné tepovanie – desktop homepage" width="1600" height="1000"></div>
    <div class="phone"><img src="/portfolio/img/tepovanie-mobile.webp" alt="Odborné tepovanie – mobile"></div></div>
   <div class="rv d1">
-   <span class="tag">● Live · Slovakia</span>
+   <span class="tag">Live · Slovakia</span>
    <h3>Odborné tepovanie</h3>
    <p>Website for an upholstery and carpet cleaning service in western Slovakia (Bánovce, Prievidza, Topoľčany, Trenčín).</p>
    <span class="cz">Web pro firmu na tepování sedaček, koberců, matrací a interiérů aut.</span>
@@ -105,7 +92,7 @@ footer{margin:80px 0 0;border-top:1px solid var(--line)}
   <div class="mock rv"><div class="laptop"><div class="bar"><i></i><i></i><i></i><span>dingopet.cz</span></div><img src="/portfolio/img/dingopet-desktop.webp" alt="DINGOPET – desktop homepage" width="1600" height="1000"></div>
    <div class="phone"><img src="/portfolio/img/dingopet-mobile.webp" alt="DINGOPET – mobile"></div></div>
   <div class="rv d1">
-   <span class="tag">● Live · Czech Republic</span>
+   <span class="tag">Live · Czech Republic</span>
    <h3>DINGOPET</h3>
    <p>E-shop for pet food and supplies – the brand's own DINGOPET kibble plus the Nobby range for dogs, cats, small animals, birds and aquariums.</p>
    <span class="cz">E-shop s krmivem a potřebami pro mazlíčky.</span>
@@ -116,7 +103,7 @@ footer{margin:80px 0 0;border-top:1px solid var(--line)}
 </div></section>
 
 <section id="demos" style="padding-top:20px"><div class="wrap">
- <div class="sh rv"><span class="eb">Demo samples · Ukázky</span><h2>What else we can make for you</h2><p class="lead">These are demos with fictional businesses, made to show our style.<span class="cz">Smyšlené firmy – slouží jen jako ukázka stylu.</span></p></div>
+ <div class="sh rv"><h2>What else we can make for you</h2><p class="lead">These are demos with fictional businesses, made to show our style.<span class="cz">Smyšlené firmy – slouží jen jako ukázka stylu.</span></p></div>
  <div class="demos">
   <div class="card rv"><div class="top"><div class="num">1</div><span class="tag demo">Demo · Video</span></div>
    <video src="/video/nitiva-ukazka-short-salon.mp4" controls playsinline muted preload="metadata"></video>
@@ -131,6 +118,14 @@ footer{margin:80px 0 0;border-top:1px solid var(--line)}
  <div class="cta rv"><div><h2>Want something like this?</h2><p>Write us what you need – we'll send a free quick draft before you commit.<br>Napište nám, pošleme nezávazný návrh zdarma.</p></div><a class="btn" href="mailto:milos@nitiva.cz">milos@nitiva.cz →</a></div>
 </div></section>
 
-<div class="wrap"><footer><div class="fb"><span class="hash">#nitiva</span><span>Všechno děláme přes AI · Everything made with AI</span><a href="https://nitiva.cz/">nitiva.cz</a></div></footer></div>
-<script>const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));</script>
+</main>
+<footer>
+ <div class="wrap cols">
+  <div><b>NITIVA</b><br>Miloš Brisuda<br>Kubelíkova 1258/43, 130 00 Praha 3, Czech Republic<br>Business ID (IČO) 29824125</div>
+  <div><b>Contact</b><br><a href="mailto:milos@nitiva.cz">milos@nitiva.cz</a><br><a href="/en/">nitiva.cz in English</a> · <a href="/">česky</a></div>
+  <div><b>Privacy</b><br><a href="/en/privacy/">Privacy policy</a><br><button type="button" class="nitiva-cookie-settings">Cookie settings</button></div>
+ </div>
+</footer>
+
+<script src="/nav.js" defer></script>
 </body></html>
