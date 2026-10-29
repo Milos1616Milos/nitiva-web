@@ -173,8 +173,8 @@ ol.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repe
 .vrow{display:flex;flex-wrap:nowrap;gap:20px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:6px 2px 22px;align-items:flex-start;scrollbar-color:var(--coral) var(--line)}
 .vf{margin:0;min-width:0;flex:0 0 min(280px,78vw);display:grid;gap:10px;align-content:start;scroll-snap-align:start}
 .vf{position:relative}.vf video{height:auto;aspect-ratio:9/16}
-.vplay{position:absolute;left:0;right:0;top:0;aspect-ratio:9/16;display:grid;place-items:center;background:transparent;border:0;border-radius:20px;cursor:pointer;padding:0}
-.vplay span{width:64px;height:64px;border-radius:50%;background:var(--coral);display:grid;place-items:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.55);transition:transform .3s var(--ease)}
+.vplay{position:absolute;left:0;right:0;top:0;aspect-ratio:9/16;display:grid;place-items:end start;padding:18px!important;background:transparent;border:0;border-radius:20px;cursor:pointer;padding:0}
+.vplay span{width:58px;height:58px;border-radius:50%;background:var(--coral);display:grid;place-items:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.55);transition:transform .3s var(--ease)}
 .vplay:hover span{transform:scale(1.06)}.vplay svg{margin-left:4px}
 .vf figcaption{font-size:15px;line-height:1.4;font-weight:600}.vf figcaption a{text-decoration:none}.vf figcaption a:hover{text-decoration:underline}
 .vf figcaption{display:flex;flex-direction:column}.vtopic{order:2;display:block;font-size:13.5px;font-weight:500;color:var(--muted);margin-top:3px}
@@ -234,7 +234,7 @@ section{padding:72px 0}
 .letter{padding:24px 20px 26px;border-radius:12px}
 .sign{margin-top:18px}
 .from{gap:14px;padding-bottom:16px;margin-bottom:20px}.from img{width:72px;height:72px}
-.letter .who{display:none}
+.letter .who .trades{display:none}.letter .who{margin-bottom:10px}
 .letter h1{font-size:27px;margin-bottom:18px}
 .letter p{font-size:17.5px}
 .slip{padding:24px 18px}
@@ -294,7 +294,7 @@ ol.steps{grid-template-columns:1fr;gap:26px}
     <div><b>Miloš Brisuda</b><span>Nitiva · weby a AI odpovídače pro malé firmy</span></div>
    </div>
    <h1 id="dopis">Zákazníci se vás pořád ptají na totéž? Ať jim odpoví váš web.</h1>
-   <p class="who">Dobrý den, jsem Miloš Brisuda. Pomáhám kadeřnicím, kosmetičkám, řemeslníkům a dalším malým firmám, které nemají čas sedět u telefonu.</p>
+   <p class="who">Dobrý den, jsem Miloš Brisuda.<span class="trades"> Pomáhám kadeřnicím, kosmetičkám, řemeslníkům a dalším malým firmám, které nemají čas sedět u telefonu.</span></p>
    <p>Když máte plné ruce práce, dotaz <q>kolik to stojí?</q> nebo <q>máte v sobotu otevřeno?</q> musí počkat. Někdo mezitím může napsat jinam.</p>
    <p>Nastavím vám web s odpovídačem, který na tyhle otázky odpoví podle vašeho ceníku a pravidel. Co neví, nevymýšlí a pošle vám to e-mailem. Termíny dál potvrzujete vy.</p>
    <div class="sign"><b>Miloš Brisuda</b><span>Odpovídám osobně, e-mailem.</span></div>
@@ -408,7 +408,7 @@ ol.steps{grid-template-columns:1fr;gap:26px}
    </article>
    <article class="proj">
     <h3>ODNESTO</h3>
-    <p class="where">Platící klient: AI asistent na webu a automatizace dotazů.</p>
+    <p class="where">Platící klient.</p>
     <p>AI asistent na webu, třídění poptávek a automatické kroky od dotazu až po vyřízení.</p>
     <p class="alsodone">Další weby, které jsem postavil: ĎuriKe, dvadsatjeden.org.</p>
    </article>
