@@ -89,6 +89,7 @@ form.k textarea{resize:vertical;min-height:96px}
 .msg.ok{background:#EEF8D2;color:#2B3A05}.msg.err{background:#FCE7E2;color:#8A2716}
 .box{background:var(--navy);color:#fff;border-radius:12px;padding:20px 22px}.box small{display:block;margin-top:10px;color:#C9D0DC!important}
 .formnote{font-size:13.5px;color:var(--muted);margin:0;line-height:1.5}
+.formnote a{color:var(--deep);font-weight:700}
 
 /* Price ticket */
 .ticket{grid-area:ticket;color:#fff;background:var(--navy2);border:1px solid var(--navy3);border-radius:14px;padding:28px 32px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:6px 40px;animation:lift .9s .18s var(--ease) both}
@@ -214,7 +215,8 @@ body>footer a{color:#fff}body>footer b{color:#fff}
 footer .cols{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 
 @media(max-width:980px){
-.desk>.wrap{grid-template-columns:1fr;grid-template-areas:"letter" "slip" "ticket"}
+.desk>.wrap{grid-template-columns:1fr;grid-template-areas:"slip" "letter" "ticket"}
+.ps-mark{display:none}
 .svc,.case,.reply .wrap{grid-template-columns:1fr}
 .slip{position:static}
 .proj.img{grid-template-columns:1fr;gap:20px}
@@ -303,18 +305,19 @@ ol.steps{grid-template-columns:1fr;gap:26px}
   </article>
 
    <section id="kontrola" class="ps slip" aria-labelledby="ps-title">
-   <h2 id="ps-title">P.S. Pošlete mi adresu svého webu a podívám se, co na něm zákazníkům chybí.</h2>
-   <p>Zdarma a nezávazně. Automatická kontrola trvá asi 20 sekund, výsledek uvidíte tady a přijde vám i e-mailem.</p>
+   <h2 id="ps-title"><span class="ps-mark">P.S. </span>Pošlete mi adresu svého webu a podívám se, co na něm zákazníkům chybí.</h2>
+   <p>Zdarma a nezávazně. Automatická kontrola trvá asi 20 sekund a výsledek uvidíte tady.</p>
    <form class="k" id="checkForm" novalidate>
     <div class="row">
      <div><label for="cu">Adresa webu nebo profilu</label><input id="cu" name="url" placeholder="např. www.vasefirma.cz" required maxlength="200" autocomplete="url" inputmode="url"></div>
-     <div><label for="ce">Váš e-mail</label><input id="ce" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+     <div><label for="ce">E-mail nebo telefon</label><input id="ce" name="contact" type="text" autocomplete="on" required maxlength="120"></div>
     </div>
     <details class="addnote"><summary>Přidat poznámku (nepovinné)</summary><div><label for="cn">Na co se mám zaměřit?</label><textarea id="cn" name="note" rows="3" maxlength="400"></textarea></div></details>
     <input class="hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <label class="consent" for="cc"><input type="checkbox" id="cc" name="consent"><span>Souhlasím, že Nitiva zpracuje adresu a e-mail za účelem vytvoření a odeslání kontroly. Údaje nepředávám dál a smažu je, jakmile nebudou potřeba.</span></label>
     <div><button class="btn" type="submit" id="csend">Zkontrolovat web zdarma <span class="ar" aria-hidden="true">→</span></button></div>
     <div id="cmsg" role="status" aria-live="polite"></div>
+    <p class="formnote">Údaje použiji jen k odpovědi na váš dotaz a nikomu je nepředávám. <a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a>.</p>
+    <div data-whatsapp-slot></div>
    </form>
   </section>
 
@@ -495,13 +498,13 @@ ol.steps{grid-template-columns:1fr;gap:26px}
   </div>
   <div class="card">
    <form class="k" id="contactForm" novalidate>
-    <div><label for="n">Jméno</label><input id="n" name="name" autocomplete="name" required maxlength="80"></div>
-    <div><label for="e">E-mail</label><input id="e" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+    <div><label for="e">E-mail nebo telefon</label><input id="e" name="contact" type="text" autocomplete="on" required maxlength="120"></div>
     <div><label for="m">S čím vám můžu pomoci? (nepovinné)</label><textarea id="m" name="message" rows="4" maxlength="1000"></textarea></div>
     <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div><button class="btn" type="submit" id="send">Odeslat zprávu <span class="ar" aria-hidden="true">→</span></button></div>
     <div id="fmsg" role="status" aria-live="polite"></div>
-    <p class="formnote">Odesláním souhlasíte se zpracováním jména, e-mailu a zprávy za účelem odpovědi na váš dotaz. Údaje nepředávám dál a smažu je, jakmile nebudou potřeba.</p>
+    <p class="formnote">Údaje použiji jen k odpovědi na váš dotaz a nikomu je nepředávám. <a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a>.</p>
+    <div data-whatsapp-slot></div>
    </form>
   </div>
  </div>
@@ -515,43 +518,43 @@ ol.steps{grid-template-columns:1fr;gap:26px}
   <div><b>Ochrana údajů</b><br><a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a><br>Marketingové cookies (Meta Pixel) používáme jen po vašem souhlasu. <button type="button" class="nitiva-cookie-settings">Nastavení cookies</button><br>Chat si v prohlížeči ukládá jen anonymní identifikátor relace.<br>Dříve: Marketing srdcem, BotEffex.</div>
  </div>
 </footer>
+<script src="/lead-form.js"></script>
 <script>
 (function(){
   var API='https://n8n.178-105-83-205.sslip.io/webhook/';
-  var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var forms=window.nitivaLeadForm;
   function mark(el,bad){if(!el)return;if(bad)el.setAttribute('aria-invalid','true');else el.removeAttribute('aria-invalid');}
+  function metaId(){return window.nitivaMetaEventId?window.nitivaMetaEventId():'';}
+  function readJson(res){return res.json().then(function(body){return {ok:!!res.ok,body:body};},function(){return {ok:false,body:null};});}
   var f=document.getElementById('contactForm'),msg=document.getElementById('fmsg'),btn=document.getElementById('send');
   function show(t,c){msg.className='msg '+c;msg.textContent=t;}
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var d={sid:'web',name:f.name.value.trim(),email:f.email.value.trim(),message:typeof window.nitivaLeadMessage==='function'?window.nitivaLeadMessage(f.message.value.trim()):f.message.value.trim(),web:f.web.value,page:location.href};
-    mark(f.name,!d.name);mark(f.email,!EMAIL.test(d.email));
-    if(!d.name){show('Vyplňte prosím jméno.','err');f.name.focus();return;}
-    if(!EMAIL.test(d.email)){show('Zadejte prosím platný e-mail, například jana@salon.cz.','err');f.email.focus();return;}
-    var metaId=window.nitivaMetaEventId?window.nitivaMetaEventId():'';
-    if(metaId)d.meta_event_id=metaId;
+    var id=metaId();
+    var d=forms.buildHandoffPayload({sid:'web',name:'',contact:f.contact.value,message:typeof window.nitivaLeadMessage==='function'?window.nitivaLeadMessage(f.message.value.trim()):f.message.value.trim(),web:f.web.value,page:location.href,metaEventId:id});
+    mark(f.contact,!d);
+    if(!d){show('Napište prosím e-mail nebo telefon, například jana@salon.cz nebo 736 284 023.','err');f.contact.focus();return;}
     btn.disabled=true;show('Odesílám…','ok');
     fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
-     .then(function(res){return res.json().then(function(body){return {ok:!!res.ok,body:body};},function(){return {ok:false,body:null};});})
-     .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){if(metaId&&window.nitivaFireLead)window.nitivaFireLead('kontakt',metaId);f.reset();show('Děkuji, zpráva je odeslaná. Ozvu se vám e-mailem.','ok');}else{show('Odeslání se nepodařilo. Napište mi prosím přímo na milos@nitiva.cz.','err');}})
+     .then(readJson)
+     .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){if(id&&window.nitivaFireLead)window.nitivaFireLead('kontakt',id);f.reset();show(forms.contactThanks(d.phone?'phone':'email'),'ok');}else{show('Odeslání se nepodařilo. Napište mi prosím přímo na milos@nitiva.cz.','err');}})
      .catch(function(){show('Odeslání se nepodařilo. Napište mi prosím přímo na milos@nitiva.cz.','err');})
      .then(function(){btn.disabled=false;});
   });
   var cf=document.getElementById('checkForm'),cm=document.getElementById('cmsg'),cb=document.getElementById('csend');
   cf.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var d={url:cf.url.value.trim(),email:cf.email.value.trim(),note:cf.note.value.trim(),hp:cf.hp.value,consent:document.getElementById('cc').checked,src:typeof window.nitivaLeadSource==='function'?window.nitivaLeadSource():''};
     function sh(t,c){cm.className='msg '+c;cm.textContent=t;}
-    mark(cf.url,!d.url);mark(cf.email,!EMAIL.test(d.email));
-    if(!d.url){sh('Zadejte prosím adresu webu nebo profilu, například www.vasefirma.cz.','err');cf.url.focus();return;}
-    if(!EMAIL.test(d.email)){sh('Zadejte prosím platný e-mail, na který vám pošlu výsledek.','err');cf.email.focus();return;}
-    if(!d.consent){sh('Potvrďte prosím souhlas se zpracováním údajů.','err');document.getElementById('cc').focus();return;}
-    var metaId=window.nitivaMetaEventId?window.nitivaMetaEventId():'';
-    if(metaId)d.meta_event_id=metaId;
+    var id=metaId();
+    var parsed=forms.parseContact(cf.contact.value);
+    var d=forms.buildCheckPayload({url:cf.url.value,contact:cf.contact.value,note:cf.note.value,hp:cf.hp.value,src:typeof window.nitivaLeadSource==='function'?window.nitivaLeadSource():'',metaEventId:id});
+    mark(cf.url,!cf.url.value.trim());mark(cf.contact,!parsed.ok);
+    if(!cf.url.value.trim()){sh('Zadejte prosím adresu webu nebo profilu, například www.vasefirma.cz.','err');cf.url.focus();return;}
+    if(!d){sh('Napište prosím e-mail nebo telefon, na který vám pošlu výsledek.','err');cf.contact.focus();return;}
     cb.disabled=true;sh('Kontroluji váš web… trvá to asi 20 sekund.','ok');
     fetch(API+'nitiva-kontrola',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
-     .then(function(res){return res.json().then(function(body){return {ok:!!res.ok,body:body};},function(){return {ok:false,body:null};});})
-     .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){if(metaId&&window.nitivaFireLead)window.nitivaFireLead('kontrola_webu',metaId);cf.reset();sh('','ok');var rp=document.createElement('div');rp.className='box';rp.style.cssText='margin-top:14px;white-space:pre-wrap';var hd=document.createElement('b');hd.textContent='Vaše bezplatná kontrola';var tx=document.createElement('p');tx.style.margin='8px 0 0';tx.textContent=(r.report||'Kontrolu se nepodařilo vytvořit automaticky, ozvu se vám e-mailem.');var ft=document.createElement('small');ft.textContent='Kopii jsem vám poslal i e-mailem. Jde o automatickou orientační kontrolu, rád ji s vámi projdu osobně: milos@nitiva.cz.';rp.appendChild(hd);rp.appendChild(tx);rp.appendChild(ft);cm.appendChild(rp);}else{sh((r&&r.msg)||'Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');}})
+     .then(readJson)
+     .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){if(id&&window.nitivaFireLead)window.nitivaFireLead('kontrola_webu',id);var kind=d.phone?'phone':'email';cf.reset();sh('','ok');var rp=document.createElement('div');rp.className='box';rp.style.cssText='margin-top:14px;white-space:pre-wrap';var hd=document.createElement('b');hd.textContent='Vaše bezplatná kontrola';var tx=document.createElement('p');tx.style.margin='8px 0 0';tx.textContent=(r.report||'Kontrolu se nepodařilo vytvořit automaticky, ozvu se vám.');var ft=document.createElement('small');ft.textContent=forms.checkFollowup(kind);rp.appendChild(hd);rp.appendChild(tx);rp.appendChild(ft);cm.appendChild(rp);}else{sh((r&&r.msg)||'Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');}})
      .catch(function(){sh('Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');})
      .then(function(){cb.disabled=false;});
   });
