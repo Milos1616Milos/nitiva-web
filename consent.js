@@ -142,6 +142,8 @@
         policyHref: '/en/privacy/',
         accept: 'Accept',
         reject: 'Reject',
+        short: 'Meta Pixel runs only if you accept it. ',
+        policyShort: 'Details',
         settings: 'Cookie settings',
         accepted: 'Current choice: accepted.',
         rejected: 'Current choice: rejected.'
@@ -154,6 +156,8 @@
       policyHref: '/ochrana-udaju/',
       accept: 'Přijmout',
       reject: 'Odmítnout',
+      short: 'Meta Pixel zapneme jen s\u00a0vaším souhlasem. ',
+      policyShort: 'Podrobnosti',
       settings: 'Nastavení cookies',
       accepted: 'Aktuální volba: přijato.',
       rejected: 'Aktuální volba: odmítnuto.'
@@ -177,13 +181,28 @@
       '#nitiva-consent .nitiva-consent-btn:focus-visible{outline:3px solid #D9FF6F;outline-offset:2px}',
       'button.nitiva-cookie-settings{appearance:none;background:transparent;border:0;padding:0;margin:0;font:inherit;font-weight:800;color:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}',
       '.nitiva-cookie-settings-row{margin:12px 0 0}',
-      '@media (max-width:640px){#nitiva-consent{left:8px;right:8px;bottom:8px;padding:16px}#nitiva-consent .nitiva-consent-actions{flex-direction:column}#nitiva-consent .nitiva-consent-btn{width:100%}}'
+      '#nitiva-consent .nitiva-consent-short{display:none}',
+      '@media (max-width:640px){#nitiva-consent{left:8px;right:8px;bottom:8px;padding:12px 12px 12px;border-radius:14px;font-size:14px;line-height:1.4}#nitiva-consent p{margin:0 0 10px}#nitiva-consent .nitiva-consent-long{display:none}#nitiva-consent .nitiva-consent-short{display:inline}#nitiva-consent .nitiva-consent-status{font-size:13px;margin:0 0 8px}#nitiva-consent .nitiva-consent-actions{gap:8px}#nitiva-consent .nitiva-consent-btn{font-size:15px;padding:11px 10px;border-radius:10px}}'
     ].join('');
     document.head.appendChild(style);
   }
 
+  var padSaved = null;
+  function syncPad() {
+    if (!document.body) return;
+    if (banner && !banner.hidden) {
+      if (padSaved === null) padSaved = document.body.style.paddingBottom || '';
+      document.body.style.paddingBottom = (banner.offsetHeight + 8) + 'px';
+    } else if (padSaved !== null) {
+      document.body.style.paddingBottom = padSaved;
+      padSaved = null;
+    }
+  }
+  window.addEventListener('resize', syncPad);
+
   function hideBanner() {
     if (banner) banner.hidden = true;
+    syncPad();
   }
 
   function showBanner(fromSettings) {
@@ -196,12 +215,24 @@
       banner.tabIndex = -1;
       var body = document.createElement('p');
       body.id = 'nitiva-consent-text';
-      body.textContent = copy.body + (isEnglish() ? ' Details: ' : ' Podrobnosti: ');
+      var long = document.createElement('span');
+      long.className = 'nitiva-consent-long';
+      long.textContent = copy.body + (isEnglish() ? ' Details: ' : ' Podrobnosti: ');
       var link = document.createElement('a');
       link.href = copy.policyHref;
       link.textContent = copy.policy;
-      body.appendChild(link);
-      body.appendChild(document.createTextNode('.'));
+      long.appendChild(link);
+      long.appendChild(document.createTextNode('.'));
+      var short = document.createElement('span');
+      short.className = 'nitiva-consent-short';
+      short.appendChild(document.createTextNode(copy.short));
+      var linkShort = document.createElement('a');
+      linkShort.href = copy.policyHref;
+      linkShort.textContent = copy.policyShort;
+      short.appendChild(linkShort);
+      short.appendChild(document.createTextNode('.'));
+      body.appendChild(long);
+      body.appendChild(short);
       var status = document.createElement('p');
       status.className = 'nitiva-consent-status';
       status.id = 'nitiva-consent-status';
@@ -226,6 +257,7 @@
     var statusEl = document.getElementById('nitiva-consent-status');
     statusEl.textContent = fromSettings && current === 'accepted' ? copy.accepted : fromSettings && current === 'rejected' ? copy.rejected : '';
     banner.hidden = false;
+    syncPad();
     if (fromSettings) banner.focus();
   }
 
