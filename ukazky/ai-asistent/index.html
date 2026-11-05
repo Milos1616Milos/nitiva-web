@@ -280,7 +280,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     <div class="ai-copy">
       <h2>AI asistent na webu</h2>
       <div class="orn" aria-hidden="true"></div>
-      <p>Odpovídá na ceny, otevírací dobu a STK. V ostré verzi napojíme webhook / n8n — tady běží lokální ukázka bez serveru.</p>
+      <p>Odpovídá na ceny, otevírací dobu a STK. Ve vaší verzi asistent zná váš ceník a termíny a dotazy vám pošle e-mailem nebo do mobilu.</p>
       <ul class="ai-points">
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
@@ -416,7 +416,7 @@ bay / bay2 / tires / tools / mechanic / car: Unsplash automotive workshop set
     add('user', q);
     setTimeout(function(){
       const ans = (window.NitivaChat && NitivaChat.answer) ? NitivaChat.answer(q) :
-        'Díky za zprávu. V ostré verzi by asistent odpověděl z vašeho ceníku.';
+        'Díky za zprávu. Zkuste se zeptat na přezutí, STK, ceny nebo otevírací dobu.';
       add('bot', ans);
     }, 420 + Math.random()*380);
   }
