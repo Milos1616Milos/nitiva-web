@@ -109,12 +109,12 @@ section{padding:64px 0}
 .ai-points li{display:grid;grid-template-columns:18px 1fr;gap:12px;font-size:14px;color:var(--ink-2)}
 .ai-points svg{width:18px;height:18px;color:var(--ok);margin-top:2px}
 .chat{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:480px;box-shadow:0 18px 40px -28px rgba(18,20,22,.35)}
-.chat-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff, #faf8f4)}
+.chat-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);background:#faf8f4}
 .chat-av{width:36px;height:36px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:14px;letter-spacing:.04em}
 .chat-head strong{display:block;font-size:14px}
 .chat-head span{font-size:12px;color:var(--ok)}
 .chat-head span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ok);margin-right:6px;vertical-align:middle}
-.chat-body{flex:1;padding:18px 16px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;background:repeating-linear-gradient(0deg,transparent,transparent 23px,rgba(217,212,201,.35) 24px);background-size:100% 24px}
+.chat-body{flex:1;padding:18px 16px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;background:#fff}
 .bubble{max-width:86%;padding:12px 14px;border-radius:12px;font-size:14px;line-height:1.5}
 .bubble.bot{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px;color:var(--ink)}
 .bubble.user{align-self:flex-end;background:var(--ink);color:#fff;border-bottom-right-radius:4px}
@@ -199,13 +199,13 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
         <a class="btn btn-ghost" href="#sluzby">Ceník služeb</a>
       </div>
       <div class="trust">
-        <div><b>12+</b><span>let v oboru (ukázka)</span></div>
-        <div><b>Do 60&nbsp;s</b><span>odpověď asistenta</span></div>
+        <div><b>Ceny</b><span>orientačně, podle ceníku dílny</span></div>
+        <div><b>Termín</b><span>asistent navrhne, dílna potvrdí</span></div>
         <div><b>Po–So</b><span>dle kapacity dílny</span></div>
       </div>
     </div>
     <div class="hero-media">
-      <img src="img/hero.jpg" alt="Dílna Autoservisu Novák" width="800" height="1000" loading="eager">
+      <img src="img/hero.jpg" alt="Ukázková fotografie autodílny" width="800" height="1000" loading="eager">
       <div class="hero-badge"><strong>Online asistent</strong> Funguje i mimo otevírací dobu</div>
     </div>
   </div>
@@ -389,9 +389,11 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 </footer>
 
 <!--
-Unsplash photo credits (commercial license):
-hero: workshop bay
-bay / bay2 / tires / tools / mechanic / car: Unsplash automotive workshop set
+Fotografie: hero.jpg, bay.jpg, bay2.jpg, tires.jpg, tools.jpg, mechanic.jpg, car.jpg
+Puvod NEOVEREN. Puvodni poznamka uvadela jen "Unsplash automotive workshop set"
+bez odkazu na konkretni fotky; soubory nemaji EXIF ani jiny zaznam o zdroji.
+Pred ostrym pouzitim doplnit u kazde fotky URL na unsplash.com/photos/...
+(licence https://unsplash.com/license), nebo fotky nahradit overenymi.
 -->
 <script src="chat.js"></script>
 <script>

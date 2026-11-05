@@ -200,8 +200,8 @@ button,input,select,textarea{font:inherit}
 .gallery figure:hover img{transform:scale(1.03)}
 .gallery .tall{grid-row:1 / span 2}
 .gallery figcaption{
-  position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;
-  background:linear-gradient(transparent,rgba(28,24,20,.55));
+  position:absolute;left:0;right:0;bottom:0;padding:10px 14px;
+  background:rgba(28,24,20,.55);
   color:#fff;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
   opacity:.92;
 }
@@ -246,23 +246,11 @@ button,input,select,textarea{font:inherit}
 .member .role{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:calc(var(--g)*1.5);font-weight:500}
 .member p{margin:0;font-size:13px;color:var(--mute);font-weight:300;line-height:1.55}
 
-/* REVIEWS */
-.reviews{background:var(--paper-2);padding:calc(var(--g)*9) 0}
-.quotes{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--g)*2.5);margin-top:calc(var(--g)*4)}
-.quote{
-  background:var(--paper);padding:calc(var(--g)*4) calc(var(--g)*3.5) calc(var(--g)*3);
-  border-radius:2px;position:relative;
-}
-.quote .mark{
-  font-family:"Bodoni Moda",serif;font-size:56px;line-height:1;color:var(--clay);
-  position:absolute;top:12px;left:20px;opacity:.35;font-style:italic;
-}
-.quote p{
-  font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(18px,2vw,22px);
-  line-height:1.4;margin:18px 0 22px;letter-spacing:-.015em;position:relative;
-}
-.quote footer{font-size:12px;color:var(--mute);display:flex;justify-content:space-between;gap:12px;align-items:center}
-.quote .stars{color:var(--clay);letter-spacing:3px;font-size:11px}
+/* NÁVŠTĚVA */
+.visit-flow{background:var(--paper-2);padding:calc(var(--g)*9) 0}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--g)*3);margin-top:calc(var(--g)*4);border-top:1px solid var(--line);padding-top:calc(var(--g)*3)}
+.steps h3{font-family:"Bodoni Moda",serif;font-weight:500;font-size:20px;letter-spacing:-.015em;margin:0 0 8px}
+.steps p{margin:0;font-size:14px;line-height:1.6;color:var(--mute);font-weight:300}
 
 /* VISIT */
 .visit{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--g)*5);align-items:start}
@@ -313,7 +301,7 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
 .mnav svg{display:block}
 
 @media(max-width:900px){
-  .hero,.band-inner,.services,.visit,.quotes{grid-template-columns:1fr}
+  .hero,.band-inner,.services,.visit,.steps{grid-template-columns:1fr}
   .hero{gap:calc(var(--g)*3)}
   .hero-photo{aspect-ratio:5/4;max-height:420px}
   .gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto;min-height:0}
@@ -477,21 +465,27 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
   </div>
 </section>
 
-<section class="reviews" id="recenze">
+<section class="visit-flow" id="navsteva">
   <div class="wrap">
-    <p class="eyebrow" style="margin:0 0 12px">Hlasy klientů · ukázkové</p>
-    <h2 class="serif" style="font-size:clamp(28px,3.2vw,38px);font-weight:500;margin:0;letter-spacing:-.025em;line-height:1.15;max-width:16ch">Co by lidé psali, kdyby salon existoval.</h2>
-    <div class="quotes">
-      <blockquote class="quote">
-        <span class="mark" aria-hidden="true">„</span>
-        <p>Konečně někdo, kdo nejdřív poslouchá. Odešla jsem se střihom, který zvládám sama.</p>
-        <footer><span>Klára M. · Vinohrady</span><span class="stars" aria-label="5 z 5">★★★★★</span></footer>
-      </blockquote>
-      <blockquote class="quote">
-        <span class="mark" aria-hidden="true">„</span>
-        <p>Balayage bez oranžového přechodu. Termín přes web večer, ráno potvrzení.</p>
-        <footer><span>Andrea K. · Praha 3</span><span class="stars" aria-label="5 z 5">★★★★★</span></footer>
-      </blockquote>
+    <p class="eyebrow" style="margin:0 0 12px">Jak probíhá návštěva</p>
+    <h2 class="serif" style="font-size:clamp(28px,3.2vw,38px);font-weight:500;margin:0;letter-spacing:-.025em;line-height:1.15;max-width:18ch">Od rezervace po zrcadlo, bez překvapení.</h2>
+    <div class="steps">
+      <div>
+        <h3>Rezervace</h3>
+        <p>Termín si vyberete na webu podle služby a kadeřnice. Když si nejste jistí, co objednat, napište do poznámky, co chcete změnit. Ozveme se a doporučíme.</p>
+      </div>
+      <div>
+        <h3>Konzultace</h3>
+        <p>Než vezmeme nůžky nebo štětec, probereme, jak vlasy nosíte, kolik času jim ráno dáváte a jakou barvu jste měla naposledy. Fotky toho, co se vám líbí, pomůžou.</p>
+      </div>
+      <div>
+        <h3>V křesle</h3>
+        <p>Řekneme vám, co děláme a proč. Když se během práce ukáže, že by výsledek nevypadal dobře, raději se zastavíme a domluvíme jinou cestu.</p>
+      </div>
+      <div>
+        <h3>Doma</h3>
+        <p>Ukážeme, jak účes upravit fénem nebo rukama, a poradíme, kdy přijít příště. Prodávat vám kosmetiku, kterou nepotřebujete, nebudeme.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -542,7 +536,7 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
 
 <div class="wrap">
   <footer class="site">
-    <span>Salon Lumen je smyšlená firma. Adresa, telefon i recenze jsou ilustrační.</span>
+    <span>Salon Lumen je smyšlená firma. Adresa, telefon, jména i ceny jsou ilustrační.</span>
     <span>Chcete podobný web? <a href="https://nitiva.cz/portfolio/">nitiva.cz / portfolio</a></span>
   </footer>
 </div>
