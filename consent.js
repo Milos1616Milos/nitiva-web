@@ -188,25 +188,22 @@
   }
 
   var padSaved = null;
-  var lifted = [];
-  function liftFloats(h) {
-    var root = document.documentElement;
-    root.style.setProperty('--consent-h', h + 'px');
+  var hiddenFloats = [];
+  function hideFloats() {
     Array.prototype.forEach.call(document.body.querySelectorAll('*'), function (el) {
-      if (el === banner || (banner && banner.contains(el)) || el.hasAttribute('data-consent-lift')) return;
+      if (el === banner || (banner && banner.contains(el)) || el.hasAttribute('data-consent-hide')) return;
       var cs = getComputedStyle(el);
       if (cs.position !== 'fixed' || cs.bottom === 'auto') return;
-      var b = parseFloat(cs.bottom) || 0;
-      if (b > window.innerHeight / 2) return;
-      lifted.push([el, el.style.bottom]);
-      el.setAttribute('data-consent-lift', '');
-      el.style.bottom = 'calc(' + b + 'px + var(--consent-h, 0px))';
+      if ((parseFloat(cs.bottom) || 0) > window.innerHeight / 2) return;
+      if (el.offsetHeight > window.innerHeight * 0.4) return;
+      hiddenFloats.push([el, el.style.visibility]);
+      el.setAttribute('data-consent-hide', '');
+      el.style.visibility = 'hidden';
     });
   }
-  function dropFloats() {
-    document.documentElement.style.removeProperty('--consent-h');
-    lifted.forEach(function (item) { item[0].style.bottom = item[1]; item[0].removeAttribute('data-consent-lift'); });
-    lifted = [];
+  function showFloats() {
+    hiddenFloats.forEach(function (item) { item[0].style.visibility = item[1]; item[0].removeAttribute('data-consent-hide'); });
+    hiddenFloats = [];
   }
   function syncPad() {
     if (!document.body) return;
@@ -214,11 +211,11 @@
       if (padSaved === null) padSaved = document.body.style.paddingBottom || '';
       var h = banner.offsetHeight + 8;
       document.body.style.paddingBottom = h + 'px';
-      liftFloats(h);
+      hideFloats();
     } else if (padSaved !== null) {
       document.body.style.paddingBottom = padSaved;
       padSaved = null;
-      dropFloats();
+      showFloats();
     }
   }
   window.addEventListener('resize', syncPad);
