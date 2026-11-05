@@ -61,14 +61,15 @@ button,input{font:inherit}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:18px}
 .eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
-.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,5.2vw,56px);line-height:1.05;letter-spacing:.01em;text-transform:uppercase;margin-bottom:18px;max-width:14ch}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,5.2vw,56px);line-height:1.14;letter-spacing:.015em;text-transform:uppercase;margin-bottom:20px;max-width:14ch;text-wrap:balance}
 .hero p.lead{font-size:17px;color:var(--ink-2);max-width:38ch;margin-bottom:28px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px}
 .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);padding-top:20px}
 .trust div{padding:4px 16px 4px 0;border-right:1px solid var(--line)}
 .trust div:last-child{border-right:0;padding-right:0}
-.trust b{display:block;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.02em}
-.trust span{font-size:12px;color:var(--mute)}
+.trust div+div{padding-left:16px}
+.trust b{display:block;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.02em;line-height:1.15}
+.trust span{display:block;margin-top:4px;font-size:12.5px;line-height:1.35;color:var(--mute)}
 .hero-media{position:relative}
 .hero-media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;filter:saturate(.9) contrast(1.05)}
 .hero-badge{position:absolute;left:16px;bottom:16px;background:rgba(18,20,22,.88);color:#fff;padding:10px 14px;border-radius:6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;backdrop-filter:blur(6px)}
@@ -77,7 +78,7 @@ button,input{font:inherit}
 /* section shared */
 section{padding:64px 0}
 .sec-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px;flex-wrap:wrap}
-.sec-head h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,36px);font-weight:600;letter-spacing:.02em;text-transform:uppercase;line-height:1.1}
+.sec-head h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,36px);font-weight:600;letter-spacing:.02em;text-transform:uppercase;line-height:1.16;text-wrap:balance}
 .sec-head p{color:var(--mute);max-width:36ch;font-size:15px}
 .orn{width:40px;height:2px;background:var(--accent);margin:12px 0 0}
 
@@ -87,7 +88,7 @@ section{padding:64px 0}
 .svc-featured{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:320px}
 .svc-featured img{width:100%;height:100%;object-fit:cover;min-height:280px}
 .svc-featured .body{padding:28px;display:flex;flex-direction:column;justify-content:center}
-.svc-featured h3{font-family:var(--serif);font-size:26px;text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px}
+.svc-featured h3{font-family:var(--serif);font-size:26px;text-transform:uppercase;letter-spacing:.03em;line-height:1.16;margin-bottom:10px;text-wrap:balance}
 .svc-featured p{color:var(--ink-2);font-size:15px;margin-bottom:18px}
 .price{font-family:var(--serif);font-size:20px;color:var(--accent);letter-spacing:.02em}
 .svc-side{display:flex;flex-direction:column;gap:16px}
@@ -102,7 +103,7 @@ section{padding:64px 0}
 /* AI assistant panel */
 .ai{padding:72px 0}
 .ai-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:stretch}
-.ai-copy h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,38px);text-transform:uppercase;letter-spacing:.02em;line-height:1.1;margin-bottom:14px}
+.ai-copy h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,38px);text-transform:uppercase;letter-spacing:.02em;line-height:1.16;text-wrap:balance;margin-bottom:14px}
 .ai-copy .orn{margin-bottom:18px}
 .ai-copy p{color:var(--ink-2);font-size:16px;max-width:40ch;margin-bottom:20px}
 .ai-points{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
@@ -141,7 +142,7 @@ section{padding:64px 0}
 /* contact */
 .contact{background:var(--ink);color:#fff;padding:64px 0}
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.contact h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,40px);text-transform:uppercase;letter-spacing:.02em;margin-bottom:14px}
+.contact h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,40px);text-transform:uppercase;letter-spacing:.02em;line-height:1.16;margin-bottom:14px;text-wrap:balance}
 .contact p{color:rgba(255,255,255,.72);max-width:40ch;margin-bottom:24px}
 .contact .btn{background:#fff;color:var(--ink)}
 .contact .btn:hover{background:#f0ebe3}
@@ -162,13 +163,16 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
   .hero-grid,.ai-grid,.svc-list,.contact-grid{grid-template-columns:1fr}
   .svc-featured{grid-template-columns:1fr}
   .svc-featured img{min-height:200px;aspect-ratio:16/10}
-  .trust{grid-template-columns:1fr 1fr}
-  .trust div:nth-child(2){border-right:0}
+  .trust div{padding:2px 12px 2px 0}
+  .trust div+div{padding-left:12px}
+  .trust b{font-size:18px}
+  .trust span{font-size:12px}
   .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}
   .gal-grid figure:first-child{grid-row:auto;grid-column:1 / -1;min-height:220px}
   .hero{padding:32px 0 40px}
   section,.ai{padding:48px 0}
 }
+h1,h2,h3{text-wrap:balance}p,li,figcaption{text-wrap:pretty}
 </style>
 </head>
 <body>
@@ -191,9 +195,9 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Brno · dílna s AI asistentem</div>
+      <div class="eyebrow">Brno · dílna s&nbsp;AI asistentem</div>
       <h1>Servis, který odpovídá hned</h1>
-      <p class="lead">Orientační ceny, termíny a příprava na STK — bez čekání na telefon. Ukázkový web s AI asistentem, který Nitiva postaví i pro váš servis.</p>
+      <p class="lead">Orientační ceny, termíny a&nbsp;příprava na STK — bez čekání na telefon. Ukázkový web s&nbsp;AI asistentem, který Nitiva postaví i&nbsp;pro váš servis.</p>
       <div class="hero-cta">
         <a class="btn" href="#asistent">Vyzkoušet chat</a>
         <a class="btn btn-ghost" href="#sluzby">Ceník služeb</a>
@@ -206,7 +210,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     </div>
     <div class="hero-media">
       <img src="img/hero.jpg" alt="Ukázková fotografie autodílny" width="900" height="1125" loading="eager">
-      <div class="hero-badge"><strong>Online asistent</strong> Funguje i mimo otevírací dobu</div>
+      <div class="hero-badge"><strong>Online asistent</strong> Funguje i&nbsp;mimo otevírací dobu</div>
     </div>
   </div>
 </section>
@@ -225,7 +229,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
         <img src="img/tires.jpg" alt="Přezutí pneumatik" loading="lazy">
         <div class="body">
           <h3>Přezutí pneu</h3>
-          <p>Kompletní sada, vyvážení, kontrola tlaku a uložení. Termín podle vytížení dílny.</p>
+          <p>Kompletní sada, vyvážení, kontrola tlaku a&nbsp;uložení. Termín podle vytížení dílny.</p>
           <div class="price">od 600&nbsp;Kč</div>
         </div>
       </article>
@@ -280,15 +284,15 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     <div class="ai-copy">
       <h2>AI asistent na webu</h2>
       <div class="orn" aria-hidden="true"></div>
-      <p>Odpovídá na ceny, otevírací dobu a STK. Ve vaší verzi asistent zná váš ceník a termíny a dotazy vám pošle e-mailem nebo do mobilu.</p>
+      <p>Odpovídá na ceny, otevírací dobu a&nbsp;STK. Ve vaší verzi asistent zná váš ceník a&nbsp;termíny a&nbsp;dotazy vám pošle e-mailem nebo do mobilu.</p>
       <ul class="ai-points">
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
-          <span>Okamžité odpovědi i mimo otevírací dobu</span>
+          <span>Okamžité odpovědi i&nbsp;mimo otevírací dobu</span>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
-          <span>Orientační ceník a typické termíny</span>
+          <span>Orientační ceník a&nbsp;typické termíny</span>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
@@ -330,7 +334,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
         <h2>Dílna</h2>
         <div class="orn" aria-hidden="true"></div>
       </div>
-      <p>Fotografie z ukázkové sady — v ostrém webu nahradíme vašimi.</p>
+      <p>Fotografie z&nbsp;ukázkové sady — v&nbsp;ostrém webu nahradíme vašimi.</p>
     </div>
     <div class="gal-grid">
       <figure>
@@ -361,7 +365,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:13px;color:var(
   <div class="wrap contact-grid">
     <div>
       <h2>Chcete stejného asistenta?</h2>
-      <p>Nitiva postaví web + AI chat napojený na váš kalendář a ceník. Tahle stránka je jen ukázka — data jsou fiktivní.</p>
+      <p>Nitiva postaví web + AI chat napojený na váš kalendář a&nbsp;ceník. Tahle stránka je jen ukázka — data jsou fiktivní.</p>
       <a class="btn" href="https://nitiva.cz/#kontakt">Napsat Nitivě</a>
     </div>
     <div class="contact-card">
