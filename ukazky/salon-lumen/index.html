@@ -1,16 +1,15 @@
 <!doctype html>
 <!--
-  Photo credits (Unsplash License — free for commercial use):
-  - hero.jpg   https://unsplash.com/photos/photo-1560066984-138dadb4c035
-  - chair.jpg  https://unsplash.com/photos/photo-1522335789203-aabd1fc54bc9
-  - color.jpg  https://unsplash.com/photos/photo-1519699047748-de8e457a634e
-  - detail.jpg https://unsplash.com/photos/photo-1562322140-8baeececf3df
-  - makeup.jpg https://unsplash.com/photos/photo-1487412947147-5cebf100ffc2
-  - cut.jpg    https://unsplash.com/photos/photo-1522337360788-8b13dee7a37e
-  - team1.jpg  https://unsplash.com/photos/photo-1492106087820-71f1a00d2b11
-  - team2.jpg  https://unsplash.com/photos/photo-1580618672591-eb180b1a973f
-  - barber.jpg https://unsplash.com/photos/photo-1503951914875-452162b0f3f1
-  License: https://unsplash.com/license
+  Fotografie (Unsplash License, komerční použití povoleno: https://unsplash.com/license)
+  - hero.jpg   https://unsplash.com/photos/grayscale-photo-of-woman-using-laptop-near-three-salon-chairs-VjRpkGtS55w  (Adam Winger)
+  - chair.jpg  https://unsplash.com/photos/photo-of-assorted-makeup-products-on-gray-surface-ceWgSMd8rvQ  (Element5 Digital)
+  - color.jpg  https://unsplash.com/photos/a-woman-with-an-afro-is-looking-at-the-camera-_cvwXhGqG-o  (Jessica Felicio)
+  - detail.jpg https://unsplash.com/photos/woman-holding-hair-dryer-WXmHwPcFamo  (Adam Winger)
+  - makeup.jpg https://unsplash.com/photos/woman-getting-lips-applied-with-lipstick-YGmk9UZMdZg  (freestocks)
+  - cut.jpg    https://unsplash.com/photos/woman-in-white-long-sleeved-shirt-standing-in-front-of-pink-wall-WCPg9ROZbM0  (Element5 Digital)
+  - team1.jpg  https://unsplash.com/photos/purple-haired-woman-in-black-top-leaning-on-wall-tLKOj6cNwe0  (Kareya Saleh)
+  - team2.jpg  https://unsplash.com/photos/hairstylist-blow-drying-client-hair-FkAZqQJTbXM  (Adam Winger)
+  - barber.jpg https://unsplash.com/photos/man-sitting-on-barbers-chair-IvQeAVeJULw  (Allef Vinicius)
 -->
 <html lang="cs">
 <head>
@@ -248,9 +247,11 @@ button,input,select,textarea{font:inherit}
 
 /* NÁVŠTĚVA */
 .visit-flow{background:var(--paper-2);padding:calc(var(--g)*9) 0}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--g)*3);margin-top:calc(var(--g)*4);border-top:1px solid var(--line);padding-top:calc(var(--g)*3)}
-.steps h3{font-family:"Bodoni Moda",serif;font-weight:500;font-size:20px;letter-spacing:-.015em;margin:0 0 8px}
-.steps p{margin:0;font-size:14px;line-height:1.6;color:var(--mute);font-weight:300}
+.visit-flow .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:calc(var(--g)*6);align-items:start}
+.prose{max-width:60ch}
+.prose p{margin:0 0 1.15em;font-size:17px;line-height:1.72;font-weight:300;color:var(--ink)}
+.prose p:last-child{margin-bottom:0}
+.prose strong{font-family:"Bodoni Moda",serif;font-weight:500;font-size:1.12em;color:var(--clay-d);margin-right:.25em}
 
 /* VISIT */
 .visit{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--g)*5);align-items:start}
@@ -301,7 +302,7 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
 .mnav svg{display:block}
 
 @media(max-width:900px){
-  .hero,.band-inner,.services,.visit,.steps{grid-template-columns:1fr}
+  .hero,.band-inner,.services,.visit,.visit-flow .wrap{grid-template-columns:1fr}
   .hero{gap:calc(var(--g)*3)}
   .hero-photo{aspect-ratio:5/4;max-height:420px}
   .gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto;min-height:0}
@@ -352,9 +353,9 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
       </div>
       <div class="hero-facts">
         <div><b>4 křesla</b><span>bez fronty, bez shonu</span></div>
-        <div><b>Od 2019</b><span>ukázkový údaj</span></div>
+        <div><b>Konzultace</b><span>před každou službou</span></div>
         <div><b>Po–So</b><span>viz otevírací doba</span></div>
-        <div><b>Online</b><span>rezervace do 60&nbsp;s</span></div>
+        <div><b>Online</b><span>rezervace přes web</span></div>
       </div>
     </div>
   </section>
@@ -415,15 +416,15 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
   <div class="wrap services">
     <div class="services-side">
       <p class="eyebrow">Ceník</p>
-      <h2 class="serif" style="font-size:clamp(28px,3.2vw,38px);font-weight:500;margin:0 0 14px;letter-spacing:-.025em;line-height:1.15">Služby, které dává smysl napsat nahlas.</h2>
+      <h2 class="serif" style="font-size:clamp(28px,3.2vw,38px);font-weight:500;margin:0 0 14px;letter-spacing:-.025em;line-height:1.15">Služby, které dávají smysl napsat nahlas.</h2>
       <p style="color:var(--mute);font-weight:300;margin:0;font-size:14px;line-height:1.55">Ceny jsou orientační ukázka v&nbsp;Kč. U skutečného klienta by seděly na jeho ceník a délku vlasů.</p>
       <div class="note">První návštěva: krátká konzultace (10–15&nbsp;min). Barvení vždy včetně péče a foukané.</div>
     </div>
     <div class="menu" role="list">
       <div class="menu-row" role="listitem"><div><h3>Dámský střih</h3><p>Konzultace, mytí, střih, foukaná. Cca 60–75&nbsp;min.</p></div><div class="price">890&nbsp;Kč<small>od</small></div></div>
       <div class="menu-row" role="listitem"><div><h3>Pánský střih</h3><p>Klasika i fade, úprava kontur. Vousy +150&nbsp;Kč.</p></div><div class="price">490&nbsp;Kč<small>od</small></div></div>
-      <div class="menu-row" role="listitem"><div><h3>Celobarva / tonování</h3><p>Jedna barva, péče, foukaná. Podle délky a hustoty.</p></div><div class="price">1&nbsp;690&nbsp;Kč<small>od</small></div></div>
-      <div class="menu-row" role="listitem"><div><h3>Balayage / melír</h3><p>Volné melíry, tonování, péče. Rezervace min. 3&nbsp;h.</p></div><div class="price">2&nbsp;490&nbsp;Kč<small>od</small></div></div>
+      <div class="menu-row" role="listitem"><div><h3>Celobarva / tónování</h3><p>Jedna barva, péče, foukaná. Podle délky a hustoty.</p></div><div class="price">1&nbsp;690&nbsp;Kč<small>od</small></div></div>
+      <div class="menu-row" role="listitem"><div><h3>Balayage / melír</h3><p>Volné melíry, tónování, péče. Rezervace min. 3&nbsp;h.</p></div><div class="price">2&nbsp;490&nbsp;Kč<small>od</small></div></div>
       <div class="menu-row" role="listitem"><div><h3>Svatební / společenský účes</h3><p>Zkouška + den D. Domácí výjezd po dohodě.</p></div><div class="price">1&nbsp;890&nbsp;Kč<small>od</small></div></div>
       <div class="menu-row" role="listitem"><div><h3>Regenerační péče</h3><p>Intenzivní maska / bond-building. Samostatně nebo k barvě.</p></div><div class="price">450&nbsp;Kč<small>od</small></div></div>
     </div>
@@ -449,7 +450,7 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
         <div class="ph"><img src="img/team1.jpg" alt="Tereza – ukázková fotografie" width="720" height="900" loading="lazy"></div>
         <div class="bio">
           <h3>Tereza</h3>
-          <div class="role">Střihačka · styling</div>
+          <div class="role">Střihy · styling</div>
           <p>Střihy, které se snadno upravují doma. Svatební účesy.</p>
         </div>
       </article>
@@ -458,7 +459,7 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
         <div class="bio">
           <h3>Martin</h3>
           <div class="role">Pánské střihy</div>
-          <p>Fade, klasik a vousy. Small talk jen tehdy, když ho chcete.</p>
+          <p>Fade, klasické střihy a vousy. Povídá si, jen když chcete.</p>
         </div>
       </article>
     </div>
@@ -467,25 +468,15 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
 
 <section class="visit-flow" id="navsteva">
   <div class="wrap">
-    <p class="eyebrow" style="margin:0 0 12px">Jak probíhá návštěva</p>
-    <h2 class="serif" style="font-size:clamp(28px,3.2vw,38px);font-weight:500;margin:0;letter-spacing:-.025em;line-height:1.15;max-width:18ch">Od rezervace po zrcadlo, bez překvapení.</h2>
-    <div class="steps">
-      <div>
-        <h3>Rezervace</h3>
-        <p>Termín si vyberete na webu podle služby a kadeřnice. Když si nejste jistí, co objednat, napište do poznámky, co chcete změnit. Ozveme se a doporučíme.</p>
-      </div>
-      <div>
-        <h3>Konzultace</h3>
-        <p>Než vezmeme nůžky nebo štětec, probereme, jak vlasy nosíte, kolik času jim ráno dáváte a jakou barvu jste měla naposledy. Fotky toho, co se vám líbí, pomůžou.</p>
-      </div>
-      <div>
-        <h3>V křesle</h3>
-        <p>Řekneme vám, co děláme a proč. Když se během práce ukáže, že by výsledek nevypadal dobře, raději se zastavíme a domluvíme jinou cestu.</p>
-      </div>
-      <div>
-        <h3>Doma</h3>
-        <p>Ukážeme, jak účes upravit fénem nebo rukama, a poradíme, kdy přijít příště. Prodávat vám kosmetiku, kterou nepotřebujete, nebudeme.</p>
-      </div>
+    <div>
+      <p class="eyebrow" style="margin:0 0 12px">Jak probíhá návštěva</p>
+      <h2 class="serif" style="font-size:clamp(28px,3.2vw,38px);font-weight:500;margin:0;letter-spacing:-.025em;line-height:1.15;max-width:14ch">Od rezervace po zrcadlo, bez překvapení.</h2>
+    </div>
+    <div class="prose">
+      <p><strong>Rezervace.</strong> Termín si vyberete na webu podle služby a podle toho, kdo vás má stříhat. Když si nejste jistí, co objednat, napište do poznámky, co chcete na vlasech změnit. Ozveme se a doporučíme.</p>
+      <p><strong>Konzultace.</strong> Než vezmeme do ruky nůžky nebo štětec, probereme, jak vlasy nosíte, kolik času jim ráno dáváte a jaká barva na nich byla naposledy. Pomůžou i fotky účesů, které se vám líbí.</p>
+      <p><strong>V křesle.</strong> Průběžně říkáme, co děláme a proč. Když se během práce ukáže, že by výsledek nevypadal dobře, raději se zastavíme a domluvíme jinou cestu.</p>
+      <p><strong>Doma.</strong> Ukážeme vám, jak účes upravit fénem nebo jen rukama, a poradíme, kdy přijít příště. Kosmetiku, kterou nepotřebujete, vám prodávat nebudeme.</p>
     </div>
   </div>
 </section>
@@ -519,7 +510,7 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
             <label for="s">Služba</label>
             <select id="s" name="service">
               <option>Dámský střih</option><option>Pánský střih</option>
-              <option>Celobarva / tonování</option><option>Balayage / melír</option>
+              <option>Celobarva / tónování</option><option>Balayage / melír</option>
               <option>Svatební účes</option><option>Regenerační péče</option>
             </select>
           </div>
