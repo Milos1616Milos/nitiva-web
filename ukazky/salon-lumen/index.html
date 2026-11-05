@@ -255,11 +255,13 @@ button,input,select,textarea{font:inherit}
 
 /* VISIT */
 .visit{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--g)*5);align-items:start}
-.map{
-  border-radius:2px;overflow:hidden;border:1px solid var(--line);
-  background:var(--sand);min-height:340px;
-}
-.map iframe{width:100%;height:100%;min-height:360px;border:0;filter:grayscale(.4) contrast(1.05) sepia(.08)}
+.visit>div:first-child{position:sticky;top:96px}
+.where{background:var(--paper-2);border:1px solid var(--line);border-radius:2px;padding:calc(var(--g)*5) calc(var(--g)*4)}
+.where-addr{font-family:"Bodoni Moda",serif;font-size:clamp(30px,3.4vw,42px);font-weight:500;line-height:1.14;letter-spacing:-.02em;margin:0 0 18px;color:var(--ink)}
+.where-note{margin:0 0 24px;max-width:36ch;font-size:15px;line-height:1.6;font-weight:300;color:var(--mute)}
+.where-link{display:inline-block;font-size:14px;font-weight:500;color:var(--clay-d);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.where-link:hover{color:var(--clay)}
+.where .fine{margin-top:28px;padding-top:14px;border-top:1px solid var(--line)}
 .fine{margin:10px 0 0;font-size:12px;color:var(--mute);font-weight:300}
 .contact-block .addr{margin:0 0 calc(var(--g)*3);color:var(--mute);font-weight:300;font-size:15px;line-height:1.6}
 .contact-grid{
@@ -303,6 +305,8 @@ footer.site a:hover{border-bottom-color:var(--clay-d)}
 
 @media(max-width:900px){
   .hero,.band-inner,.services,.visit,.visit-flow .wrap{grid-template-columns:1fr}
+  .visit>div:first-child{position:static}
+  .where{padding:30px 22px}
   .hero{gap:calc(var(--g)*3)}
   .hero-photo{aspect-ratio:5/4;max-height:420px}
   .gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto;min-height:0}
@@ -485,16 +489,17 @@ h1,h2,h3{text-wrap:balance}p,li,figcaption{text-wrap:pretty}
 <section class="section" id="navstivte">
   <div class="wrap visit">
     <div>
-      <div class="map" aria-label="Mapa – ukázková lokalita Vinohrady">
-        <iframe title="Mapa Vinohrady Praha (ukázka)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=14.430%2C50.070%2C14.455%2C50.082&amp;layer=mapnik&amp;marker=50.076%2C14.442"></iframe>
+      <div class="where">
+        <p class="eyebrow">Kde nás najdete</p>
+        <p class="where-addr">Korunní 128<br>120 00 Praha 2</p>
+        <p class="where-note">Vinohrady, pár kroků od náměstí Míru. Tram 10 a&nbsp;16, zastávka Jiřího z&nbsp;Poděbrad.</p>
+        <a class="where-link" href="https://mapy.cz/?q=Korunn%C3%AD%20128%2C%20Praha%202" target="_blank" rel="noopener">Otevřít v&nbsp;mapách →</a>
+        <p class="fine">Adresa je ilustrační, salon je ukázka.</p>
       </div>
-      <p class="fine">Mapa ukazuje čtvrť Vinohrady&nbsp;— adresa níže je ilustrační.</p>
     </div>
     <div class="contact-block" id="rezervace">
       <p class="eyebrow">Návštěva</p>
-      <h2 class="serif" style="font-size:clamp(28px,3.2vw,36px);font-weight:500;margin:0 0 12px;letter-spacing:-.025em;line-height:1.15">Přijďte, nebo si nejdřív zamluvte čas.</h2>
-      <p class="addr">Korunní 128 (ukázka)<br>120 00 Praha 2&nbsp;– Vinohrady</p>
+      <h2 class="serif" style="font-size:clamp(28px,3.2vw,36px);font-weight:500;margin:0 0 28px;letter-spacing:-.025em;line-height:1.15">Přijďte, nebo si nejdřív zamluvte čas.</h2>
       <div class="contact-grid">
         <div><b>Telefon</b>+420 777 000 000</div>
         <div><b>E-mail</b>ahoj@salon-lumen.demo</div>
