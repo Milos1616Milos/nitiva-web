@@ -13,7 +13,7 @@
 .stats{display:flex;gap:28px;flex-wrap:wrap}
 .stat{display:flex;gap:10px;align-items:baseline}.stat .num{font-weight:800;color:var(--lime);font-variant-numeric:tabular-nums}.stat .num:after{content:"."}
 .stat b{display:block;color:#fff;line-height:1.3}.stat span{display:block;color:var(--soft);font-size:14px}
-.pf .frame{justify-self:center}.pf .frame video{display:block;width:min(280px,100%);aspect-ratio:9/16;object-fit:cover;border-radius:16px;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.pf .frame{justify-self:center}.pf .frame video{display:block;width:min(280px,100%);aspect-ratio:9/16;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.14);background:#1a2233}
 .sh{margin-bottom:12px}.sh h2{margin:0 0 10px}
 #work .lead,#demos .lead{margin-bottom:28px}
 .proj{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center;padding:48px 0;border-top:1px solid var(--line)}
@@ -68,7 +68,7 @@ h1,h2,h3{text-wrap:balance}p,li,figcaption{text-wrap:pretty}
    <div class="stat"><div><b>AI asistenti</b><span>odpovídají na časté dotazy</span></div></div>
   </div>
  </div>
- <div class="frame rv d2"><video src="/video/nitiva-short-3-kolikrat.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+ <div class="frame rv d2"><video src="/video/nitiva-short-3-kolikrat.mp4" poster="/video/nitiva-short-3-kolikrat-poster.webp" width="280" height="498" autoplay muted loop playsinline preload="metadata"></video><script>if(matchMedia("(prefers-reduced-motion: reduce)").matches){var v=document.currentScript.previousElementSibling;v.removeAttribute("autoplay");v.pause();v.controls=true}</script></div>
 </div></div>
 
 <section id="work"><div class="wrap">
