@@ -2,7 +2,7 @@
 <urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://nitiva.cz/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"/>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/socialni-site/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/socialni-site/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/social-media/"/>
@@ -14,7 +14,11 @@
   </url>
   <url>
     <loc>https://nitiva.cz/ai-chatbot/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ai-chatbot/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/ai-chatbot/"/>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/ai-asistent-pro-web/</loc>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/ponuka/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ponuka/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/offer/"/>
@@ -79,7 +83,7 @@
   </url>
   <url>
     <loc>https://nitiva.cz/poradna/kdy-ma-ai-chatbot-smysl/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/poradna/eshop-odpovedi-zakaznikum-24-7/</loc>
@@ -95,7 +99,7 @@
   </url>
   <url>
     <loc>https://nitiva.cz/poradna/faktury-bez-prepisovani/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/poradna/automatizace-poptavek-z-webu/</loc>
@@ -130,11 +134,13 @@
     <loc>https://nitiva.cz/en/ai-chatbot/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ai-chatbot/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/ai-chatbot/"/>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/en/offer/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ponuka/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/offer/"/>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/en/privacy/</loc>
