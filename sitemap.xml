@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://nitiva.cz/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"/>
-    <lastmod>2026-11-12</lastmod>
+    <loc>https://nitiva.cz/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/"/>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/socialni-site/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/socialni-site/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/social-media/"/>
@@ -122,7 +122,10 @@
   <url>
     <loc>https://nitiva.cz/en/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/"/>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/en/social-media/</loc>
@@ -160,5 +163,10 @@
     <loc>https://nitiva.cz/en/ai-phone-assistant/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ai-telefon/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/ai-phone-assistant/"/>
+  </url>
+
+  <url>
+    <loc>https://nitiva.cz/sk/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/"/>
+    <lastmod>2026-11-13</lastmod>
   </url>
 </urlset>

@@ -15,6 +15,11 @@
     return path === '/en' || path.indexOf('/en/') === 0;
   }
 
+  function isSlovak() {
+    var path = location.pathname || '/';
+    return path === '/sk' || path.indexOf('/sk/') === 0;
+  }
+
   function readChoice() {
     try {
       var value = localStorage.getItem(STORAGE_KEY);
@@ -138,6 +143,7 @@
       return {
         label: 'Cookie consent',
         body: 'We turn on marketing cookies (Meta Pixel) only if you accept them. They measure how well our ads work. Without consent they stay off, and we do not send form details to Meta.',
+        details: ' Details: ',
         policy: 'Privacy policy',
         policyHref: '/en/privacy/',
         accept: 'Accept',
@@ -149,9 +155,26 @@
         rejected: 'Current choice: rejected.'
       };
     }
+    if (isSlovak()) {
+      return {
+        label: 'Súhlas s cookies',
+        body: 'Marketingové cookies (Meta Pixel) zapneme, len keď ich prijmete. Slúžia na meranie účinnosti reklamy. Bez súhlasu sa nespustia a údaje z formulárov do Meta neposielame.',
+        details: ' Podrobnosti: ',
+        policy: 'Zásady ochrany osobných údajov',
+        policyHref: '/ochrana-udaju/',
+        accept: 'Prijať',
+        reject: 'Odmietnuť',
+        short: 'Meta Pixel na meranie účinnosti reklamy zapneme len s vaším súhlasom. ',
+        policyShort: 'Podrobnosti',
+        settings: 'Nastavenie cookies',
+        accepted: 'Aktuálna voľba: prijaté.',
+        rejected: 'Aktuálna voľba: odmietnuté.'
+      };
+    }
     return {
       label: 'Souhlas s cookies',
       body: 'Marketingové cookies (Meta Pixel) zapneme jen když je přijmete. Slouží k měření účinnosti reklamy. Bez souhlasu se nespustí a do Meta neposíláme údaje z formulářů.',
+      details: ' Podrobnosti: ',
       policy: 'Zásady ochrany osobních údajů',
       policyHref: '/ochrana-udaju/',
       accept: 'Přijmout',
@@ -242,7 +265,7 @@
       body.id = 'nitiva-consent-text';
       var long = document.createElement('span');
       long.className = 'nitiva-consent-long';
-      long.textContent = copy.body + (isEnglish() ? ' Details: ' : ' Podrobnosti: ');
+      long.textContent = copy.body + copy.details;
       var link = document.createElement('a');
       link.href = copy.policyHref;
       link.textContent = copy.policy;
