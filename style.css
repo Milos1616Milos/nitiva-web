@@ -244,7 +244,6 @@ table.compare caption{caption-side:top;text-align:left;font-weight:850;font-size
 table.compare th,table.compare td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
 table.compare thead th{font-size:14px;color:var(--muted);font-weight:700;border-bottom:2px solid var(--navy);background:var(--ground)}
 table.compare tbody th{font-weight:700;width:11em}
-.draft-price{background:#FFF8E8;border:1px solid #E6D7A8;border-radius:12px;padding:14px 16px;color:#3F3416}
 @media(max-width:980px){
 .cmp,.ba,.price{grid-template-columns:1fr}
 .article-layout{grid-template-columns:1fr;gap:32px}
