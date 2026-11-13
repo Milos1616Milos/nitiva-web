@@ -2,20 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /demo/
 
-User-agent: OAI-SearchBot
-Allow: /
-Disallow: /demo/
-
-User-agent: PerplexityBot
-Allow: /
-Disallow: /demo/
-
-User-agent: Claude-User
-Allow: /
-Disallow: /demo/
-
-User-agent: Googlebot
-Allow: /
-Disallow: /demo/
-
 Sitemap: https://nitiva.cz/sitemap.xml

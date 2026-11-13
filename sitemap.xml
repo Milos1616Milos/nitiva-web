@@ -9,8 +9,8 @@
     <lastmod>2026-10-17</lastmod>
   </url>
   <url>
-    <loc>https://nitiva.cz/tvorba-webu/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/tvorba-webu/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/tvorba-webu/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/web-design/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/tvorba-webu/"/>
-    <lastmod>2026-11-13</lastmod>
+    <loc>https://nitiva.cz/tvorba-webu/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/tvorba-webu/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/web-design/"/>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/ai-chatbot/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ai-chatbot/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/ai-chatbot/"/>
@@ -43,8 +43,8 @@
     </video:video>
   </url>
   <url>
-    <loc>https://nitiva.cz/projekty/odborne-tepovanie/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/projekty/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/projekty/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/projects/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/projekty/odborne-tepovanie/"/>
-    <lastmod>2026-11-13</lastmod>
+    <loc>https://nitiva.cz/projekty/odborne-tepovanie/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/projekty/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/projects/odborne-tepovanie/"/>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/video/chatbot-nabidka/</loc>
@@ -121,8 +121,10 @@
   </url>
   <url>
     <loc>https://nitiva.cz/en/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/"/>
     <lastmod>2026-11-13</lastmod>
   </url>
   <url>
@@ -132,9 +134,8 @@
   </url>
   <url>
     <loc>https://nitiva.cz/en/web-design/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/tvorba-webu/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/tvorba-webu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/web-design/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/tvorba-webu/"/>
-    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/tvorba-webu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/web-design/"/>
   </url>
   <url>
     <loc>https://nitiva.cz/en/ai-chatbot/</loc>
@@ -155,9 +156,8 @@
   </url>
   <url>
     <loc>https://nitiva.cz/en/projects/odborne-tepovanie/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/projekty/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/projekty/odborne-tepovanie/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/projects/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/projekty/odborne-tepovanie/"/>
-    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/projekty/odborne-tepovanie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/projects/odborne-tepovanie/"/>
   </url>
   <url>
     <loc>https://nitiva.cz/en/ai-phone-assistant/</loc>
@@ -167,26 +167,6 @@
 
   <url>
     <loc>https://nitiva.cz/sk/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/"/>
-    <lastmod>2026-11-13</lastmod>
-  </url>
-  <url>
-    <loc>https://nitiva.cz/sk/tvorba-webu/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/tvorba-webu/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/tvorba-webu/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/web-design/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/tvorba-webu/"/>
-    <lastmod>2026-11-13</lastmod>
-  </url>
-  <url>
-    <loc>https://nitiva.cz/sk/automatizacia-procesov/</loc><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/automatizacia-procesov/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/sk/automatizacia-procesov/"/>
-    <lastmod>2026-11-13</lastmod>
-  </url>
-  <url>
-    <loc>https://nitiva.cz/sk/facebook-reklamy/</loc><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/facebook-reklamy/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/sk/facebook-reklamy/"/>
-    <lastmod>2026-11-13</lastmod>
-  </url>
-  <url>
-    <loc>https://nitiva.cz/sk/projekty/odborne-tepovanie/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/projekty/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/projekty/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/projects/odborne-tepovanie/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/projekty/odborne-tepovanie/"/>
-    <lastmod>2026-11-13</lastmod>
-  </url>
-  <url>
-    <loc>https://nitiva.cz/sk/projekty/odnesto/</loc><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/projekty/odnesto/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/sk/projekty/odnesto/"/>
     <lastmod>2026-11-13</lastmod>
   </url>
 </urlset>
