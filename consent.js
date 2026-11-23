@@ -4,9 +4,11 @@
   var STORAGE_KEY = 'nitiva_cookie_consent';
   var PIXEL_ID = '164438667301853';
   var PIXEL_SRC = 'https://connect.facebook.net/en_US/fbevents.js';
+  var CLARITY_ID = 'zi6zov6u2y';
   var LEAD_NAMES = { kontrola_webu: 1, kontakt: 1, objednavka: 1 };
   var firedLeads = Object.create(null);
   var pixelStarted = false;
+  var clarityStarted = false;
   var pageViewSent = false;
   var banner = null;
 
@@ -108,12 +110,40 @@
     window.fbq('init', PIXEL_ID);
   }
 
+  function loadClarity() {
+    if (readChoice() !== 'accepted' || clarityStarted) return;
+    clarityStarted = true;
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0];
+      if (y && y.parentNode) y.parentNode.insertBefore(t, y);
+      else (l.head || l.documentElement).appendChild(t);
+    })(window, document, 'clarity', 'script', CLARITY_ID);
+  }
+
+  function clearClarityCookies() {
+    expireCookie('_clck');
+    expireCookie('_clsk');
+  }
+
+  function revokeClarity() {
+    if (typeof window.clarity === 'function') {
+      try { window.clarity('consent', false); } catch (e) {}
+    }
+    clearClarityCookies();
+  }
+
   function grantAgain() {
-    if (!pixelStarted || typeof window.fbq !== 'function') return;
-    try { window.fbq('consent', 'grant'); } catch (e) {}
-    if (!pageViewSent && window.fbq.callMethod) {
-      pageViewSent = true;
-      window.fbq('track', 'PageView');
+    if (pixelStarted && typeof window.fbq === 'function') {
+      try { window.fbq('consent', 'grant'); } catch (e) {}
+      if (!pageViewSent && window.fbq.callMethod) {
+        pageViewSent = true;
+        window.fbq('track', 'PageView');
+      }
+    }
+    if (clarityStarted && typeof window.clarity === 'function') {
+      try { window.clarity('consent', true); } catch (e) {}
     }
   }
 
@@ -315,8 +345,10 @@
     if (choice === 'accepted') {
       grantAgain();
       loadPixel();
+      loadClarity();
     } else {
       revokePixel();
+      revokeClarity();
     }
   }
 
@@ -352,7 +384,10 @@
     if (!readChoice()) showBanner(false);
   }
 
-  if (readChoice() === 'accepted') loadPixel();
+  if (readChoice() === 'accepted') {
+    loadPixel();
+    loadClarity();
+  }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready);
   else ready();
 })();
