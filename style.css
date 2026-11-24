@@ -270,7 +270,7 @@ section{padding:60px 0}
 .head-offer .channels{order:3}
 .head-offer .lead-card{order:4}
 .head-offer .intro{order:5;margin-top:18px}
-.page>.wrap>section{grid-template-columns:1fr;padding:32px 0}
+.page>.wrap>section{grid-template-columns:minmax(0,1fr);padding:32px 0}
 .page>.wrap>section>*:not(h2){grid-column:1}
 .page>.wrap>section:first-of-type{margin-top:36px}
 .page .intro{font-size:17.5px}
@@ -289,7 +289,9 @@ section{padding:60px 0}
 @media(max-width:860px){.cs-split{grid-template-columns:1fr;gap:32px}}
 
 /* Tvorba webu: kdo to dělá, kroky, ukázky */
-.who2{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:center}
+.page>.wrap>section.who2{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:center}
+.page>.wrap>section.who2>*{grid-column:auto}
+.who2 h2{font-size:22px;letter-spacing:-.02em}
 .who2 p{max-width:56ch}
 .vf{margin:0;max-width:340px;justify-self:center;width:100%}
 .vf-b{position:relative;display:block;width:100%;padding:0;border:0;border-radius:18px;overflow:hidden;background:var(--navy);cursor:pointer;aspect-ratio:9/16}
@@ -298,13 +300,16 @@ section{padding:60px 0}
 .vf-p:after{content:"";position:absolute;left:27px;top:20px;border-left:20px solid var(--navy);border-top:14px solid transparent;border-bottom:14px solid transparent}
 .vf iframe,.vf video{display:block;width:100%;aspect-ratio:9/16;height:auto;border:0;border-radius:18px;background:#000}
 .vf figcaption{font-size:14px;color:var(--muted);margin-top:10px}
-.steps3{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:14px;max-width:760px}
-.steps3 li{counter-increment:s;position:relative;padding:18px 20px 18px 68px;border:1px solid var(--line);border-radius:14px;background:#fff}
-.steps3 li:before{content:counter(s);position:absolute;left:18px;top:16px;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:grid;place-items:center}
+.steps3{max-width:760px}
+.steps3 h3{margin:22px 0 6px;font-size:18px}
+.steps3 h3:first-child{margin-top:0}
+.steps3 p{margin:0}
 .shows{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));max-width:860px}
 .shows .card h3{margin:0 0 8px}
+.shows .card p+p{margin-top:12px}
 .cta-box{margin:26px 0;padding:22px 24px;border-radius:14px;background:var(--navy);color:#fff}
 .cta-box p{color:#C9D0DC;margin:0 0 14px}
 .cta-box .rel{gap:12px}
 .cta-box .btn:not(.c){background:#fff;color:var(--navy)}
-@media(max-width:760px){.who2{grid-template-columns:1fr;gap:28px}.vf{max-width:300px}}
+.cta-box .btn.c{background:var(--coral);color:var(--navy);box-shadow:none}
+@media(max-width:760px){.page>.wrap>section.who2{grid-template-columns:minmax(0,1fr);gap:28px}.vf{max-width:300px}}
