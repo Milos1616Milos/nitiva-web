@@ -99,11 +99,11 @@ assert.ok(sk.indexOf('Ozvem sa vám e-mailom') !== -1);
 assert.ok(!/paypal\.com/i.test(sk), 'SK page must not have a payment button');
 
 var home = fs.readFileSync(path.join(rootDir, 'index.html'), 'utf8');
-assert.ok(home.indexOf('Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3. 10. 2026') !== -1 || home.indexOf('Cena zřízení 4 900 Kč platí od 3. 10. 2026') !== -1);
+assert.ok(home.indexOf('Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3.&nbsp;10.&nbsp;2026') !== -1 || home.indexOf('Cena zřízení 4 900 Kč platí od 3.&nbsp;10.&nbsp;2026') !== -1);
 assert.ok(home.indexOf('Spuštění do 7 dnů od podkladů') !== -1);
 
 var ponuka = fs.readFileSync(path.join(rootDir, 'ponuka/index.html'), 'utf8');
-assert.ok(ponuka.indexOf('Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3. 10. 2026') !== -1 || ponuka.indexOf('platí od 3. 10. 2026') !== -1);
+assert.ok(ponuka.indexOf('Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3.&nbsp;10.&nbsp;2026') !== -1 || ponuka.indexOf('platí od 3.&nbsp;10.&nbsp;2026') !== -1);
 
 assert.strictEqual(bf.isActive(new Date('2026-11-26T10:00:00+01:00'), 5), true);
 assert.strictEqual(bf.isActive(new Date('2026-11-26T10:00:00+01:00'), 0), false, 'offer hides at 0 spots');
@@ -150,7 +150,7 @@ assert.ok(sk.indexOf('Objednať za 97&nbsp;€') !== -1);
 assert.ok(sk.indexOf('za akciovú cenu') === -1);
 assert.ok(privacyCs.indexOf('Cookies Clarity (_clck, _clsk) mají platnost nejdéle 1 rok.') !== -1);
 assert.ok(privacySk.indexOf('Cookies Clarity (_clck, _clsk) majú platnosť najviac 1 rok.') !== -1);
-assert.ok(privacySk.indexOf('v Česku Úrad pro ochranu osobních údajů') !== -1);
+assert.ok(privacySk.indexOf('v Česku Úřad pro ochranu osobních údajů') !== -1);
 assert.ok(privacySk.indexOf('v Česku na Úřadu') === -1);
 
 function fakeSkForm() {
