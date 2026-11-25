@@ -100,10 +100,9 @@ assert.deepStrictEqual(check, {
 assert.strictEqual(lead.buildCheckPayload({ url: '', contact: 'jana@salon.cz', note: '', hp: '', src: '' }), null);
 assert.strictEqual(lead.buildCheckPayload({ url: 'www.x.cz', contact: 'xyz', note: '', hp: '', src: '' }), null);
 assert.strictEqual(lead.contactThanks('email'), 'Děkuji, zpráva je odeslaná. Odpovím e-mailem nejpozději druhý den.');
-assert.strictEqual(lead.contactThanks('phone').indexOf('24 hodin'), -1);
-assert.ok(lead.contactThanks('phone').indexOf('číslo') !== -1);
+assert.strictEqual(lead.contactThanks('phone'), 'Děkuji, zpráva je odeslaná. Ozvu se nejpozději druhý den.');
 assert.ok(lead.checkFollowup('email').indexOf('e-mailem') !== -1);
-assert.strictEqual(lead.checkFollowup('phone').indexOf('e-mailem'), -1);
+assert.strictEqual(lead.checkFollowup('phone'), 'Jde o automatickou orientační kontrolu. Ozvu se nejpozději druhý den. Dotazy: milos@nitiva.cz.');
 
 function FakeEl() {
   this.children = [];

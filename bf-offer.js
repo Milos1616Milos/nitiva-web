@@ -5,7 +5,7 @@
   var DEADLINE_STAMP = '20261130235959';
   var FALLBACK_END = Date.parse('2026-11-30T23:59:59+01:00');
 
-  // Remaining places. After each confirmed order (CZ or SK), lower SPOTS_LEFT by 1.
+  // Remaining places. Lower by 1 right after each paid deposit (CZ or SK), never otherwise.
   // This is the only place to edit; the pages read it via [data-bf-spots].
   // When it reaches 0 the whole Black Friday offer is hidden.
   var SPOTS_TOTAL = 5;
@@ -56,8 +56,8 @@
   }
 
   function spotsText(lang) {
-    if (lang === 'sk') return 'Voľné miesta: ' + SPOTS_LEFT + ' z ' + SPOTS_TOTAL + '.';
-    return 'Volná místa: ' + SPOTS_LEFT + ' z ' + SPOTS_TOTAL + '.';
+    if (lang === 'sk') return 'Voľné miesta: ' + SPOTS_LEFT + '\u00a0z\u00a0' + SPOTS_TOTAL + '.';
+    return 'Volná místa: ' + SPOTS_LEFT + '\u00a0z\u00a0' + SPOTS_TOTAL + '.';
   }
 
   function fillSpots(doc) {
@@ -86,14 +86,15 @@
     return on;
   }
 
-  function preselectPackage(doc) {
+  function preselectPackage(doc, loc) {
     doc = doc || (root && root.document);
-    if (!doc || !doc.getElementById || !root || !root.location) return;
-    var form = doc.getElementById('orderForm');
+    loc = loc || (root && root.location);
+    if (!doc || !doc.getElementById || !loc) return;
+    var form = doc.getElementById('orderForm') || (doc.getElementById('sk-pkg') || {}).form;
     if (!form || !form.pkg) return;
     var query;
     try {
-      query = new URLSearchParams(root.location.search).get('balicek');
+      query = new URLSearchParams(loc.search).get('balicek');
     } catch (err) {
       query = null;
     }
