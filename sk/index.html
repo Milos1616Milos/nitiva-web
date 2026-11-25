@@ -403,7 +403,7 @@ main .sk-after a,main .sk-lead a,main .author-bio a{color:var(--deep);font-weigh
   btn.disabled=true;show('Odosielam…','ok');
   fetch(API+'nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
    .then(function(res){return res.json().then(function(body){return {ok:!!res.ok,body:body};},function(){return {ok:false,body:null};});})
-   .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){f.reset();show(d.phone?'Ďakujem, správa je odoslaná. Ozvem sa vám na uvedené číslo.':'Ďakujem, správa je odoslaná. Ozvem sa vám e-mailom.','ok');}else{show('Odoslanie sa nepodarilo. Napíšte mi na milos@nitiva.cz.','err');}})
+   .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){f.reset();show(d.phone?'Ďakujem, správa je odoslaná. Ozvem sa vám e-mailom.':'Ďakujem, správa je odoslaná. Ozvem sa vám e-mailom.','ok');}else{show('Odoslanie sa nepodarilo. Napíšte mi na milos@nitiva.cz.','err');}})
    .catch(function(){show('Odoslanie sa nepodarilo. Napíšte mi na milos@nitiva.cz.','err');})
    .then(function(){btn.disabled=false;});
  });
