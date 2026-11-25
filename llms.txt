@@ -3,7 +3,7 @@
 > Nitiva (Miloš Brisuda, IČO 29824125) dělá weby, AI chatboty, AI asistenty a automatizace v n8n pro malé firmy a živnostníky v Česku. Jsem živnostník, komunikujete přímo se mnou.
 
 ## Služby
-- [Tvorba webu pro malé firmy a živnostníky](https://nitiva.cz/tvorba-webu/): přehledný web s formulářem pro poptávky, zřízení od 4 900 Kč.
+- [Tvorba webu pro malé firmy a živnostníky](https://nitiva.cz/tvorba-webu/): přehledný web s formulářem pro poptávky, samostatný nový web od 3 900 Kč jednorázově. Balíček První dotaz (web, odpovídač a 8 příspěvků měsíčně) je jiná služba: zřízení 4 900 Kč a provoz 1 490 Kč měsíčně (https://nitiva.cz/ponuka/).
 - [AI chatbot pro web a e-shop](https://nitiva.cz/ai-chatbot/): odpovídá na časté dotazy a co neví, předá člověku.
 - [Digitální AI asistent pro web](https://nitiva.cz/ai-asistent-pro-web/): odpovídá návštěvníkům webu, spuštění během pár dnů.
 - [AI telefonní asistent](https://nitiva.cz/ai-telefon/): přijme hovor a pošle vám krátké shrnutí.
