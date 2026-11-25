@@ -15,6 +15,7 @@
 .podklady .q h2{margin:0 0 10px;font-size:18px;color:#0E1727}
 .podklady .opt{display:block;margin:0 0 8px;line-height:1.45;font-size:15px;color:#0E1727}
 .podklady .opt input{margin-right:8px}
+.podklady .q label{color:#0E1727}
 .podklady .hint{margin:0 0 10px;font-size:14px;color:#4B5563}
 .podklady input[type="text"],.podklady input[type="email"],.podklady input[type="tel"],.podklady textarea{width:100%;max-width:480px}
 </style>
@@ -33,7 +34,7 @@
 <main>
 <section class="dark" id="podklady"><div class="wrap">
  <h1>Podklady k úpravě webu minibagremvykopu.cz</h1>
- <p>Většinu věcí stačí odklikat, zabere to asi dvě minuty. Kde si nejste jistý, zvolte „Nevím, pomozte mi“. Heslo do WordPressu sem nepište, přístupové údaje mi pošlete zvlášť e-mailem.</p>
+ <p>Většinu věcí stačí odklikat, zabere to asi 5 minut. Kde si nejste jistý, zvolte „Nevím, pomozte mi“. Heslo nikam nepište; nejjednodušší je přidat mi vlastní účet administrátora na milos@nitiva.cz.</p>
  <form id="podkladyForm" class="k podklady" novalidate>
   <div class="q">
    <h2>Vaše kontaktní údaje</h2>
@@ -42,7 +43,7 @@
    <label for="p-email">E-mail</label>
    <input id="p-email" name="email" type="email" autocomplete="email" required>
    <label for="p-phone">Telefon (nepovinné)</label>
-   <input id="p-phone" name="phone" type="tel" autocomplete="tel" placeholder="+420 775 958 152">
+   <input id="p-phone" name="phone" type="tel" autocomplete="tel" placeholder="+420 …">
   </div>
 
   <div class="q">
@@ -73,8 +74,8 @@
 
   <div class="q">
    <h2>3. Přístup do správy WordPressu</h2>
-   <p class="hint">Heslo do tohoto formuláře nepište. Pokud přístup máte, pošlete ho potom zvlášť e-mailem na milos@nitiva.cz.</p>
-   <label class="opt"><input type="radio" name="wp" value="Mám admin přístup, pošlu ho e-mailem zvlášť" required> Mám admin přístup, pošlu ho e-mailem zvlášť</label>
+   <p class="hint">Heslo nikam nepište. Nejjednodušší je přidat mi vlastní účet administrátora na milos@nitiva.cz.</p>
+   <label class="opt"><input type="radio" name="wp" value="Přidám vám vlastní účet administrátora na milos@nitiva.cz" required> Přidám vám vlastní účet administrátora na milos@nitiva.cz</label>
    <label class="opt"><input type="radio" name="wp" value="Nemám přístup"> Nemám přístup</label>
    <label class="opt"><input type="radio" name="wp" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
   </div>
