@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Podklady k úpravě webu minibagremvykopu.cz | Nitiva</title>
+<meta name="description" content="Krátký formulář podkladů k úpravě webu minibagremvykopu.cz. Většinu položek stačí odklikat.">
+<link rel="canonical" href="https://nitiva.cz/podklady/minibagr/">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E1727">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css?v=4">
+<style>
+.podklady .q{margin:0 0 22px;padding:18px 18px 10px;background:#fff;border:1px solid #E2E5EA;border-radius:12px}
+.podklady .q h2{margin:0 0 10px;font-size:18px;color:#0E1727}
+.podklady .opt{display:block;margin:0 0 8px;line-height:1.45;font-size:15px;color:#0E1727}
+.podklady .opt input{margin-right:8px}
+.podklady .hint{margin:0 0 10px;font-size:14px;color:#4B5563}
+.podklady input[type="text"],.podklady input[type="email"],.podklady input[type="tel"],.podklady textarea{width:100%;max-width:480px}
+</style>
+</head>
+<body>
+<header class="site">
+ <div class="wrap nav">
+  <a class="logo" href="/" aria-label="Nitiva, úvod"><i>n</i>nitiva</a>
+  <nav aria-label="Hlavní menu" id="hlavni-menu"><ul id="menu-odkazy">
+   <li><a href="/#sluzby">Služby</a></li>
+   <li><a href="/ponuka/">Nabídka</a></li>
+   <li><a href="/#kontakt">Kontakt</a></li>
+  </ul></nav>
+ </div>
+</header>
+<main>
+<section class="dark" id="podklady"><div class="wrap">
+ <h1>Podklady k úpravě webu minibagremvykopu.cz</h1>
+ <p>Většinu věcí stačí odklikat, zabere to asi dvě minuty. Kde si nejste jistý, zvolte „Nevím, pomozte mi“. Heslo do WordPressu sem nepište, přístupové údaje mi pošlete zvlášť e-mailem.</p>
+ <form id="podkladyForm" class="k podklady" novalidate>
+  <div class="q">
+   <h2>Vaše kontaktní údaje</h2>
+   <label for="p-name">Jméno</label>
+   <input id="p-name" name="name" autocomplete="name" required>
+   <label for="p-email">E-mail</label>
+   <input id="p-email" name="email" type="email" autocomplete="email" required>
+   <label for="p-phone">Telefon (nepovinné)</label>
+   <input id="p-phone" name="phone" type="tel" autocomplete="tel" placeholder="+420 775 958 152">
+  </div>
+
+  <div class="q">
+   <h2>1. Kde máte registrovanou doménu</h2>
+   <p class="hint">Jde o místo, kde platíte minibagremvykopu.cz.</p>
+   <label class="opt"><input type="radio" name="domena" value="Český hosting" required> Český hosting</label>
+   <label class="opt"><input type="radio" name="domena" value="WEDOS"> WEDOS</label>
+   <label class="opt"><input type="radio" name="domena" value="Active24"> Active24</label>
+   <label class="opt"><input type="radio" name="domena" value="Forpsi"> Forpsi</label>
+   <label class="opt"><input type="radio" name="domena" value="Jiný"> Jiný (doplňte níže)</label>
+   <label class="opt"><input type="radio" name="domena" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+   <label for="p-domena-jiny">Pokud jiný, název registrátora</label>
+   <input id="p-domena-jiny" name="domena_jiny" type="text">
+  </div>
+
+  <div class="q">
+   <h2>2. U koho běží hosting</h2>
+   <label class="opt"><input type="radio" name="hosting" value="Stejný jako doména" required> Stejný jako doména</label>
+   <label class="opt"><input type="radio" name="hosting" value="Český hosting"> Český hosting</label>
+   <label class="opt"><input type="radio" name="hosting" value="WEDOS"> WEDOS</label>
+   <label class="opt"><input type="radio" name="hosting" value="Active24"> Active24</label>
+   <label class="opt"><input type="radio" name="hosting" value="Forpsi"> Forpsi</label>
+   <label class="opt"><input type="radio" name="hosting" value="Jiný"> Jiný (doplňte níže)</label>
+   <label class="opt"><input type="radio" name="hosting" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+   <label for="p-hosting-jiny">Pokud jiný, název hostingu</label>
+   <input id="p-hosting-jiny" name="hosting_jiny" type="text">
+  </div>
+
+  <div class="q">
+   <h2>3. Přístup do správy WordPressu</h2>
+   <p class="hint">Heslo do tohoto formuláře nepište. Pokud přístup máte, pošlete ho potom zvlášť e-mailem na milos@nitiva.cz.</p>
+   <label class="opt"><input type="radio" name="wp" value="Mám admin přístup, pošlu ho e-mailem zvlášť" required> Mám admin přístup, pošlu ho e-mailem zvlášť</label>
+   <label class="opt"><input type="radio" name="wp" value="Nemám přístup"> Nemám přístup</label>
+   <label class="opt"><input type="radio" name="wp" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>4. Které služby a ceník mají na webu zůstat</h2>
+   <p class="hint">Můžete zaškrtnout více možností.</p>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Ceník nechat, jak je teď"> Ceník nechat, jak je teď</label>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Minibagr"> Minibagr (motohodina 750 Kč)</label>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Smykový nakladač"> Smykový nakladač (motohodina 680 Kč)</label>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Sklápěč"> Sklápěč 3,5 t</label>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Výkop základů"> Výkop základů (dům, garáž, plot)</label>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Přípojky"> Přípojky</label>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Terénní úpravy a zahrady"> Terénní úpravy a zahrady</label>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Odvoz zeminy a suti"> Odvoz zeminy a suti</label>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Dovoz materiálu"> Dovoz materiálu</label>
+   <label class="opt"><input type="checkbox" name="sluzby" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>5. Kde zakázky děláte</h2>
+   <label class="opt"><input type="checkbox" name="oblast" value="Praha 13"> Praha 13</label>
+   <label class="opt"><input type="checkbox" name="oblast" value="Stodůlky"> Stodůlky</label>
+   <label class="opt"><input type="checkbox" name="oblast" value="Praha-Západ"> Praha-Západ</label>
+   <label class="opt"><input type="checkbox" name="oblast" value="Celá Praha"> Celá Praha</label>
+   <label class="opt"><input type="checkbox" name="oblast" value="Mimo Prahu do 10 km od hranice"> Mimo Prahu do 10 km od hranice</label>
+   <label class="opt"><input type="checkbox" name="oblast" value="I dál než 10 km"> I dál než 10 km</label>
+   <label class="opt"><input type="checkbox" name="oblast" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>6. Fotky strojů a práce</h2>
+   <label class="opt"><input type="radio" name="fotky" value="Použijte, co je teď v galerii" required> Použijte, co je teď v galerii</label>
+   <label class="opt"><input type="radio" name="fotky" value="Pošlu další fotky e-mailem"> Pošlu další fotky e-mailem</label>
+   <label class="opt"><input type="radio" name="fotky" value="Zatím fotky nemám"> Zatím fotky nemám</label>
+   <label class="opt"><input type="radio" name="fotky" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>7. Logo</h2>
+   <label class="opt"><input type="radio" name="logo" value="Použijte současné logo z webu" required> Použijte současné logo z webu</label>
+   <label class="opt"><input type="radio" name="logo" value="Pošlu nové logo e-mailem"> Pošlu nové logo e-mailem</label>
+   <label class="opt"><input type="radio" name="logo" value="Logo nemám"> Logo nemám</label>
+   <label class="opt"><input type="radio" name="logo" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>8. Kontakty a provozní doba</h2>
+   <p class="hint">Na úvodu je teď telefon +420 775 958 152 a adresa Jaurisova 4, Praha 4.</p>
+   <label class="opt"><input type="radio" name="kontakty" value="Telefon a adresu nechat, jak jsou" required> Telefon a adresu nechat, jak jsou</label>
+   <label class="opt"><input type="radio" name="kontakty" value="Doplním změny nebo provozní dobu níže"> Doplním změny nebo provozní dobu níže</label>
+   <label class="opt"><input type="radio" name="kontakty" value="Pevnou provozní dobu nemám"> Pevnou provozní dobu nemám</label>
+   <label class="opt"><input type="radio" name="kontakty" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+   <label for="p-kontakty-pozn">Změny, e-mail na web nebo provozní doba (nepovinné)</label>
+   <textarea id="p-kontakty-pozn" name="kontakty_pozn" rows="2"></textarea>
+  </div>
+
+  <div class="q">
+   <h2>9. Profil firmy na Google</h2>
+   <label class="opt"><input type="radio" name="google" value="Ano, profil už mám" required> Ano, profil už mám</label>
+   <label class="opt"><input type="radio" name="google" value="Ne, založte ho prosím"> Ne, založte ho prosím</label>
+   <label class="opt"><input type="radio" name="google" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>10. Profil na Firmy.cz</h2>
+   <label class="opt"><input type="radio" name="firmy" value="Ano, profil už mám" required> Ano, profil už mám</label>
+   <label class="opt"><input type="radio" name="firmy" value="Ne, založte ho prosím"> Ne, založte ho prosím</label>
+   <label class="opt"><input type="radio" name="firmy" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>11. Které otázky chcete v poptávkovém formuláři</h2>
+   <p class="hint">Můžete zaškrtnout více možností. Návrh jsem připravil podle vašeho ceníku.</p>
+   <label class="opt"><input type="checkbox" name="formular" value="Typ práce"> Typ práce</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Stroj"> Stroj (minibagr, nakladač, sklápěč)</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Rozměry a hloubka"> Rozměry a hloubka</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Terén a podloží"> Terén a podloží</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Objem nebo tuny"> Objem nebo tuny (dovoz a odvoz)</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Adresa stavby"> Adresa stavby</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Preferovaný termín"> Preferovaný termín</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Šířka vjezdu"> Šířka vjezdu</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Sítě v zemi"> Sítě v zemi</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Fotky pozemku"> Fotky pozemku</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Nechte návrh, jak jste ho poslal"> Nechte návrh, jak jste ho poslal</label>
+   <label class="opt"><input type="checkbox" name="formular" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>12. Žádost o recenzi dřívějším zákazníkům</h2>
+   <label class="opt"><input type="radio" name="recenze" value="Ano, kontakty pošlu e-mailem" required> Ano, kontakty pošlu e-mailem (do formuláře je nepište)</label>
+   <label class="opt"><input type="radio" name="recenze" value="Zatím ne, jen systém pro nové zakázky"> Zatím ne, jen systém pro nové zakázky</label>
+   <label class="opt"><input type="radio" name="recenze" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>13. Fakturační údaje k zálohové faktuře</h2>
+   <label class="opt"><input type="radio" name="faktura" value="Vyplním níže" required> Vyplním níže</label>
+   <label class="opt"><input type="radio" name="faktura" value="Pošlu e-mailem"> Pošlu e-mailem</label>
+   <label class="opt"><input type="radio" name="faktura" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+   <label for="p-fakt-nazev">Jméno / firma</label>
+   <input id="p-fakt-nazev" name="fakt_nazev" type="text" autocomplete="organization">
+   <label for="p-fakt-ico">IČO</label>
+   <input id="p-fakt-ico" name="fakt_ico" type="text">
+   <label for="p-fakt-adresa">Fakturační adresa</label>
+   <input id="p-fakt-adresa" name="fakt_adresa" type="text" autocomplete="street-address">
+   <p class="hint">Jste plátce DPH?</p>
+   <label class="opt"><input type="radio" name="dph" value="Ne, nejsem plátce DPH"> Ne, nejsem plátce DPH</label>
+   <label class="opt"><input type="radio" name="dph" value="Ano, jsem plátce DPH"> Ano, jsem plátce DPH</label>
+   <label class="opt"><input type="radio" name="dph" value="Nevím, pomozte mi"> Nevím, pomozte mi</label>
+  </div>
+
+  <div class="q">
+   <h2>Poznámka (nepovinné)</h2>
+   <textarea id="p-pozn" name="poznamka" rows="3"></textarea>
+  </div>
+
+  <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <button class="btn l" id="send" type="submit">Odeslat podklady</button>
+  <div id="fmsg" class="msg" role="status" aria-live="polite"></div>
+  <p style="font-size:14px;color:#c9ced8">Údaje použiji jen k přípravě úpravy webu a k odpovědi na váš dotaz. Podrobnosti v <a href="/ochrana-osobnich-udaju/">zásadách ochrany osobních údajů</a>.</p>
+ </form>
+</div></section>
+</main>
+<footer>
+ <div class="wrap cols">
+  <div><b>Nitiva</b><br>Miloš Brisuda<br>Kubelíkova 1258/43, 130 00 Praha 3<br>IČO 29824125</div>
+  <div><b>Kontakt</b><br><a href="mailto:milos@nitiva.cz">milos@nitiva.cz</a></div>
+  <div><b>Ochrana údajů</b><br><a href="/ochrana-osobnich-udaju/">Zásady ochrany osobních údajů</a></div>
+ </div>
+</footer>
+<script>
+(function(){
+ var f=document.getElementById('podkladyForm'),msg=document.getElementById('fmsg'),btn=document.getElementById('send');
+ function show(t,c){msg.className='msg '+c;msg.textContent=t;}
+ function radio(name){
+  var el=f.querySelector('input[name="'+name+'"]:checked');
+  return el?el.value:'';
+ }
+ function boxes(name){
+  var out=[],els=f.querySelectorAll('input[name="'+name+'"]:checked'),i;
+  for(i=0;i<els.length;i++) out.push(els[i].value);
+  return out.join(', ');
+ }
+ function need(ok,label){if(!ok)throw label;}
+ f.addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var name=f.name.value.trim();
+  var email=f.email.value.trim();
+  if(!name||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){show('Vyplňte prosím jméno a platný e-mail.','err');return;}
+  try{
+   need(radio('domena'),'Vyberte, kde máte registrovanou doménu.');
+   need(radio('hosting'),'Vyberte, u koho běží hosting.');
+   need(radio('wp'),'Vyberte, zda máte přístup do WordPressu.');
+   need(boxes('sluzby'),'Zaškrtněte služby a ceník, nebo „Nevím, pomozte mi“.');
+   need(boxes('oblast'),'Zaškrtněte oblast zakázek, nebo „Nevím, pomozte mi“.');
+   need(radio('fotky'),'Vyberte, jak naložit s fotkami.');
+   need(radio('logo'),'Vyberte, jak naložit s logem.');
+   need(radio('kontakty'),'Vyberte, jak naložit s kontakty.');
+   need(radio('google'),'Vyberte stav profilu na Google.');
+   need(radio('firmy'),'Vyberte stav profilu na Firmy.cz.');
+   need(boxes('formular'),'Zaškrtněte otázky ve formuláři, nebo „Nevím, pomozte mi“.');
+   need(radio('recenze'),'Vyberte, zda posílat žádost o recenzi dřívějším zákazníkům.');
+   need(radio('faktura'),'Vyberte, jak pošlete fakturační údaje.');
+  }catch(err){show(String(err),'err');return;}
+  var lines=[
+   'PODKLADY MINIBAGR',
+   'Telefon: '+(f.phone.value.trim()||'-'),
+   'Doména: '+radio('domena')+(f.domena_jiny.value.trim()?' ('+f.domena_jiny.value.trim()+')':''),
+   'Hosting: '+radio('hosting')+(f.hosting_jiny.value.trim()?' ('+f.hosting_jiny.value.trim()+')':''),
+   'WordPress: '+radio('wp'),
+   'Služby a ceník: '+boxes('sluzby'),
+   'Oblast: '+boxes('oblast'),
+   'Fotky: '+radio('fotky'),
+   'Logo: '+radio('logo'),
+   'Kontakty: '+radio('kontakty'),
+   'Kontakty poznámka: '+(f.kontakty_pozn.value.trim()||'-'),
+   'Google profil: '+radio('google'),
+   'Firmy.cz: '+radio('firmy'),
+   'Otázky ve formuláři: '+boxes('formular'),
+   'Recenze dřívějším zákazníkům: '+radio('recenze'),
+   'Fakturace: '+radio('faktura'),
+   'Fakturační jméno / firma: '+(f.fakt_nazev.value.trim()||'-'),
+   'IČO: '+(f.fakt_ico.value.trim()||'-'),
+   'Fakturační adresa: '+(f.fakt_adresa.value.trim()||'-'),
+   'DPH: '+(radio('dph')||'-'),
+   'Poznámka: '+(f.poznamka.value.trim()||'-')
+  ];
+  var d={sid:'podklady-minibagr',name:name,email:email,message:lines.join('\n'),web:f.web.value,page:location.href};
+  var metaId=window.nitivaMetaEventId?window.nitivaMetaEventId():'';
+  if(metaId)d.meta_event_id=metaId;
+  btn.disabled=true;
+  fetch('https://n8n.178-105-83-205.sslip.io/webhook/nitiva-handoff',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+   .then(function(res){return res.json().then(function(body){return {ok:!!res.ok,body:body};},function(){return {ok:false,body:null};});})
+   .then(function(res){var r=res.body;if(res.ok&&r&&r.ok){f.reset();show('Děkuji, podklady jsou odeslané. Odpovím e-mailem nejpozději druhý den.','ok');}else{show('Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');}})
+   .catch(function(){show('Odeslání se nepodařilo. Napište mi prosím na milos@nitiva.cz.','err');})
+   .then(function(){btn.disabled=false;});
+ });
+})();
+</script>
+</body>
+</html>
