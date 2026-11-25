@@ -7,6 +7,7 @@
 
   // Remaining places. After each confirmed order (CZ or SK), lower SPOTS_LEFT by 1.
   // This is the only place to edit; the pages read it via [data-bf-spots].
+  // When it reaches 0 the whole Black Friday offer is hidden.
   var SPOTS_TOTAL = 5;
   var SPOTS_LEFT = 5;
 
@@ -39,8 +40,11 @@
     }
   }
 
-  function isActive(now) {
+  // The offer is hidden after the deadline and whenever no places are left.
+  // spotsLeft is optional (used by tests); by default the SPOTS_LEFT constant decides.
+  function isActive(now, spotsLeft) {
     now = now || new Date();
+    if ((spotsLeft === undefined ? SPOTS_LEFT : spotsLeft) <= 0) return false;
     var stamp = pragueStamp(now);
     if (stamp) return stamp <= DEADLINE_STAMP;
     return now.getTime() <= FALLBACK_END;
@@ -65,10 +69,10 @@
     });
   }
 
-  function apply(doc, now) {
+  function apply(doc, now, spotsLeft) {
     doc = doc || (root && root.document);
-    if (!doc || !doc.querySelectorAll) return isActive(now);
-    var on = isActive(now);
+    if (!doc || !doc.querySelectorAll) return isActive(now, spotsLeft);
+    var on = isActive(now, spotsLeft);
     if (doc.documentElement && doc.documentElement.classList) {
       doc.documentElement.classList.toggle('bf-on', on);
     }

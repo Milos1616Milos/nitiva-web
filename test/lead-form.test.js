@@ -99,7 +99,7 @@ assert.deepStrictEqual(check, {
 });
 assert.strictEqual(lead.buildCheckPayload({ url: '', contact: 'jana@salon.cz', note: '', hp: '', src: '' }), null);
 assert.strictEqual(lead.buildCheckPayload({ url: 'www.x.cz', contact: 'xyz', note: '', hp: '', src: '' }), null);
-assert.strictEqual(lead.contactThanks('email'), 'Děkuji, zpráva je odeslaná. Ozvu se vám e-mailem.');
+assert.strictEqual(lead.contactThanks('email'), 'Děkuji, zpráva je odeslaná. Odpovím e-mailem nejpozději druhý den.');
 assert.strictEqual(lead.contactThanks('phone').indexOf('24 hodin'), -1);
 assert.ok(lead.contactThanks('phone').indexOf('číslo') !== -1);
 assert.ok(lead.checkFollowup('email').indexOf('e-mailem') !== -1);
@@ -163,7 +163,7 @@ assert.ok(home.indexOf('grid-template-areas:"slip" "letter" "ticket"') !== -1);
 assert.ok(home.indexOf('E-mail nebo telefon') !== -1);
 assert.ok(home.indexOf('name="consent"') === -1);
 assert.ok(home.indexOf('getElementById(\'cc\')') === -1);
-assert.ok(home.indexOf('Odesláním souhlasíte se zpracováním údajů za účelem odpovědi na váš dotaz.') !== -1);
+assert.ok(home.indexOf('Údaje použiji jen k odpovědi na váš dotaz.') !== -1);
 assert.ok(home.indexOf('href="/ochrana-osobnich-udaju/"') !== -1);
 assert.ok(home.indexOf('id="cu"') !== -1);
 assert.ok(home.indexOf('24 hodin') === -1);
@@ -182,7 +182,7 @@ assert.ok(bot.indexOf('Jméno (nepovinné)') !== -1);
 assert.ok(bot.indexOf("sid: 'ai-chatbot'") !== -1 || bot.indexOf('sid:\'ai-chatbot\'') !== -1 || bot.indexOf("buildHandoffPayload") !== -1);
 assert.ok(bot.indexOf('nitiva-handoff') !== -1);
 assert.ok(bot.indexOf("nitivaFireLead('kontakt'") !== -1);
-assert.ok(bot.indexOf('Odesláním souhlasíte se zpracováním údajů za účelem odpovědi na váš dotaz.') !== -1);
+assert.ok(bot.indexOf('Údaje použiji jen k odpovědi na váš dotaz.') !== -1);
 assert.ok(bot.indexOf('24 hodin') === -1);
 assert.ok(bot.indexOf('Domluvit nezávaznou konzultaci') === -1);
 assert.ok(bot.indexOf('>Napište mi<') === -1);
@@ -190,7 +190,7 @@ assert.ok(bot.indexOf('/lead-form.js') !== -1);
 
 assert.ok(offer.indexOf('E-mail nebo telefon') !== -1);
 assert.ok(offer.indexOf('for="offer-name"') === -1);
-assert.ok(offer.indexOf('Odesláním souhlasíte se zpracováním údajů za účelem odpovědi na váš dotaz.') !== -1);
+assert.ok(offer.indexOf('Údaje použiji jen k odpovědi na váš dotaz.') !== -1);
 assert.ok(offer.indexOf('/lead-form.js') !== -1);
 
 assert.strictEqual(consent.indexOf('WHATSAPP_NUMBER'), -1);

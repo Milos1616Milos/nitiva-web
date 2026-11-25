@@ -90,8 +90,8 @@ assert.ok(bfItem[0].indexOf('paypal.com') === -1, 'BF block on /objednat/ must n
 
 var sk = fs.readFileSync(path.join(rootDir, 'sk/index.html'), 'utf8');
 assert.ok(sk.indexOf('BF2026') !== -1, 'SK form must mark BF2026');
-assert.ok(sk.indexOf('Zálohu 48 € uhradíte cez PayPal, výzvu na platbu pošlem po prijatí správy.') !== -1);
-assert.ok(sk.indexOf('Cena zriadenia 195 € platí od 13. 11. 2026') !== -1);
+assert.ok(sk.indexOf('Zálohu 48&nbsp;€ uhradíte cez PayPal, výzvu na platbu pošlem po prijatí správy.') !== -1);
+assert.ok(sk.indexOf('Cenníková cena zriadenia je 195&nbsp;€ a platí od 13. 11. 2026, teda kratšie ako 30 dní.') !== -1);
 assert.ok(sk.indexOf('label for="e">E-mail<') !== -1 || sk.indexOf('label for="e">E-mail ') !== -1, 'SK field should be e-mail only');
 assert.ok(sk.indexOf('E-mail alebo telefón') === -1, 'SK field no longer accepts phone');
 assert.ok(sk.indexOf('type="email"') !== -1, 'SK e-mail input uses type=email');
@@ -105,6 +105,9 @@ assert.ok(home.indexOf('Spuštění do 7 dnů od podkladů') !== -1);
 var ponuka = fs.readFileSync(path.join(rootDir, 'ponuka/index.html'), 'utf8');
 assert.ok(ponuka.indexOf('Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3. 10. 2026') !== -1 || ponuka.indexOf('platí od 3. 10. 2026') !== -1);
 
+assert.strictEqual(bf.isActive(new Date('2026-11-26T10:00:00+01:00'), 5), true);
+assert.strictEqual(bf.isActive(new Date('2026-11-26T10:00:00+01:00'), 0), false, 'offer hides at 0 spots');
+assert.strictEqual(bf.isActive(new Date('2026-12-01T10:00:00+01:00'), 5), false);
 console.log('bf-offer tests ok');
 
 assert.strictEqual(bf.SPOTS_TOTAL, 5);
@@ -128,7 +131,11 @@ var privacySk = fs.readFileSync(path.join(rootDir, 'sk/ochrana-osobnych-udajov/i
 assert.ok(privacyCs.indexOf('application/ld+json') === -1, 'CZ privacy must not add JSON-LD');
 assert.ok(privacySk.indexOf('application/ld+json') === -1, 'SK privacy must not add JSON-LD');
 assert.ok(privacyCs.indexOf('mail-hetzner.dingopet.cz') !== -1);
-assert.ok(privacyCs.indexOf('Google Workspace') !== -1);
+assert.ok(privacyCs.indexOf('Google Workspace') === -1, 'mail is forwarded to Gmail, the page must not deny Google');
+assert.ok(privacyCs.indexOf('Gmail') !== -1);
+assert.ok(privacyCs.indexOf('OpenAI') !== -1);
+assert.ok(privacySk.indexOf('Úrad na ochranu osobných údajov Slovenskej republiky') !== -1);
+assert.ok(privacySk.indexOf('Gmail') !== -1);
 assert.ok(privacyCs.indexOf('164438667301853') !== -1);
 assert.ok(privacyCs.indexOf('zi6zov6u2y') !== -1);
 assert.ok(privacyCs.indexOf('Hetzner') !== -1);

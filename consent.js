@@ -188,13 +188,13 @@
     if (isSlovak()) {
       return {
         label: 'Súhlas s cookies',
-        body: 'Marketingové cookies (Meta Pixel a Microsoft Clarity) zapneme, len keď ich prijmete. Slúžia na meranie účinnosti reklamy a na zlepšenie webu. Bez súhlasu sa nespustia a údaje z formulárov do Meta neposielame.',
+        body: 'Marketingové cookies (Meta Pixel a Microsoft Clarity) zapnem, len keď ich prijmete. Slúžia na meranie účinnosti reklamy a na zlepšenie webu. Bez súhlasu sa nespustia a údaje z formulárov do Meta neposielame.',
         details: ' Podrobnosti: ',
         policy: 'Zásady ochrany osobných údajov',
         policyHref: '/sk/ochrana-osobnych-udajov/',
         accept: 'Prijať',
         reject: 'Odmietnuť',
-        short: 'Meta Pixel na meranie účinnosti reklamy zapneme len s vaším súhlasom. ',
+        short: 'Meta Pixel na meranie účinnosti reklamy zapnem len s vaším súhlasom. ',
         policyShort: 'Podrobnosti',
         settings: 'Nastavenie cookies',
         accepted: 'Aktuálna voľba: prijaté.',
@@ -203,13 +203,13 @@
     }
     return {
       label: 'Souhlas s cookies',
-      body: 'Marketingové cookies (Meta Pixel a Microsoft Clarity) zapneme jen když je přijmete. Slouží k měření účinnosti reklamy a ke zlepšení webu. Bez souhlasu se nespustí a do Meta neposíláme údaje z formulářů.',
+      body: 'Marketingové cookies (Meta Pixel a Microsoft Clarity) zapnu jen když je přijmete. Slouží k měření účinnosti reklamy a ke zlepšení webu. Bez souhlasu se nespustí a do Meta neposíláme údaje z formulářů.',
       details: ' Podrobnosti: ',
       policy: 'Zásady ochrany osobních údajů',
       policyHref: '/ochrana-osobnich-udaju/',
       accept: 'Přijmout',
       reject: 'Odmítnout',
-      short: 'Meta Pixel pro měření účinnosti reklamy zapneme jen s\u00a0vaším souhlasem. ',
+      short: 'Meta Pixel pro měření účinnosti reklamy zapnu jen s\u00a0vaším souhlasem. ',
       policyShort: 'Podrobnosti',
       settings: 'Nastavení cookies',
       accepted: 'Aktuální volba: přijato.',

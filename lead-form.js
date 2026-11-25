@@ -71,15 +71,15 @@
   }
 
   function contactThanks(kind) {
-    if (kind === 'email') return 'Děkuji, zpráva je odeslaná. Ozvu se vám e-mailem.';
+    if (kind === 'email') return 'Děkuji, zpráva je odeslaná. Odpovím e-mailem nejpozději druhý den.';
     return 'Děkuji, zpráva je odeslaná. Ozvu se vám na uvedené číslo.';
   }
 
   function checkFollowup(kind) {
     if (kind === 'email') {
-      return 'Kopii jsem vám poslal i e-mailem. Jde o automatickou orientační kontrolu, rád ji s vámi projdu osobně: milos@nitiva.cz.';
+      return 'Kopii jsem vám poslal i e-mailem. Jde o automatickou orientační kontrolu. Odpovím e-mailem nejpozději druhý den: milos@nitiva.cz.';
     }
-    return 'Jde o automatickou orientační kontrolu. Ozvu se vám na uvedené číslo. Rád ji s vámi projdu i osobně: milos@nitiva.cz.';
+    return 'Jde o automatickou orientační kontrolu. Ozvu se vám na uvedené číslo. Rád ji s vámi projdu: milos@nitiva.cz.';
   }
 
   function hasFloat(doc) {
