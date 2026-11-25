@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="alternate" hreflang="cs" href="https://nitiva.cz/ponuka/"><link rel="alternate" hreflang="en" href="https://nitiva.cz/en/offer/"><link rel="alternate" hreflang="x-default" href="https://nitiva.cz/ponuka/"><script src="/consent.js"></script><link rel="stylesheet" href="/style.css?v=4">
+<link rel="alternate" hreflang="cs" href="https://nitiva.cz/ponuka/"><link rel="alternate" hreflang="en" href="https://nitiva.cz/en/offer/"><link rel="alternate" hreflang="x-default" href="https://nitiva.cz/ponuka/"><script src="/consent.js"></script><link rel="stylesheet" href="/style.css?v=4"><link rel="stylesheet" href="/bf-offer.css?v=1">
 </head>
 <body>
 <header class="site">
@@ -38,12 +38,13 @@
  <p>Vyberte, o co máte zájem. Po odeslání vám do jednoho pracovního dne potvrdím rozsah e-mailem.</p>
  <ul style="max-width:640px;line-height:1.6">
   <li><b>Bezplatná kontrola webu</b> – 0 Kč. Krátký rozbor, co na vašem webu brzdí poptávky.</li>
-  <li><b>Balíček První dotaz</b> – zřízení 4 900 Kč jednorázově, provoz 1 490 Kč měsíčně, první měsíc provozu zdarma. <a href="/ponuka/">Co obsahuje</a><br><a class="btn l" href="https://www.paypal.com/ncp/payment/MCGKTSP2LCCA8" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;max-width:100%;white-space:normal;text-align:center">Zaplatit zálohu 2 450 Kč (PayPal nebo karta)</a><br><small>Záloha 50 % z ceny zřízení balíčku První dotaz.</small></li>
+  <li data-bf hidden><b>Balíček První dotaz – Black Friday</b> – zřízení 2&nbsp;450&nbsp;Kč místo 4&nbsp;900&nbsp;Kč, provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc provozu zdarma. Objednávky do pondělí 30. 11. 2026 23:59, jen pro 5 firem. <a href="/ponuka/">Co obsahuje</a><br><small>Záloha 1&nbsp;225&nbsp;Kč (50&nbsp;% z akciové ceny zřízení). Platební odkaz na zálohu vám pošlu e-mailem po odeslání objednávky. Provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc zdarma, výpověď kdykoli. Spuštění do 7 dnů od podkladů. Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3. 10. 2026. Volná místa: 5 z 5. Nejsem plátce DPH.</small></li>
+  <li><b>Balíček První dotaz</b> – zřízení 4&nbsp;900&nbsp;Kč jednorázově, provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc provozu zdarma. <a href="/ponuka/">Co obsahuje</a><br><a class="btn l" href="https://www.paypal.com/ncp/payment/MCGKTSP2LCCA8" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;max-width:100%;white-space:normal;text-align:center">Zaplatit zálohu 2 450 Kč (PayPal nebo karta)</a><br><small>Záloha 50 % z ceny zřízení balíčku První dotaz.</small></li>
   <li><b>AI telefon</b> – zřízení 2 900 Kč jednorázově, provoz od 490 Kč měsíčně. <a href="/ai-telefon/">Více</a><br><a class="btn l" href="https://www.paypal.com/ncp/payment/APG5XSL2FAZFC" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;max-width:100%;white-space:normal;text-align:center">Zaplatit zálohu 1 450 Kč (PayPal nebo karta)</a><br><small>Záloha 50 % z ceny zřízení AI telefonu.</small></li>
  </ul>
  <p><b>Záloha 50 %</b> – u placených služeb začínám po úhradě zálohy 50 % z ceny zřízení. Zálohu zaplatíte tlačítkem u balíčku (PayPal nebo karta). Nejsem plátce DPH.</p>
  <form id="orderForm" class="k">
-  <label for="o-pkg">Služba</label><select id="o-pkg" name="pkg" required><option value="Bezplatná kontrola webu">Bezplatná kontrola webu (0 Kč)</option><option value="Balíček První dotaz">Balíček První dotaz (zřízení 4 900 Kč + 1 490 Kč/měs.)</option><option value="AI telefon">AI telefon (zřízení 2 900 Kč + od 490 Kč/měs.)</option></select>
+  <label for="o-pkg">Služba</label><select id="o-pkg" name="pkg" required><option value="Bezplatná kontrola webu">Bezplatná kontrola webu (0 Kč)</option><option value="Balíček První dotaz – Black Friday (BF2026)" data-bf hidden>Balíček První dotaz – Black Friday (zřízení 2 450 Kč + 1 490 Kč/měs.)</option><option value="Balíček První dotaz">Balíček První dotaz (zřízení 4 900 Kč + 1 490 Kč/měs.)</option><option value="AI telefon">AI telefon (zřízení 2 900 Kč + od 490 Kč/měs.)</option></select>
   <label for="o-name">Jméno</label><input id="o-name" name="name" autocomplete="name" required>
   <label for="o-email">E-mail</label><input id="o-email" name="email" type="email" autocomplete="email" required>
   <label for="o-site">Váš web (nepovinné)</label><input id="o-site" name="site" placeholder="www.vasefirma.cz">
@@ -63,10 +64,11 @@
   <div><b>Ochrana údajů</b><br><a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a><br>Marketingové cookies (Meta Pixel) používáme jen po vašem souhlasu. <button type="button" class="nitiva-cookie-settings">Nastavení cookies</button></div>
  </div>
 </footer>
+<script src="/bf-offer.js?v=1"></script>
 <script>
 (function(){
  var f=document.getElementById('orderForm'),msg=document.getElementById('fmsg'),btn=document.getElementById('send');
- var q=new URLSearchParams(location.search).get('balicek');if(q){for(var o of f.pkg.options){if(o.value.toLowerCase().indexOf(q.toLowerCase())>=0)f.pkg.value=o.value;}}
+ if(window.nitivaBlackFriday)window.nitivaBlackFriday.preselectPackage();
  function show(t,c){msg.className='msg '+c;msg.textContent=t;}
  f.addEventListener('submit',function(ev){
   ev.preventDefault();

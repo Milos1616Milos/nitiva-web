@@ -19,9 +19,21 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="alternate" hreflang="cs" href="https://nitiva.cz/ponuka/"><link rel="alternate" hreflang="en" href="https://nitiva.cz/en/offer/"><link rel="alternate" hreflang="x-default" href="https://nitiva.cz/ponuka/"><script src="/consent.js"></script><link rel="stylesheet" href="/style.css?v=4">
+<link rel="alternate" hreflang="cs" href="https://nitiva.cz/ponuka/"><link rel="alternate" hreflang="en" href="https://nitiva.cz/en/offer/"><link rel="alternate" hreflang="x-default" href="https://nitiva.cz/ponuka/"><script src="/consent.js"></script><link rel="stylesheet" href="/style.css?v=4"><link rel="stylesheet" href="/bf-offer.css?v=1">
 </head>
 <body>
+<aside class="bf-banner" data-bf hidden aria-label="Black Friday">
+ <div class="wrap bf-inner">
+  <p class="bf-off" aria-hidden="true">−50&nbsp;%</p>
+  <div class="bf-copy">
+   <p class="bf-kicker">Do pondělí 30. 11. 23:59 · 5&nbsp;míst</p>
+   <p class="bf-title">Black Friday: zřízení balíčku První dotaz −50 %</p>
+   <p class="bf-text">Zákazníci dostanou odpověď hned, i večer a o víkendu, a vy jen převezmete hotový dotaz. Web s odpovídačem a 8 příspěvky měsíčně teď zřídím za 2&nbsp;450&nbsp;Kč místo 4&nbsp;900&nbsp;Kč, objednávky do pondělí 30. 11. 23:59 a jen pro 5 firem.</p>
+   <p class="bf-fine">Provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc zdarma, výpověď kdykoli. Spuštění do 7 dnů od podkladů. Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3. 10. 2026. Jsem jeden člověk, proto jen 5 míst. Volná místa: 5 z 5. Nejsem plátce DPH.</p>
+  </div>
+  <a class="btn c bf-cta" href="/objednat/?balicek=bf2026">Objednat se slevou</a>
+ </div>
+</aside>
 <header class="site">
  <div class="wrap nav">
   <a class="logo" href="/" aria-label="Nitiva – úvod"><i>n</i>nitiva</a>
@@ -38,7 +50,8 @@
  <div class="wrap">
   <p class="soon">První měsíc provozu zdarma</p><h1>Zákazník se ptá. Vy se věnujete práci.</h1>
   <p>Web, automatický odpovídač na opakované otázky a hotové příspěvky v jednom balíčku. Odpovědi nastavím podle vašich služeb, ceníku a pravidel. Termíny potvrzujete vy; bez ověřeného propojení odpovídač volná místa nezná.</p>
-  <div class="cta"><a class="btn c" href="/objednat/?balicek=prvni">Objednat balíček</a><a class="btn" href="#kontakt">Probrat balíček</a><a class="btn" href="#cena">Kolik to stojí</a></div><p class="note priceline">Zřízení balíčku 4&nbsp;900&nbsp;Kč. Provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc provozu zdarma. Podmínky spuštění najdete níže.</p>
+  <div class="cta"><a class="btn c" data-bf-hide href="/objednat/?balicek=prvni">Objednat balíček</a><a class="btn c" data-bf hidden href="/objednat/?balicek=bf2026">Objednat se slevou −50&nbsp;%</a><a class="btn" href="#kontakt">Probrat balíček</a><a class="btn" href="#cena">Kolik to stojí</a></div><p class="note priceline" data-bf-hide>Zřízení balíčku 4&nbsp;900&nbsp;Kč. Provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc provozu zdarma. Podmínky spuštění najdete níže.</p>
+  <p class="note priceline" data-bf hidden>Black Friday: zřízení balíčku 2&nbsp;450&nbsp;Kč místo 4&nbsp;900&nbsp;Kč. Provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc provozu zdarma. Objednávky do 30. 11. 2026 23:59, jen pro 5 firem.</p>
  </div>
 </section>
 <section id="proc" style="padding-top:30px">
@@ -68,10 +81,11 @@
  <div class="wrap">
   <h2>Jasná cena, bez překvapení</h2>
   <div class="price">
-   <div class="pbox"><small>Zřízení balíčku, jednorázově</small><div class="big">4 900 Kč</div><ul class="tick"><li>Web na míru vašemu oboru</li><li>Nastavení odpovídače</li><li>Úprava Firmy.cz a&nbsp;Facebooku</li><li>Spuštění do 7 dnů od podkladů</li></ul></div>
-   <div class="pbox"><small>Měsíčně</small><div class="big">1 490 Kč</div><ul class="tick"><li>Provoz odpovídače a webu</li><li>8 hotových příspěvků</li><li>Měsíční přehled dotazů</li><li>První měsíc zdarma, výpověď kdykoli</li></ul></div>
+   <div class="pbox"><small>Zřízení balíčku, jednorázově</small><div class="big"><span data-bf-hide>4&nbsp;900&nbsp;Kč</span><span class="bf-sale" data-bf hidden><span class="bf-was">4&nbsp;900&nbsp;Kč</span><span class="bf-now">2&nbsp;450&nbsp;Kč</span></span></div><ul class="tick"><li>Web na míru vašemu oboru</li><li>Nastavení odpovídače</li><li>Úprava Firmy.cz a&nbsp;Facebooku</li><li>Spuštění do 7 dnů od podkladů</li></ul></div>
+   <div class="pbox"><small>Měsíčně</small><div class="big">1&nbsp;490&nbsp;Kč</div><ul class="tick"><li>Provoz odpovídače a webu</li><li>8 hotových příspěvků</li><li>Měsíční přehled dotazů</li><li>První měsíc zdarma, výpověď kdykoli</li></ul></div>
   </div>
   <p class="note">Ceny jsou konečné. Nejsem plátce DPH. Reklamní rozpočet na Facebooku či Googlu se neplatí s námi, hradíte jej případně přímo vy.</p>
+  <p class="note" data-bf hidden>Black Friday: zřízení 2&nbsp;450&nbsp;Kč místo 4&nbsp;900&nbsp;Kč, objednávky do pondělí 30. 11. 2026 23:59, jen pro 5 firem. Provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc zdarma, výpověď kdykoli. Spuštění do 7 dnů od podkladů. Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3. 10. 2026. Jsem jeden člověk, proto jen 5 míst. Volná místa: 5 z 5. Nejsem plátce DPH.</p>
  </div>
 </section>
 <section id="garance" style="padding-top:0">
@@ -95,7 +109,7 @@
    <div class="card"><h3>Jeden přehledný web</h3><p>Služby, ceník a kontakt na jednom místě. Rozsah je jedna stránka; e-shop ani vlastní rezervační systém nejsou součástí.</p></div>
    <div class="card"><h3>Odpovědi podle podkladů</h3><p>Odpovídač na webu nastavím podle údajů, které schválíte. Dostupnost termínů a individuální cenu zakázky za vás nepotvrzuje.</p></div>
    <div class="card"><h3>Pravidelný obsah</h3><p>8 návrhů příspěvků měsíčně. Texty a grafiku před použitím schválíte. Reklamní rozpočet není součástí.</p></div>
-   <div class="card" style="background:var(--navy);color:var(--cream)"><h3>Celková cena</h3><p style="color:#c9ced8">Při využívání po celých 12 měsíců celkem 21&nbsp;290&nbsp;Kč. Za 24 měsíců 39&nbsp;170&nbsp;Kč. Zahrnuje zřízení a první měsíc provozu zdarma.</p></div>
+   <div class="card" style="background:var(--navy);color:var(--cream)"><h3>Celková cena</h3><p style="color:#c9ced8" data-bf-hide>Při využívání po celých 12 měsíců celkem 21&nbsp;290&nbsp;Kč. Za 24 měsíců 39&nbsp;170&nbsp;Kč. Zahrnuje zřízení a první měsíc provozu zdarma.</p><p style="color:#c9ced8" data-bf hidden>Při využívání po celých 12 měsíců celkem 18&nbsp;840&nbsp;Kč (akciové zřízení 2&nbsp;450&nbsp;Kč a 11 měsíců provozu). Za 24 měsíců 36&nbsp;720&nbsp;Kč. Zahrnuje zřízení a první měsíc provozu zdarma.</p></div>
   </div>
   <p class="note">Jde o výpočet při nepřerušené spolupráci za současnou cenu, nikoli o závazek na rok nebo dva. Spolupráci lze ukončit kdykoli e-mailem. Ceny jsou konečné, nejsem plátce DPH.</p>
  </div>
@@ -117,7 +131,7 @@
 </div></section>
 <section id="kontakt" class="dark">
  <div class="wrap">
-  <h2>Proberme, zda se pro vás balíček hodí</h2><p>Napište, co potřebujete a co už používáte. Ozvu se vám do druhého dne a společně ověříme vhodný rozsah. Zřízení balíčku stojí 4&nbsp;900&nbsp;Kč; zdarma je první měsíc provozu. Odeslání dotazu není objednávka.</p>
+  <h2>Proberme, zda se pro vás balíček hodí</h2><p data-bf-hide>Napište, co potřebujete a co už používáte. Ozvu se vám do druhého dne a společně ověříme vhodný rozsah. Zřízení balíčku stojí 4&nbsp;900&nbsp;Kč; zdarma je první měsíc provozu. Odeslání dotazu není objednávka.</p><p data-bf hidden>Napište, co potřebujete a co už používáte. Ozvu se vám do druhého dne a společně ověříme vhodný rozsah. Do 30. 11. 2026 23:59 je zřízení balíčku 2&nbsp;450&nbsp;Kč místo 4&nbsp;900&nbsp;Kč; zdarma je první měsíc provozu. Objednávku pošlete přes <a href="/objednat/?balicek=bf2026">formulář objednávky</a>. Odeslání tohoto dotazu není objednávka.</p>
   <form id="contactForm" class="k" novalidate>
    <label for="offer-contact">E-mail nebo telefon</label><input id="offer-contact" name="contact" type="text" autocomplete="on" placeholder="E-mail nebo telefon" required maxlength="120">
    <label for="offer-message">Čím se zabýváte a co potřebujete? (nepovinné)</label><textarea id="offer-message" name="message" rows="4" placeholder="Čím se zabýváte a co potřebujete?"></textarea>
@@ -138,6 +152,7 @@
   <div><b>Ochrana údajů</b><br><a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a><br>Marketingové cookies (Meta Pixel) používáme jen po vašem souhlasu. <button type="button" class="nitiva-cookie-settings">Nastavení cookies</button></div>
  </div>
 </footer>
+<script src="/bf-offer.js?v=1"></script>
 <script src="/lead-form.js"></script>
 <script>
 (function(){

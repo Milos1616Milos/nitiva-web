@@ -276,9 +276,21 @@ ol.steps{grid-template-columns:1fr;gap:26px}
 <link rel="preload" href="/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" hreflang="cs" href="https://nitiva.cz/"><link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/"><link rel="alternate" hreflang="en" href="https://nitiva.cz/en/"><link rel="alternate" hreflang="x-default" href="https://nitiva.cz/">
-<script src="/consent.js"></script></head>
+<script src="/consent.js"></script><link rel="stylesheet" href="/bf-offer.css?v=1"></head>
 <body>
 <a class="skip" href="#kontrola">Přeskočit na kontrolu webu</a>
+<aside class="bf-banner" data-bf hidden aria-label="Black Friday">
+ <div class="wrap bf-inner">
+  <p class="bf-off" aria-hidden="true">−50&nbsp;%</p>
+  <div class="bf-copy">
+   <p class="bf-kicker">Do pondělí 30. 11. 23:59 · 5&nbsp;míst</p>
+   <p class="bf-title">Black Friday: zřízení balíčku První dotaz −50 %</p>
+   <p class="bf-text">Zákazníci dostanou odpověď hned, i večer a o víkendu, a vy jen převezmete hotový dotaz. Web s odpovídačem a 8 příspěvky měsíčně teď zřídím za 2&nbsp;450&nbsp;Kč místo 4&nbsp;900&nbsp;Kč, objednávky do pondělí 30. 11. 23:59 a jen pro 5 firem.</p>
+   <p class="bf-fine">Provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc zdarma, výpověď kdykoli. Spuštění do 7 dnů od podkladů. Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3. 10. 2026. Jsem jeden člověk, proto jen 5 míst. Volná místa: 5 z 5. Nejsem plátce DPH.</p>
+  </div>
+  <a class="btn c bf-cta" href="/objednat/?balicek=bf2026">Objednat se slevou</a>
+ </div>
+</aside>
 <header>
  <div class="wrap nav">
   <a class="logo" href="/" aria-label="Nitiva – úvod"><i>n</i>nitiva</a>
@@ -324,8 +336,8 @@ ol.steps{grid-template-columns:1fr;gap:26px}
 
   <aside class="ticket" aria-labelledby="cena-title">
    <h2 id="cena-title">Kolik to stojí: balíček První dotaz</h2>
-   <div class="prices"><div class="price"><b>4 900 Kč</b><span>zřízení, jednorázově</span></div>
-   <div class="price"><b>1 490 Kč</b><span>provoz měsíčně</span></div></div>
+   <div class="prices"><div class="price"><b><span data-bf-hide>4&nbsp;900&nbsp;Kč</span><span class="bf-sale" data-bf hidden><span class="bf-was">4&nbsp;900&nbsp;Kč</span><span class="bf-now">2&nbsp;450&nbsp;Kč</span></span></b><span>zřízení, jednorázově</span></div>
+   <div class="price"><b>1&nbsp;490&nbsp;Kč</b><span>provoz měsíčně</span></div></div>
    <div class="terms"><ul>
     <li><strong>První měsíc provozu zdarma</strong></li>
     <li>Web, odpovídač a 8 příspěvků měsíčně</li>
@@ -334,7 +346,8 @@ ol.steps{grid-template-columns:1fr;gap:26px}
     <li>Ceny jsou konečné, nejsem plátce DPH</li>
    </ul>
    </div>
-   <div class="links"><a class="btn" href="/objednat/?balicek=prvni">Objednat balíček</a> <a class="tlink" href="/ponuka/">Co přesně dostanete →</a></div>
+   <div class="links"><a class="btn" data-bf-hide href="/objednat/?balicek=prvni">Objednat balíček</a><a class="btn" data-bf hidden href="/objednat/?balicek=bf2026">Objednat se slevou −50&nbsp;%</a> <a class="tlink" href="/ponuka/">Co přesně dostanete →</a></div>
+   <p class="bf-fine" data-bf hidden>Black Friday: zřízení 2&nbsp;450&nbsp;Kč místo 4&nbsp;900&nbsp;Kč, objednávky do 30. 11. 2026 23:59, jen pro 5 firem. Provoz 1&nbsp;490&nbsp;Kč měsíčně, první měsíc zdarma, výpověď kdykoli. Spuštění do 7 dnů od podkladů. Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3. 10. 2026. Volná místa: 5 z 5. Nejsem plátce DPH.</p>
   </aside>
 <style>.solo{grid-column:1/-1;margin:18px 0 0;padding:18px 20px;border:1px solid rgba(0,0,0,.12);border-radius:14px;background:var(--paper)}.solo h3{margin:0 0 10px;font-size:19px}.solo ul{margin:0 0 10px;padding-left:20px}.solo li{margin:4px 0}.solo p{margin:6px 0;font-size:15px}</style><div class="solo" aria-label="Samostatné služby">
  <h3>Potřebujete jen jednu věc? Každou službu máte i samostatně.</h3>
@@ -518,6 +531,7 @@ ol.steps{grid-template-columns:1fr;gap:26px}
   <div><b>Ochrana údajů</b><br><a href="/ochrana-udaju/">Zásady ochrany osobních údajů</a><br>Marketingové cookies (Meta Pixel) používáme jen po vašem souhlasu. <button type="button" class="nitiva-cookie-settings">Nastavení cookies</button><br>Chat si v prohlížeči ukládá jen anonymní identifikátor relace.<br>Dříve: Marketing srdcem, BotEffex.</div>
  </div>
 </footer>
+<script src="/bf-offer.js?v=1"></script>
 <script src="/lead-form.js"></script>
 <script>
 (function(){
