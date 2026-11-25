@@ -5,6 +5,11 @@
   var DEADLINE_STAMP = '20261130235959';
   var FALLBACK_END = Date.parse('2026-11-30T23:59:59+01:00');
 
+  // Remaining places. After each confirmed order (CZ or SK), lower SPOTS_LEFT by 1.
+  // This is the only place to edit; the pages read it via [data-bf-spots].
+  var SPOTS_TOTAL = 5;
+  var SPOTS_LEFT = 5;
+
   function pad(value) {
     value = String(value);
     return value.length < 2 ? '0' + value : value;
@@ -46,6 +51,20 @@
     for (i = 0; i < nodeList.length; i++) fn(nodeList[i], i);
   }
 
+  function spotsText(lang) {
+    if (lang === 'sk') return 'Voľné miesta: ' + SPOTS_LEFT + ' z ' + SPOTS_TOTAL + '.';
+    return 'Volná místa: ' + SPOTS_LEFT + ' z ' + SPOTS_TOTAL + '.';
+  }
+
+  function fillSpots(doc) {
+    doc = doc || (root && root.document);
+    if (!doc || !doc.querySelectorAll) return;
+    each(doc.querySelectorAll('[data-bf-spots]'), function (el) {
+      var lang = el.getAttribute('data-bf-spots') || 'cs';
+      el.textContent = spotsText(lang);
+    });
+  }
+
   function apply(doc, now) {
     doc = doc || (root && root.document);
     if (!doc || !doc.querySelectorAll) return isActive(now);
@@ -59,6 +78,7 @@
     each(doc.querySelectorAll('[data-bf-hide]'), function (el) {
       el.hidden = on;
     });
+    fillSpots(doc);
     return on;
   }
 
@@ -92,6 +112,10 @@
 
   var api = {
     DEADLINE_STAMP: DEADLINE_STAMP,
+    SPOTS_TOTAL: SPOTS_TOTAL,
+    SPOTS_LEFT: SPOTS_LEFT,
+    spotsText: spotsText,
+    fillSpots: fillSpots,
     isActive: isActive,
     pragueStamp: pragueStamp,
     apply: apply,

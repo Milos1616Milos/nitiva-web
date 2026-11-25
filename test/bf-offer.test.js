@@ -106,3 +106,31 @@ var ponuka = fs.readFileSync(path.join(rootDir, 'ponuka/index.html'), 'utf8');
 assert.ok(ponuka.indexOf('Cena zřízení 4&nbsp;900&nbsp;Kč platí od 3. 10. 2026') !== -1 || ponuka.indexOf('platí od 3. 10. 2026') !== -1);
 
 console.log('bf-offer tests ok');
+
+assert.strictEqual(bf.SPOTS_TOTAL, 5);
+assert.strictEqual(bf.SPOTS_LEFT, 5);
+assert.strictEqual(bf.spotsText('cs'), 'Volná místa: 5 z 5.');
+assert.strictEqual(bf.spotsText('sk'), 'Voľné miesta: 5 z 5.');
+
+var spot = { textContent: '', getAttribute: function (n) { return n === 'data-bf-spots' ? 'sk' : null; } };
+bf.fillSpots({ querySelectorAll: function (sel) { return sel === '[data-bf-spots]' ? [spot] : []; } });
+assert.strictEqual(spot.textContent, 'Voľné miesta: 5 z 5.');
+
+['index.html', 'ponuka/index.html', 'sk/index.html', 'objednat/index.html'].forEach(function (rel) {
+  var html = fs.readFileSync(path.join(rootDir, rel), 'utf8');
+  assert.ok(html.indexOf('data-bf-spots') !== -1, rel + ' should read spots from one JS constant');
+  assert.ok(html.indexOf('Volná místa: 5 z 5') === -1, rel + ' must not hard-code the Czech counter');
+  assert.ok(html.indexOf('Voľné miesta: 5 z 5') === -1, rel + ' must not hard-code the Slovak counter');
+});
+
+var privacyCs = fs.readFileSync(path.join(rootDir, 'ochrana-osobnich-udaju/index.html'), 'utf8');
+var privacySk = fs.readFileSync(path.join(rootDir, 'sk/ochrana-osobnych-udajov/index.html'), 'utf8');
+assert.ok(privacyCs.indexOf('application/ld+json') === -1, 'CZ privacy must not add JSON-LD');
+assert.ok(privacySk.indexOf('application/ld+json') === -1, 'SK privacy must not add JSON-LD');
+assert.ok(privacyCs.indexOf('mail-hetzner.dingopet.cz') !== -1);
+assert.ok(privacyCs.indexOf('Google Workspace') !== -1);
+assert.ok(privacyCs.indexOf('164438667301853') !== -1);
+assert.ok(privacyCs.indexOf('zi6zov6u2y') !== -1);
+assert.ok(privacyCs.indexOf('Hetzner') !== -1);
+assert.ok(privacySk.indexOf('dataprotection.gov.sk') !== -1);
+assert.ok(llms.indexOf('ochrana-osobnich-udaju') === -1, 'llms.txt must not get the new privacy page');

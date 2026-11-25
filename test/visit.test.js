@@ -211,7 +211,8 @@ assert.ok(htmlFiles.length > 30);
 htmlFiles.forEach(function (file) {
   var rel = path.relative(root, file);
   var html = fs.readFileSync(file, 'utf8');
-  if (rel === 'google2067fb7c4703a82e.html') {
+  if (rel === 'google2067fb7c4703a82e.html' || rel === 'ochrana-udaju/index.html') {
+    // Verification file, or a redirect to /ochrana-osobnich-udaju/.
     assert.ok(html.indexOf('visit.js') === -1);
     return;
   }

@@ -172,7 +172,7 @@
     if (isEnglish()) {
       return {
         label: 'Cookie consent',
-        body: 'We turn on marketing cookies (Meta Pixel) only if you accept them. They measure how well our ads work. Without consent they stay off, and we do not send form details to Meta.',
+        body: 'We turn on marketing cookies (Meta Pixel and Microsoft Clarity) only if you accept them. They measure how well our ads work and help improve the site. Without consent they stay off, and we do not send form details to Meta.',
         details: ' Details: ',
         policy: 'Privacy policy',
         policyHref: '/en/privacy/',
@@ -188,10 +188,10 @@
     if (isSlovak()) {
       return {
         label: 'Súhlas s cookies',
-        body: 'Marketingové cookies (Meta Pixel) zapneme, len keď ich prijmete. Slúžia na meranie účinnosti reklamy. Bez súhlasu sa nespustia a údaje z formulárov do Meta neposielame.',
+        body: 'Marketingové cookies (Meta Pixel a Microsoft Clarity) zapneme, len keď ich prijmete. Slúžia na meranie účinnosti reklamy a na zlepšenie webu. Bez súhlasu sa nespustia a údaje z formulárov do Meta neposielame.',
         details: ' Podrobnosti: ',
         policy: 'Zásady ochrany osobných údajov',
-        policyHref: '/ochrana-udaju/',
+        policyHref: '/sk/ochrana-osobnych-udajov/',
         accept: 'Prijať',
         reject: 'Odmietnuť',
         short: 'Meta Pixel na meranie účinnosti reklamy zapneme len s vaším súhlasom. ',
@@ -203,10 +203,10 @@
     }
     return {
       label: 'Souhlas s cookies',
-      body: 'Marketingové cookies (Meta Pixel) zapneme jen když je přijmete. Slouží k měření účinnosti reklamy. Bez souhlasu se nespustí a do Meta neposíláme údaje z formulářů.',
+      body: 'Marketingové cookies (Meta Pixel a Microsoft Clarity) zapneme jen když je přijmete. Slouží k měření účinnosti reklamy a ke zlepšení webu. Bez souhlasu se nespustí a do Meta neposíláme údaje z formulářů.',
       details: ' Podrobnosti: ',
       policy: 'Zásady ochrany osobních údajů',
-      policyHref: '/ochrana-udaju/',
+      policyHref: '/ochrana-osobnich-udaju/',
       accept: 'Přijmout',
       reject: 'Odmítnout',
       short: 'Meta Pixel pro měření účinnosti reklamy zapneme jen s\u00a0vaším souhlasem. ',

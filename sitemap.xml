@@ -25,8 +25,12 @@
     <lastmod>2026-11-25</lastmod>
   </url>
   <url>
-    <loc>https://nitiva.cz/ochrana-udaju/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ochrana-udaju/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/privacy/"/>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://nitiva.cz/ochrana-osobnich-udaju/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ochrana-osobnich-udaju/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/ochrana-osobnych-udajov/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/privacy/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/ochrana-osobnich-udaju/"/>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://nitiva.cz/sk/ochrana-osobnych-udajov/</loc><xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ochrana-osobnich-udaju/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/ochrana-osobnych-udajov/"/><xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/privacy/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://nitiva.cz/ochrana-osobnich-udaju/"/>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://nitiva.cz/video/co-automatizovat-jako-prvni/</loc>
@@ -153,7 +157,7 @@
   </url>
   <url>
     <loc>https://nitiva.cz/en/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ochrana-udaju/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://nitiva.cz/ochrana-osobnich-udaju/"/><xhtml:link rel="alternate" hreflang="sk" href="https://nitiva.cz/sk/ochrana-osobnych-udajov/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nitiva.cz/en/privacy/"/>
     <lastmod>2026-11-24</lastmod>
   </url>
