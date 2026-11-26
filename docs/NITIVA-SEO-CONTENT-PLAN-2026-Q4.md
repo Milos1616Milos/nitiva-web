@@ -33,7 +33,7 @@ Nevytvářet články jen přepsáním obecných definic, cizích textů nebo AI
 | 1 | Kdy má AI chatbot na webu smysl – a kdy ještě ne | Rozhodnout ano/ne | AI chatbot | Publikováno 2026-10-17: https://nitiva.cz/poradna/kdy-ma-ai-chatbot-smysl/ |
 | 2 | Jak automatizovat poptávky z webu krok za krokem | Navrhnout proces | Web + automatizace | Publikováno 2026-10-17: https://nitiva.cz/poradna/automatizace-poptavek-z-webu/ |
 | 3 | Jak připravit podklady pro AI asistenta, aby si nevymýšlel | Bezpečné nasazení | AI chatbot | Plán |
-| 4 | Kontrolní seznam webu malé firmy před spuštěním | Ověřit kvalitu | Tvorba webu | Plán |
+| 4 | Kontrolní seznam webu malé firmy před spuštěním | Ověřit kvalitu | Tvorba webu | Publikováno 2026-11-26: https://nitiva.cz/poradna/kontrolni-seznam-webu-pred-spustenim/ |
 | 5 | AI telefonní asistent: které hovory zvládne a které má předat | Posoudit použití | AI telefon | Plán |
 | 6 | Formulář, chatbot nebo telefon: kudy má přijít poptávka | Porovnat řešení | Balíček První dotaz | Plán |
 | 7 | Jak měřit, jestli automatizace skutečně šetří práci | Vyhodnotit přínos | Automatizace | Plán |
