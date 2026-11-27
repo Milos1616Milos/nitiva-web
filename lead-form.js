@@ -42,7 +42,7 @@
   function buildHandoffPayload(input) {
     var parsed = parseContact(input && input.contact);
     if (!parsed.ok) return null;
-    return withMeta({
+    var payload = {
       sid: (input && input.sid) || 'web',
       name: clean(input && input.name, 80),
       email: parsed.contact,
@@ -51,7 +51,13 @@
       message: input && input.message != null ? String(input.message) : '',
       web: input && input.web != null ? String(input.web) : '',
       page: input && input.page != null ? String(input.page) : ''
-    }, input && input.metaEventId);
+    };
+    // Optional visitor website. Kept separate from the honeypot field `web`.
+    // Stored as typed (trimmed); a missing scheme is left alone.
+    if (input && Object.prototype.hasOwnProperty.call(input, 'website_url')) {
+      payload.website_url = clean(input.website_url, 300);
+    }
+    return withMeta(payload, input && input.metaEventId);
   }
 
   function buildCheckPayload(input) {

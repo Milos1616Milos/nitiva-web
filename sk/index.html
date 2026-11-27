@@ -397,6 +397,8 @@ main .sk-after a,main .sk-lead a,main .author-bio a{color:var(--deep);font-weigh
    </div>
    <label for="e">E-mail</label>
    <input id="e" name="contact" type="email" autocomplete="email" required maxlength="120">
+   <label for="website_url">Adresa webu</label>
+   <input id="website_url" name="website_url" type="url" inputmode="url" autocomplete="url" placeholder="https://…" maxlength="300">
    <label for="m">S čím vám môžem pomôcť? (nepovinné)</label>
    <textarea id="m" name="message" rows="4" maxlength="1000"></textarea>
    <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -425,7 +427,7 @@ main .sk-after a,main .sk-lead a,main .author-bio a{color:var(--deep);font-weigh
   var msg=f.message.value.trim();
   if(pkg==='BF2026')msg=(msg?'OBJEDNÁVKA BF2026: Balík Prvý dopyt (zriadenie 97 € + 60 €/mes., záloha 48 €) | ':'OBJEDNÁVKA BF2026: Balík Prvý dopyt (zriadenie 97 € + 60 €/mes., záloha 48 €)')+msg;
   var parsed=forms.parseContact(f.contact.value);
-  var d=parsed.ok&&parsed.kind==='email'?forms.buildHandoffPayload({sid:'web',name:'',contact:f.contact.value,message:msg,web:f.web.value,page:location.href,metaEventId:window.nitivaMetaEventId?window.nitivaMetaEventId():''}):null;
+  var d=parsed.ok&&parsed.kind==='email'?forms.buildHandoffPayload({sid:'web',name:'',contact:f.contact.value,message:msg,web:f.web.value,website_url:f.website_url.value,page:location.href,metaEventId:window.nitivaMetaEventId?window.nitivaMetaEventId():''}):null;
   mark(f.contact,!d);
   if(!d){show('Napíšte platný e-mail, napríklad jana@firma.sk.','err');f.contact.focus();return;}
   btn.disabled=true;show('Odosielam…','ok');

@@ -77,6 +77,42 @@ assert.strictEqual(chatbot.contact, 'jana@salon.cz');
 assert.strictEqual(chatbot.phone, '');
 assert.strictEqual(Object.prototype.hasOwnProperty.call(chatbot, 'meta_event_id'), false);
 assert.strictEqual(lead.buildHandoffPayload({ sid: 'web', contact: 'nope', message: '', page: '/' }), null);
+assert.strictEqual(Object.prototype.hasOwnProperty.call(handoff, 'website_url'), false);
+
+var withSite = lead.buildHandoffPayload({
+  sid: 'web',
+  name: '',
+  contact: 'jana@salon.cz',
+  message: 'Ahoj',
+  web: '',
+  website_url: '  mojefirma.cz  ',
+  page: 'https://nitiva.cz/#kontakt'
+});
+assert.strictEqual(withSite.website_url, 'mojefirma.cz');
+assert.strictEqual(withSite.web, '');
+assert.strictEqual(withSite.email, 'jana@salon.cz');
+
+var withScheme = lead.buildHandoffPayload({
+  sid: 'web',
+  contact: 'jana@salon.cz',
+  message: '',
+  web: 'filled-by-bot',
+  website_url: 'https://mojefirma.cz/kontakt',
+  page: '/'
+});
+assert.strictEqual(withScheme.website_url, 'https://mojefirma.cz/kontakt');
+assert.strictEqual(withScheme.web, 'filled-by-bot');
+
+var blankSite = lead.buildHandoffPayload({
+  sid: 'web',
+  contact: '736284023',
+  message: '',
+  web: '',
+  website_url: '   ',
+  page: '/'
+});
+assert.strictEqual(blankSite.website_url, '');
+assert.strictEqual(blankSite.phone, '736284023');
 
 var check = lead.buildCheckPayload({
   url: '  www.vasefirma.cz ',
@@ -152,6 +188,29 @@ function read(rel) {
   return fs.readFileSync(path.join(__dirname, '..', rel), 'utf8');
 }
 
+function assertContactWebsiteField(html, payloadSnippet) {
+  var start = html.indexOf('id="contactForm"');
+  var end = html.indexOf('</form>', start);
+  assert.ok(start !== -1 && end !== -1);
+  var form = html.slice(start, end);
+  assert.ok(form.indexOf('novalidate') !== -1 && form.indexOf('novalidate') < form.indexOf('name="contact"'));
+  var tag = form.match(/<input\b[^>]*\bname="website_url"[^>]*>/);
+  assert.ok(tag, 'contact form is missing website_url');
+  assert.ok(tag[0].indexOf('type="url"') !== -1);
+  assert.ok(tag[0].indexOf('placeholder="https://…"') !== -1);
+  assert.ok(tag[0].indexOf('required') === -1);
+  assert.ok(tag[0].indexOf('id="website_url"') !== -1);
+  assert.ok(form.indexOf('<label for="website_url">Adresa webu</label>') !== -1);
+  var contactAt = form.indexOf('name="contact"');
+  var siteAt = form.indexOf('name="website_url"');
+  var messageAt = form.indexOf('name="message"');
+  var honeyAt = form.indexOf('class="hp" name="web"');
+  assert.ok(contactAt !== -1 && contactAt < siteAt);
+  assert.ok(siteAt < messageAt);
+  assert.ok(messageAt < honeyAt);
+  assert.ok(html.indexOf(payloadSnippet) !== -1);
+}
+
 var home = read('index.html');
 var bot = read('ai-chatbot/index.html');
 var offer = read('ponuka/index.html');
@@ -173,6 +232,10 @@ assert.ok(home.indexOf('nitiva-kontrola') !== -1);
 assert.ok(home.indexOf("nitivaFireLead('kontakt'") !== -1);
 assert.ok(home.indexOf("nitivaFireLead('kontrola_webu'") !== -1);
 assert.ok(home.indexOf('for="n"') === -1);
+assertContactWebsiteField(home, 'website_url:f.website_url.value');
+
+var slovak = read('sk/index.html');
+assertContactWebsiteField(slovak, 'website_url:f.website_url.value');
 
 assert.ok(bot.indexOf('Chci nezávaznou konzultaci') !== -1);
 assert.ok(bot.indexOf('Chatbota umím napojit i na Instagram, Messenger a WhatsApp (přes oficiální rozhraní Meta).') !== -1);

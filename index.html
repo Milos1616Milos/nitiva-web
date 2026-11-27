@@ -512,6 +512,7 @@ ol.steps{grid-template-columns:1fr;gap:26px}
   <div class="card">
    <form class="k" id="contactForm" novalidate>
     <div><label for="e">E-mail nebo telefon</label><input id="e" name="contact" type="text" autocomplete="on" required maxlength="120"></div>
+    <div><label for="website_url">Adresa webu</label><input id="website_url" name="website_url" type="url" inputmode="url" autocomplete="url" placeholder="https://…" maxlength="300"></div>
     <div><label for="m">S čím vám můžu pomoci? (nepovinné)</label><textarea id="m" name="message" rows="4" maxlength="1000"></textarea></div>
     <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div><button class="btn" type="submit" id="send">Odeslat zprávu <span class="ar" aria-hidden="true">→</span></button></div>
@@ -545,7 +546,7 @@ ol.steps{grid-template-columns:1fr;gap:26px}
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
     var id=metaId();
-    var d=forms.buildHandoffPayload({sid:'web',name:'',contact:f.contact.value,message:typeof window.nitivaLeadMessage==='function'?window.nitivaLeadMessage(f.message.value.trim()):f.message.value.trim(),web:f.web.value,page:location.href,metaEventId:id});
+    var d=forms.buildHandoffPayload({sid:'web',name:'',contact:f.contact.value,message:typeof window.nitivaLeadMessage==='function'?window.nitivaLeadMessage(f.message.value.trim()):f.message.value.trim(),web:f.web.value,website_url:f.website_url.value,page:location.href,metaEventId:id});
     mark(f.contact,!d);
     if(!d){show('Napište prosím e-mail nebo telefon, například jana@salon.cz nebo 736 284 023.','err');f.contact.focus();return;}
     btn.disabled=true;show('Odesílám…','ok');
