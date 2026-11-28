@@ -156,6 +156,48 @@ install({
 });
 assert.deepStrictEqual(threw, [visit.ENDPOINT]);
 
+// AI tools: a visit without utm_ is reported when the referrer host is an AI tool.
+assert.strictEqual(visit.shouldReport('', 'https://chatgpt.com/'), true);
+assert.strictEqual(visit.shouldReport('', 'https://chat.openai.com/c/abc'), true);
+assert.strictEqual(visit.shouldReport('', 'https://www.perplexity.ai/search/x'), true);
+assert.strictEqual(visit.shouldReport('', 'https://gemini.google.com/app'), true);
+assert.strictEqual(visit.shouldReport('', 'https://copilot.microsoft.com/'), true);
+assert.strictEqual(visit.shouldReport('', 'https://claude.ai/chat/1'), true);
+assert.strictEqual(visit.shouldReport('', 'https://grok.com/'), true);
+assert.strictEqual(visit.shouldReport('', 'https://grok.x.ai/'), true);
+assert.strictEqual(visit.shouldReport('', 'https://x.ai/'), true);
+assert.strictEqual(visit.shouldReport('?utm_source=meta', ''), true);
+assert.strictEqual(visit.shouldReport('', ''), false);
+assert.strictEqual(visit.shouldReport('', 'not a url'), false);
+assert.strictEqual(visit.shouldReport('', 'https://www.google.com/search?q=nitiva'), false);
+assert.strictEqual(visit.shouldReport('', 'https://l.facebook.com/l.php'), false);
+assert.strictEqual(visit.shouldReport('', 'https://x.com/nitiva'), false);
+assert.strictEqual(visit.shouldReport('', 'https://notchatgpt.com/'), false, 'suffix match must need a dot boundary');
+assert.strictEqual(visit.shouldReport('', 'https://max.ai/'), false);
+assert.strictEqual(visit.shouldReport('', 'https://foryou.com/'), false);
+
+var aiCalls = [];
+var aiView = {
+  location: { pathname: '/tvorba-webu/', search: '', hash: '#x' },
+  document: { referrer: 'https://chatgpt.com/c/secret-conversation-id?token=abc' },
+  innerWidth: 390,
+  fetch: function (url, opts) { aiCalls.push({ url: url, body: JSON.parse(opts.body), opts: opts }); return Promise.resolve(); },
+  navigator: {}
+};
+install(aiView);
+assert.strictEqual(aiCalls.length, 1);
+assert.strictEqual(aiCalls[0].url, visit.ENDPOINT);
+assert.strictEqual(aiCalls[0].opts.credentials, 'omit');
+assert.deepStrictEqual(Object.keys(aiCalls[0].body).sort(), ['device', 'path', 'referrer', 'timestamp', 'utm_campaign', 'utm_content', 'utm_medium', 'utm_source', 'utm_term']);
+assert.strictEqual(aiCalls[0].body.path, '/tvorba-webu/');
+assert.strictEqual(aiCalls[0].body.referrer, 'chatgpt.com');
+assert.strictEqual(aiCalls[0].body.utm_source, '');
+assert.strictEqual(aiCalls[0].body.device, 'mobile');
+assert.ok(aiCalls[0].body.timestamp);
+assert.ok(JSON.stringify(aiCalls[0].body).indexOf('secret-conversation-id') === -1, 'only the referrer host may be sent');
+install(aiView);
+assert.strictEqual(aiCalls.length, 1, 'AI visit is sent only once per page');
+
 var vm = require('vm');
 var browserCalls = [];
 var browser = {

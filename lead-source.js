@@ -11,12 +11,17 @@
     var host = '';
     try { host = new URL(ref).hostname.toLowerCase(); } catch (e) { return 'priamo'; }
     if (host === location.hostname || host.slice(-('.' + location.hostname).length) === '.' + location.hostname) return '';
+    // Skutečný odkaz z AI nástroje (referrer). Štítek ai-… se liší od utm_source=chatgpt.com v adrese.
+    if (/(^|\.)(chatgpt\.com|openai\.com)$/.test(host)) return 'ai-chatgpt';
+    if (/(^|\.)perplexity\.ai$/.test(host)) return 'ai-perplexity';
+    if (/(^|\.)(gemini|bard)\.google\.com$/.test(host)) return 'ai-gemini';
+    if (/(^|\.)claude\.ai$/.test(host)) return 'ai-claude';
+    if (/(^|\.)(copilot\.microsoft\.com|copilot\.com)$/.test(host)) return 'ai-copilot';
+    if (/(^|\.)(grok\.com|x\.ai)$/.test(host)) return 'ai-grok';
     if (/(^|\.)google\./.test(host)) return 'google';
     if (/(^|\.)seznam\.cz$/.test(host)) return 'seznam';
     if (/(^|\.)bing\.com$/.test(host)) return 'bing';
     if (/(^|\.)duckduckgo\.com$/.test(host)) return 'duckduckgo';
-    if (/(^|\.)(chatgpt\.com|openai\.com)$/.test(host)) return 'chatgpt';
-    if (/(^|\.)perplexity\.ai$/.test(host)) return 'perplexity';
     if (/(^|\.)(facebook\.com|fb\.com|instagram\.com)$/.test(host)) return 'meta';
     if (/(^|\.)linkedin\.com$/.test(host)) return 'linkedin';
     if (/(^|\.)(youtube\.com|youtu\.be)$/.test(host)) return 'youtube';
@@ -25,14 +30,20 @@
   var entry = null;
   try { entry = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
   if (!entry) {
-    entry = { s: source || referrerSource(), p: (location.pathname || '/').slice(0, 80) };
+    var ref = referrerSource();
+    entry = { s: source || ref, p: (location.pathname || '/').slice(0, 80) };
+    // Skutečný referrer z AI nástroje si pamatujeme i tehdy, když je v adrese utm_source.
+    if (source && /^ai-/.test(ref)) entry.a = ref;
     try { sessionStorage.setItem(KEY, JSON.stringify(entry)); } catch (e) {}
   } else if (source && entry.s !== source) {
     entry.s = source;
     try { sessionStorage.setItem(KEY, JSON.stringify(entry)); } catch (e) {}
   }
   function label() {
-    if (source) return [source, campaign].filter(Boolean).join('-').slice(0, 60);
+    if (source) {
+      var base = [source, campaign].filter(Boolean).join('-');
+      return (entry && entry.a ? base + '+' + entry.a : base).slice(0, 60);
+    }
     return entry && entry.s ? String(entry.s).slice(0, 60) : '';
   }
   window.nitivaLeadSource = label;

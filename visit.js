@@ -5,6 +5,12 @@
   var ENDPOINT = 'https://n8n.178-105-83-205.sslip.io/webhook/nitiva-visit';
   var MOBILE_MAX_WIDTH = 768;
   var MAX_FIELD = 300;
+  // AI tools whose referrer host (never the full URL) triggers a report even without utm_.
+  var AI_HOSTS = [
+    'chatgpt.com', 'chat.openai.com', 'perplexity.ai', 'gemini.google.com', 'bard.google.com',
+    'copilot.microsoft.com', 'copilot.com', 'claude.ai', 'grok.com', 'x.ai',
+    'chat.deepseek.com', 'you.com', 'poe.com'
+  ];
 
   function clean(value) {
     if (value == null) return '';
@@ -18,7 +24,7 @@
     return new URLSearchParams(query);
   }
 
-  function shouldReport(search) {
+  function hasUtm(search) {
     try {
       var found = false;
       paramsFrom(search).forEach(function (value, key) {
@@ -28,6 +34,22 @@
     } catch (e) {
       return false;
     }
+  }
+
+  function isAiReferrer(referrer) {
+    if (!referrer) return false;
+    var host = '';
+    try { host = new URL(referrer).hostname.toLowerCase(); } catch (e) { return false; }
+    for (var i = 0; i < AI_HOSTS.length; i++) {
+      var h = AI_HOSTS[i];
+      if (host === h || host.slice(-(h.length + 1)) === '.' + h) return true;
+    }
+    return false;
+  }
+
+  // Report a visit with utm_ in the address, or one that arrives from an AI tool (referrer only).
+  function shouldReport(search, referrer) {
+    return hasUtm(search) || isAiReferrer(referrer);
   }
 
   function referrerHost(referrer) {
@@ -95,10 +117,11 @@
     try {
       if (!view || view.__nitivaVisitSent) return;
       var loc = view.location;
-      if (!loc || !shouldReport(loc.search || '')) return;
-      view.__nitivaVisitSent = 1;
+      if (!loc) return;
       var referrer = '';
       try { referrer = (view.document && view.document.referrer) || ''; } catch (e) {}
+      if (!shouldReport(loc.search || '', referrer)) return;
+      view.__nitivaVisitSent = 1;
       var width = 0;
       try { width = view.innerWidth; } catch (e) {}
       var fetchFn = null;
@@ -124,6 +147,8 @@
       ENDPOINT: ENDPOINT,
       MOBILE_MAX_WIDTH: MOBILE_MAX_WIDTH,
       shouldReport: shouldReport,
+      isAiReferrer: isAiReferrer,
+      AI_HOSTS: AI_HOSTS,
       buildPayload: buildPayload,
       sendVisit: sendVisit,
       install: install
